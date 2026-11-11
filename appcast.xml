@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Tandem</title>
+    <item>
+      <title>Tandem 1.0.0</title>
+      <pubDate>Wed, 11 Nov 2026 06:40:22 +0000</pubDate>
+      <sparkle:version>3003</sparkle:version>
+      <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>First release of Tandem. Drag it to Applications to install. Phone alerts set up with a QR code, an optional AI app, Remove Tandem in Settings, What&#x27;s new after each update, and automatic updates from now on.</p>]]></description>
+      <enclosure url="https://github.com/adersouza/tandem-releases/releases/download/v1.0.0/Tandem-1.0.0.dmg" length="185314439" type="application/octet-stream" sparkle:edSignature="gNnv77UQstqvjF3f7tRkBkJxtsT5Dh70cBrVEG7qKlpxlzbWYvxTtcRL6k83gyFtFTKqQ9Le2KEpNUxZZk+oCw=="/>
+    </item>
+  </channel>
+</rss>

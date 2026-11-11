@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tandem for Mac</title>
+<meta name="description" content="A hands-off copy-trading desk for stocks, options, prediction markets and crypto that runs on your Mac.">
+<link rel="icon" href="icon.png">
+<style>
+:root {
+  --bg: #fafaf9; --surface: #ffffff; --text: #1c1c1a; --muted: #62625d; --line: #e4e4df;
+  --accent: #1f4fd8; --accent-text: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #131312; --surface: #1c1c1a; --text: #efefeb; --muted: #a2a29b; --line: #2e2e2b; --accent: #7f9cf5; --accent-text: #0e1220; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+main { max-width: 760px; margin: 0 auto; padding: 48px 16px 64px; }
+header { text-align: center; }
+.icon { width: 96px; height: 96px; border-radius: 22px; }
+h1 { font-size: 40px; line-height: 1.1; margin: 16px 0 8px; font-weight: 600; letter-spacing: -0.02em; }
+.lead { color: var(--muted); font-size: 18px; margin: 0 auto; max-width: 34em; }
+.shot { display: block; width: 100%; height: auto; margin: 32px 0 8px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.cta { text-align: center; margin: 24px 0 8px; }
+.button { display: inline-block; background: var(--accent); color: var(--accent-text); padding: 14px 28px; border-radius: 10px; font-weight: 600; font-size: 17px; text-decoration: none; }
+.button:hover { filter: brightness(1.08); }
+.button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+dl.facts { display: grid; grid-template-columns: max-content 1fr; gap: 6px 20px; margin: 24px auto 0; padding: 16px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; font-size: 15px; }
+dl.facts dt { color: var(--muted); }
+dl.facts dd { margin: 0; min-width: 0; }
+code { font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; }
+section { margin-top: 48px; }
+h2 { font-size: 22px; margin: 0 0 12px; font-weight: 600; letter-spacing: -0.01em; }
+ul, ol { padding-left: 1.2em; margin: 0; }
+li { margin: 8px 0; }
+a { color: var(--accent); }
+.notes { white-space: pre-line; }
+footer { margin-top: 48px; color: var(--muted); font-size: 14px; text-align: center; }
+@media (max-width: 480px) {
+  main { padding-top: 32px; }
+  h1 { font-size: 32px; }
+  dl.facts { grid-template-columns: 1fr; gap: 0; }
+  dl.facts dd { margin-bottom: 10px; }
+}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img class="icon" src="icon.png" width="96" height="96" alt="">
+    <h1>Tandem</h1>
+    <p class="lead">A hands-off copy-trading desk for stocks, options, prediction markets and crypto that runs on your Mac.</p>
+  </header>
+
+  <img class="shot" src="overview.png" alt="The Tandem Overview page showing your value, positions, return and what the desk did">
+
+  <div class="cta"><a class="button" href="https://github.com/adersouza/tandem-releases/releases/download/v1.0.0/Tandem-1.0.0.dmg">Download for Mac</a></div>
+
+  <dl class="facts">
+    <dt>Version</dt><dd>1.0.0</dd>
+    <dt>Size</dt><dd>185.3 MB</dd>
+    <dt>Security</dt><dd>Signed and notarized by Apple</dd>
+    <dt>Works on</dt><dd>Apple silicon Macs, macOS 12 or later</dd>
+    <dt>SHA-256</dt><dd><code>8049cae2d6c40ba4aaa704f07b8d76b3ec0a0adece240b6ea14012e815975680</code></dd>
+  </dl>
+
+  <section id="before">
+    <h2>Before your install day</h2>
+    <p>Some accounts take a day or two to approve. Do these first, so install day is only clicks.</p>
+    <ol>
+      <li>Apply for Webull's Trading API. Approval takes about 1 to 2 business days. <a href="https://developer.webull.com/apis/docs/faq">How it works</a></li>
+      <li>Open the Webull crypto account.</li>
+      <li>Create your Kalshi and Polymarket US accounts.</li>
+      <li>Install the free ntfy app on your iPhone. The desk uses it to send alerts.</li>
+    </ol>
+    <p>A step-by-step version is in <a href="guide/BEFORE-INSTALL-DAY.html">Before install day</a>.</p>
+  </section>
+
+  <section id="privacy">
+    <h2>What stays on your Mac</h2>
+    <p>Your data and your keys stay on your Mac. Tandem talks only to your trading accounts, to the AI app if you connect one, and to ntfy for alerts.</p>
+  </section>
+
+  <section id="help">
+    <h2>Help</h2>
+    <ul>
+      <li>Contact: the person who set up Tandem for you</li>
+      <li><a href="guide/quick-start.html">Quick start</a></li>
+      <li><a href="guide/safety.html">Terms and safety</a></li>
+    </ul>
+  </section>
+
+  <section id="new">
+    <h2>What's new</h2>
+    <p class="notes">First release of Tandem. Drag it to Applications to install. Phone alerts set up with a QR code, an optional AI app, Remove Tandem in Settings, What&#x27;s new after each update, and automatic updates from now on.</p>
+  </section>
+
+  <footer>Tandem 1.0.0</footer>
+</main>
+</body>
+</html>

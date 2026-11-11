@@ -1,0 +1,39 @@
+# Getting started
+
+New here? The one-page [quick start](quick-start.md) gets you running. The step-by-step [onboarding guide](ONBOARDING.md) has every detail. Replacing the Mac? See [New Mac](new-mac.md).
+
+Tandem keeps your desk on your Mac. Start with paper trading or research. Real-money trading starts off.
+
+## Install and open
+
+1. Download the release supplied by your desk administrator. Open the disk image or unzip the download, then follow its installer instructions.
+2. In Finder, find Tandem. Control-click or right-click it, choose Open, then choose Open again if macOS asks. Only open a download whose source you trust.
+3. If macOS blocks it, open System Settings, then Privacy & Security. Review the app name before choosing Open Anyway. If that option is unavailable, ask your administrator for a compatible release.
+4. Open the app through its launcher. Keep the app running while using your AI connection. Opening an old browser bookmark may give you an expired session.
+
+## First run
+
+Open Settings, then Set up your desk. It is one checklist, and each step opens only when the desk has checked the one before it:
+
+1. Accept the terms.
+2. Connect your AI app. Under Do it yourself, The desk's own AI (optional) holds the AI provider and the models and usage limits. Do not enable paid overflow unless you want that billing behavior.
+3. Kalshi, Webull and Polymarket US. Connect at least one in paper, sandbox or demo mode where available, and mark the others Not using. A venue is done when its connection test passes.
+4. Limits and goal, phone alerts and the practice week.
+5. Test an account and check its records: inspect the connection test, then choose your account and click Check selected account. Any missing balances, orders or positions stay unknown.
+
+A step the desk could not read shows Not read. Each step has Copy prompt, a page link and Help. Completing setup never arms real-money trading.
+
+## Choose your next task
+
+- Use [My AI](trading-with-ai.md) for sourced answers, confirm cards, scheduled routines and trade review. A tested AI connection and reviewed route are needed for inference.
+- Connect an external AI app with [MCP setup](mcp-setup.md). Its requests use the same desk tools under the Research, Review, Trade or Manage scope you select; automatic modes still require a matching saved account grant.
+- Open [Markets](markets.md) for quotes, order tickets and prediction research: spreads, fair value, weather edge and wallet analysis.
+- Open [Presets](presets-and-traders.md) for disabled paper copies, smart-money verdicts, followed lists, consensus and exit alerts.
+- Use Routines and Signals for scheduled work, permitted public watchers and the inbox. Keep Tandem running for its built-in scheduler; inspect run history to verify what actually happened.
+- Use the account ticket for supported protective orders, the trade time machine and optional Telegram approval. See [Trading with your AI](trading-with-ai.md).
+
+## Keep your records
+
+Do not reset an account to fix a connection problem. Use [Troubleshooting](troubleshooting.md). An update or uninstall should preserve your private records; check the release's instructions before removing data.
+
+Installation availability and acceptance depend on the release provided to you. Check its release notes for tested installation, first-launch and Keychain behavior; this guide does not certify a particular download.
