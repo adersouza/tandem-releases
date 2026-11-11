@@ -3,6 +3,15 @@
   <channel>
     <title>Tandem</title>
     <item>
+      <title>Tandem 1.0.2</title>
+      <pubDate>Wed, 11 Nov 2026 21:09:22 +0000</pubDate>
+      <sparkle:version>3139</sparkle:version>
+      <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Faster pages; a fresh install sets itself up; Kalshi practice orders work; prices for Kalshi and crypto; 8-K filing alerts; wash-sale estimates and a tax-loss list; licences in About.</p>]]></description>
+      <enclosure url="https://github.com/adersouza/tandem-releases/releases/download/v1.0.2/Tandem-1.0.2.dmg" length="183723349" type="application/octet-stream" sparkle:edSignature="olGilNklooHwvt/oEYmLfHQ3GfUb3aOPwXne6XKFv8vVQ8PYp9ElbiWfeLQRzivn0zqgnKkkLil+h/ePWzHvCw=="/>
+    </item>
+    <item>
       <title>Tandem 1.0.1</title>
       <pubDate>Wed, 11 Nov 2026 08:30:46 +0000</pubDate>
       <sparkle:version>3027</sparkle:version>

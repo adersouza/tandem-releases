@@ -4,7 +4,7 @@ If the Mac that runs the desk dies or is replaced, this gets you back in about a
 
 ## Before you start
 
-- Your off-Mac backup must be on (Settings, Off-Mac backup). Without it the history and settings start fresh; your accounts at each venue are unaffected.
+- Your off-Mac backup must be on (Settings, Off-Mac backup), and restic must be installed on the old Mac (`brew install restic`, or from restic.net). If restic is missing, Settings says so and the desk sends one alert; nothing leaves the Mac until it is installed. Without an off-Mac backup the history and settings start fresh; your accounts at each venue are unaffected.
 - You need the backup password. The desk showed it once when you turned backup on (you wrote it down); it is also in the old Mac's Keychain under `options-desk.restic`.
 
 ## Steps
