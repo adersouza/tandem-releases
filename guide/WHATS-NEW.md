@@ -2,6 +2,20 @@
 
 The newest version is first. Tandem shows this once after each update.
 
+## 1.0.3 - November 2026
+
+- A Practice | Real switch at the top shows practice accounts or real-money accounts, never mixed. Practice shows an amber strip on every page. Switching only changes what you see.
+- You can turn real money on at any time with Review, then Confirm on Accounts, even during the practice week. Doing so ends the practice week. Review shows a short readiness list for your information.
+- If a card or page cannot draw, only that part shows an error; the rest of the desk keeps working.
+- Opening a Polymarket US account on Accounts no longer shows "Something went wrong".
+- If the desk is slow to start, the window waits and opens it as soon as it is ready.
+- A return that rounds to 0.00% is no longer shown in red.
+- The side menu is one simple list, with setup pages at the bottom.
+- The desk now backs up its database every day on this Mac, and the off-Mac backup (if you turned it on) always includes a fresh copy.
+- The outside heartbeat (Healthchecks) now reports the desk as up while it runs.
+- A new install starts Tandem when you log in. Turn it off in Settings, This Mac.
+- Check for Updates is also in the Tandem menu bar icon.
+
 ## 1.0.2 - November 2026
 
 - Pages open faster, and a thin bar shows while a page loads.

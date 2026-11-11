@@ -12,9 +12,9 @@ Save stores and automatically tests a connection. Check the result, then check t
 
 The installed CLI may not meet the desk's isolation/version checks, the model may be unavailable, a quota may be reached, or the route may need review. Read the HOLD reason. Check the sign-in in the official CLI. Do not copy its saved tokens into the desk. Paid fallback is never automatic.
 
-## Real money will not turn on in the first week
+## Real money and the first week
 
-The hold `client_first_week_paper_only` means the desk is in its first seven practice days. This is expected, not a fault. **Settings**, **First week** shows the day number and when the week ends. Keep trading on paper; after the week, review the switch checklist and arm the account. Ending the week early is possible only on the Mac, in that card, and cannot be undone.
+The practice week never blocks real money. You can turn it on for an account any time through its Review and Confirm steps, and doing so during the week ends the week. If real money will not turn on, the message names the check that held it: the current terms not yet accepted, an expired review, an account that was stopped, or a limit. The Review step's readiness list (practice week, venue confirmed, first real-money fill) is information only and never holds anything. Older desks could show the hold `client_first_week_paper_only`; the desk no longer uses it.
 
 ## MCP server cannot start
 

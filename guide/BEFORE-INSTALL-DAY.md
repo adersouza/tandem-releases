@@ -12,7 +12,7 @@ If you want crypto, open it in the Webull app now. It is a separate account from
 
 ## 3. Create your Kalshi and Polymarket US accounts
 
-Make an account on each and finish any identity checks they ask for. You do not need to fund them yet. The desk starts with a seven day practice week, and real money stays off until you turn it on.
+Make an account on each and finish any identity checks they ask for. You do not need to fund them yet. The desk starts with a seven day practice week. Real money stays off until you turn it on, which you can do any time, including during that week.
 
 ## 4. Install ntfy on your iPhone
 

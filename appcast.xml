@@ -3,6 +3,15 @@
   <channel>
     <title>Tandem</title>
     <item>
+      <title>Tandem 1.0.3</title>
+      <pubDate>Wed, 11 Nov 2026 23:47:00 +0000</pubDate>
+      <sparkle:version>3169</sparkle:version>
+      <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Practice | Real switch at the top. Real money can be turned on any time with Review, then Confirm. Daily database backup on this Mac. Start at login for new installs. Fixes: Polymarket US account drawer, slow start, red zero, Check for Updates in the menu bar icon.</p>]]></description>
+      <enclosure url="https://github.com/adersouza/tandem-releases/releases/download/v1.0.3/Tandem-1.0.3.dmg" length="181878180" type="application/octet-stream" sparkle:edSignature="Jh/wwOraqSoZJsVbhh+aZkOezUbpMyBX9O71+8DbNiEhZSrL5oSNZ1aZ/Ivngclh6uyO0vb1HW1ExqlN9GY2CQ=="/>
+    </item>
+    <item>
       <title>Tandem 1.0.2</title>
       <pubDate>Wed, 11 Nov 2026 21:09:22 +0000</pubDate>
       <sparkle:version>3139</sparkle:version>
