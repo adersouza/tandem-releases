@@ -2,6 +2,13 @@
 
 The newest version is first. Tandem shows this once after each update.
 
+## 1.0.10 - November 2026
+
+- Accounts shows each account's AI mode, its recent orders and money in and out.
+- Overview's returns show income: settlements, dividends and interest, when the venue reports them.
+- Kalshi and Polymarket US accounts show their recent orders, and fills show their fees.
+- The watchlist has a price alert column.
+
 ## 1.0.9 - November 2026
 
 - Overview, Markets, Accounts, Strategies and Settings have a new layout, and there is a light theme.
