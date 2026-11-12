@@ -2,6 +2,16 @@
 
 The newest version is first. Tandem shows this once after each update.
 
+## 1.0.9 - November 2026
+
+- Overview, Markets, Accounts, Strategies and Settings have a new layout, and there is a light theme.
+- Real-money orders from an AI app are confirmed in the desk; practice orders can still be confirmed in the AI app.
+- Turning on the assistant's automatic mode now takes two steps that expire after 5 minutes.
+- On the phone, a Stop button sits in the top bar.
+- Pages appear at once while they load, and one card's error no longer breaks the whole page.
+- Account names are numbered, and the desk says how many accounts are connected.
+- The install guide matches the notarized app: open it from Applications, no extra steps.
+
 ## 1.0.8 - November 2026
 
 - One app for everyone: no hidden Advanced section and no separate edition.

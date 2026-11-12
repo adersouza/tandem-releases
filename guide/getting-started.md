@@ -8,7 +8,7 @@ Tandem keeps your desk on your Mac. Start with paper trading or research. Real-m
 
 1. Open the Tandem disk image (`Tandem-x.y.z.dmg`) from the download page.
 2. Drag Tandem to Applications.
-3. Open Tandem from Applications. It is signed and notarized, so macOS opens it without extra steps.
+3. Open Tandem from Applications. The release is signed with a Developer ID and notarized by Apple, so macOS opens it without extra steps. The first time, macOS asks once to confirm you want to open an app downloaded from the internet; click Open.
 
 Tandem then lives in the menu bar. Closing the window keeps it running; use the menu bar icon to open the desk again. To uninstall, see [Remove Tandem](remove-tandem.md).
 
