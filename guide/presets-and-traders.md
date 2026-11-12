@@ -4,7 +4,7 @@ Open Presets to inspect a strategy's version, assumptions and available evidence
 
 ## Copy a preset
 
-Choose a preset and review its details. A copied strategy starts disabled in paper mode. Give it its own identity rather than overwriting another experiment. In Review mode, confirm an AI-proposed copy in My AI. With explicit Manage authority, the agent can create a supported disabled paper copy inside its saved account scope without another confirmation. Copying a preset is separate from copying a public tracked trade, which still requires confirmation.
+Choose a preset and review its details. A copied strategy starts disabled in paper mode. Give it its own identity rather than overwriting another experiment. In Review mode, confirm an AI-proposed copy in the AI assistant. With explicit Manage authority, the agent can create a supported disabled paper copy inside its saved account scope without another confirmation. Copying a preset is separate from copying a public tracked trade, which still requires confirmation.
 
 A saved configuration does not prove a worker is running. When the release reports that an execution binding is unavailable, keep the strategy disabled. The AI cannot start an unsupported engine by changing a configuration flag.
 
@@ -38,7 +38,7 @@ Do not treat a public wallet, leaderboard or social post as complete positions, 
 
 ## Copy verdicts
 
-Tracked observations include a versioned verdict and written reasons. Missing liquidity, trade size, delay, account context or sampled persistence can leave a trade on the watchlist or skipped. A candidate is a research qualification, not a promise of execution or return. The assistant can propose a qualified tracked trade for your exact account; review and confirm it in My AI. Copy proposals cannot use autonomous execution.
+Tracked observations include a versioned verdict and written reasons. Missing liquidity, trade size, delay, account context or sampled persistence can leave a trade on the watchlist or skipped. A candidate is a research qualification, not a promise of execution or return. The assistant can propose a qualified tracked trade for your exact account; review and confirm it in the AI assistant. Copy proposals cannot use autonomous execution.
 
 ## Lists, consensus and exits
 
@@ -46,7 +46,7 @@ Use Follow together, review exits within Presets. Lists lets you curate 1–20 p
 
 Congress transactions and 13F disclosures do not establish current holdings. Consensus needs sourced holdings snapshots, matching member identities and real as-of dates; missing quantities and entry prices remain unknown. Limited public pages or a missing position do not prove a sale or liquidation.
 
-Exit alerts reviews sourced reductions, sales, merges or hedges against retained copy lineage. Ask My AI for a qualified copy or exit proposal, then review its exact account, instrument and risk. Exit following proposes actions for confirmation; a public alert never directly submits an order. Signals and the inbox can surface retained research; external notification delivery depends on your configured alerts and its retained result. See [Routines and AI trading](trading-with-ai.md).
+Exit alerts reviews sourced reductions, sales, merges or hedges against retained copy lineage. Ask the AI assistant for a qualified copy or exit proposal, then review its exact account, instrument and risk. Exit following proposes actions for confirmation; a public alert never directly submits an order. Signals and the inbox can surface retained research; external notification delivery depends on your configured alerts and its retained result. See [Routines and AI trading](trading-with-ai.md).
 
 The separate [Markets wallet analyzer](markets.md) explains public trading patterns; it does not qualify a wallet for copying or prove profitability. The imported Inverse Cramer model template remains HOLD until you supply a dated authorized model; public commentary alone is not its holdings.
 ## Choose or customize a strategy

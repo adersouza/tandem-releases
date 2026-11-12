@@ -3,6 +3,24 @@
   <channel>
     <title>Tandem</title>
     <item>
+      <title>Tandem 1.0.5</title>
+      <pubDate>Thu, 12 Nov 2026 03:11:53 +0000</pubDate>
+      <sparkle:version>3221</sparkle:version>
+      <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>- Every page lists only the accounts you connected.
+- When an order is held or refused, the desk says why in a plain sentence.
+- If the Mac was asleep at 4:15 pm, the daily account record is taken when it wakes, marked as late.
+- If the desk stops while Tandem is open, the menu bar says Desk stopped and offers Restart desk.
+- If Tandem cannot copy your data before an update, it does not start and says what to do. Nothing is changed.
+- A Webull account connected for practice shows Done (paper) in setup while live waits for Webull&#x27;s approval.
+- Routines show plain names, and the monthly venue checks say they are checked daily and run once a month.
+- The guides match the app, and a new Remove Tandem guide is in Help.
+- Phone alerts use the help contact as their sender contact.
+- The app is smaller: research parts you never use are no longer included.</p>]]></description>
+      <enclosure url="https://github.com/adersouza/tandem-releases/releases/download/v1.0.5/Tandem-1.0.5.dmg" length="181833079" type="application/octet-stream" sparkle:edSignature="XdUA/pVRjBe5Khz1WKhZY5mQCBiWTeBi9ZyAlBfu/Irw8oYviAficutlfbhaa9vY8NkmkXcHOYtE7GqK6WzuAg=="/>
+    </item>
+    <item>
       <title>Tandem 1.0.4</title>
       <pubDate>Thu, 12 Nov 2026 00:55:40 +0000</pubDate>
       <sparkle:version>3196</sparkle:version>

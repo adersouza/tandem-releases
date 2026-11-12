@@ -10,7 +10,7 @@ Read the source, observation time, environment and coverage before acting. A dis
 
 ## Ask your AI
 
-Use the market's Ask AI action to pass its instrument identity to My AI. The assistant fetches sourced facts rather than treating market prose as instructions. Select the exact account before requesting an account action.
+Use the market's Ask AI action to pass its instrument identity to the AI assistant. The assistant fetches sourced facts rather than treating market prose as instructions. Select the exact account before requesting an account action.
 
 ## Prepare an order
 

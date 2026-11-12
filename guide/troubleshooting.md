@@ -26,7 +26,7 @@ Check Settings → Set up your desk → Connect your AI app (under Do it yoursel
 
 ## Proposal missing or expired
 
-Open My AI, select the account approved for the connection, and refresh saved requests. Research-only connections have no trading account. An expired proposal needs a fresh review of sourced state; do not reuse a stale price or confirmation.
+Open the AI assistant, select the account approved for the connection, and refresh saved requests. Research-only connections have no trading account. An expired proposal needs a fresh review of sourced state; do not reuse a stale price or confirmation.
 
 ## Order outcome unknown
 
@@ -51,3 +51,9 @@ Open holdings prevent cancellation of their protection, and stops may only tight
 ## Asking for help
 
 Share the release version, public error category, selected environment and steps taken. Remove account identifiers and private data from screenshots. Never share keys, sign-in tokens, raw private logs or configuration files containing credentials.
+
+## After an update
+
+- Before the first start of each update, Tandem copies your data to `~/Library/Application Support/Options Desk/data/backups/pre-upgrade-<old version>-<time>/`. It keeps the newest three copies.
+- If Tandem says it could not copy your data before starting an update, nothing was changed. Free some disk space and open Tandem again.
+- If an update ever looks wrong, send the Help contact a diagnostics file before you change anything; the pre-update copy lets them put your data back.

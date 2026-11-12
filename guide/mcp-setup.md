@@ -36,7 +36,7 @@ code. Automatic mode retains account, instrument, capability, capital, loss, act
 and expiry ceilings. The client approves a new or expanded mandate once. The agent
 cannot grant itself more authority or arm real-money trading.
 
-MCP lets a local AI app use the same desk tools as My AI. Open Tandem, then Settings → Set up your desk → Connect your AI app (under Do it yourself). Keep the desk running. Copy the config shown there; it contains the actual installed launcher path and no account keys. The bridge launcher is `scripts/desk-mcp`; the generated snippets supply its absolute path and the desk's explicit loopback `--origin`. Do not substitute a checkout path for an installed release.
+MCP lets a local AI app use the same desk tools as the AI assistant. Open Tandem, then Settings → Set up your desk → Connect your AI app (under Do it yourself). Keep the desk running. Copy the config shown there; it contains the actual installed launcher path and no account keys. The bridge launcher is `scripts/desk-mcp`; the generated snippets supply its absolute path and the desk's explicit loopback `--origin`. Do not substitute a checkout path for an installed release.
 
 ## Claude Desktop: one-click extension (easiest)
 

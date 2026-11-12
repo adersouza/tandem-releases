@@ -1,6 +1,6 @@
 # Trading with your AI
 
-Open My AI and select the exact account. Begin with a question such as “Show my sourced positions and tell me which inputs are missing.” Do not put credentials in your message.
+Open the AI assistant and select the exact account. Begin with a question such as “Show my sourced positions and tell me which inputs are missing.” Do not put credentials in your message.
 
 ## Ask
 
@@ -12,7 +12,7 @@ Ask for a proposed action. Review the account, environment, instruments, quantit
 
 In Review mode, a proposal ID means an action is waiting for your review. In Trade or Manage mode, a proposal wrapper can also contain an automatic execution result: inspect `execution` and its saved receipt. Neither a proposal nor an acknowledgement establishes a fill. Unattempted review proposals expire; the AI cannot confirm its own Review proposal or initial/expanded authority grant.
 
-External AI requests made through MCP appear as saved requests in My AI for the connected account. Use Refresh saved if needed. Their selected connection mode and matching saved account grant determine whether a supported action needs confirmation. Research reads only; Review waits for your confirmation; Trade can execute qualifying orders; Manage can also configure supported strategies. Changing the in-app mode does not upgrade an existing MCP connection.
+External AI requests made through MCP appear as saved requests in the AI assistant for the connected account. Use Refresh saved if needed. Their selected connection mode and matching saved account grant determine whether a supported action needs confirmation. Research reads only; Review waits for your confirmation; Trade can execute qualifying orders; Manage can also configure supported strategies. Changing the in-app mode does not upgrade an existing MCP connection.
 
 ## Routines, signals and copy proposals
 
@@ -40,7 +40,7 @@ Trade summaries show sourced fills, orders and open positions. Wins/losses and r
 
 ## Autonomy
 
-In My AI, review the account's autonomy policy separately. It narrows allowed capabilities/instruments, order and risk limits, daily action/notional budgets and expiry. It cannot enlarge the account policy. Choose Research, Review, Automatic trading or Delegated strategy management for each in-app request. Research is enforced read-only; automatic modes need the saved account grant. Only an explicit management grant lets the agent change supported strategy settings without another confirmation. Production also requires an armed live policy.
+In the AI assistant, review the account's autonomy policy separately. It narrows allowed capabilities/instruments, order and risk limits, daily action/notional budgets and expiry. It cannot enlarge the account policy. Choose Research, Review, Automatic trading or Delegated strategy management for each in-app request. Research is enforced read-only; automatic modes need the saved account grant. Only an explicit management grant lets the agent change supported strategy settings without another confirmation. Production also requires an armed live policy.
 
 Use **Operate with agent** on a copied strategy to select that exact policy, or restrict an MCP connection to it during review. A stale selection stops. Pick a preset or customize supported typed settings; the agent reads saved strategy status and uses the same runner as the app. The strategy schedule has its own Research, Review, Trade or Manage choice. Research may collect free source evidence but cannot create financial orders. Review proposals from deterministic schedules appear in Routines/Inbox. Virtual Kalshi simulation has a separate reviewed strategy grant and no broker authority; its active level and expiry also bound accountless app/MCP requests.
 
@@ -52,7 +52,7 @@ Stop and check the account’s records. Do not click again, create a replacement
 
 ## Automatic actions and notices
 
-Automatic actions show their retained result in My AI and Inbox; they do not ask for another confirmation. A working order awaits fills; a venue-reported fill can still await account reconciliation. A saved strategy is a configuration change, and an unknown outcome needs reconciliation. Review mode keeps its confirmation card. Expired proposals cannot be confirmed.
+Automatic actions show their retained result in the AI assistant and Inbox; they do not ask for another confirmation. A working order awaits fills; a venue-reported fill can still await account reconciliation. A saved strategy is a configuration change, and an unknown outcome needs reconciliation. Review mode keeps its confirmation card. Expired proposals cannot be confirmed.
 
 If the app stops before a notice is sent, the scheduler can recover the recorded notice without repeating the action. An interrupted request that never reached admission is reported when its proposal expires. Phone delivery still depends on configured alerts; an Inbox record does not prove delivery.
 

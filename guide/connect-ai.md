@@ -36,9 +36,9 @@ Install and open Ollama from its [official download](https://ollama.com/download
 
 ## Use the connection
 
-My AI and AI routines use the reviewed client assistant route. For an unsaved task, the app prefers a tested Claude Code connection, then tested Codex, then tested Ollama. Tested API connections with explicitly saved model prices and positive spending caps may follow. These unsaved defaults keep paid spending off until you enable it for that task. A saved route keeps its own selection. These defaults do not bypass budgets, overflow acknowledgement or the selected account and autonomy grant.
+The AI assistant and AI routines use the reviewed client assistant route. For an unsaved task, the app prefers a tested Claude Code connection, then tested Codex, then tested Ollama. Tested API connections with explicitly saved model prices and positive spending caps may follow. These unsaved defaults keep paid spending off until you enable it for that task. A saved route keeps its own selection. These defaults do not bypass budgets, overflow acknowledgement or the selected account and autonomy grant.
 
-Start with a sourced question in [My AI](trading-with-ai.md), then try a propose-only routine. Prediction calculators and the trade time machine use deterministic calculations and do not require AI inference. An external AI app needs its own [MCP approval](mcp-setup.md); signing into a CLI for the built-in assistant does not approve an MCP connection.
+Start with a sourced question in [AI assistant](trading-with-ai.md), then try a propose-only routine. Prediction calculators and the trade time machine use deterministic calculations and do not require AI inference. An external AI app needs its own [MCP approval](mcp-setup.md); signing into a CLI for the built-in assistant does not approve an MCP connection.
 
 Check the saved connection test and a separate sourced inference result for your own installation. A configuration guide or successful sign-in alone does not establish inference acceptance or available quota.
 

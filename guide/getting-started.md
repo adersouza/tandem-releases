@@ -6,10 +6,11 @@ Tandem keeps your desk on your Mac. Start with paper trading or research. Real-m
 
 ## Install and open
 
-1. Download the release supplied by your desk administrator. Open the disk image or unzip the download, then follow its installer instructions.
-2. In Finder, find Tandem. Control-click or right-click it, choose Open, then choose Open again if macOS asks. Only open a download whose source you trust.
-3. If macOS blocks it, open System Settings, then Privacy & Security. Review the app name before choosing Open Anyway. If that option is unavailable, ask your administrator for a compatible release.
-4. Open the app through its launcher. Keep the app running while using your AI connection. Opening an old browser bookmark may give you an expired session.
+1. Open the Tandem disk image (`Tandem-x.y.z.dmg`) from the download page.
+2. Drag Tandem to Applications.
+3. Open Tandem from Applications. It is signed and notarized, so macOS opens it without extra steps.
+
+Tandem then lives in the menu bar. Closing the window keeps it running; use the menu bar icon to open the desk again. To uninstall, see [Remove Tandem](remove-tandem.md).
 
 ## First run
 
@@ -25,7 +26,7 @@ A step the desk could not read shows Not read. Each step has Copy prompt, a page
 
 ## Choose your next task
 
-- Use [My AI](trading-with-ai.md) for sourced answers, confirm cards, scheduled routines and trade review. A tested AI connection and reviewed route are needed for inference.
+- Use the [AI assistant](trading-with-ai.md) for sourced answers, confirm cards, scheduled routines and trade review. A tested AI connection and reviewed route are needed for inference.
 - Connect an external AI app with [MCP setup](mcp-setup.md). Its requests use the same desk tools under the Research, Review, Trade or Manage scope you select; automatic modes still require a matching saved account grant.
 - Open [Markets](markets.md) for quotes, order tickets and prediction research: spreads, fair value, weather edge and wallet analysis.
 - Open [Presets](presets-and-traders.md) for disabled paper copies, smart-money verdicts, followed lists, consensus and exit alerts.

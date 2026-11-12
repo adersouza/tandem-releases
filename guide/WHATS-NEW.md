@@ -2,6 +2,19 @@
 
 The newest version is first. Tandem shows this once after each update.
 
+## 1.0.5 - November 2026
+
+- Every page lists only the accounts you connected.
+- When an order is held or refused, the desk says why in a plain sentence.
+- If the Mac was asleep at 4:15 pm, the daily account record is taken when it wakes, marked as late.
+- If the desk stops while Tandem is open, the menu bar says Desk stopped and offers Restart desk.
+- If Tandem cannot copy your data before an update, it does not start and says what to do. Nothing is changed.
+- A Webull account connected for practice shows Done (paper) in setup while live waits for Webull's approval.
+- Routines show plain names, and the monthly venue checks say they are checked daily and run once a month.
+- The guides match the app, and a new Remove Tandem guide is in Help.
+- Phone alerts use the help contact as their sender contact.
+- The app is smaller: research parts you never use are no longer included.
+
 ## 1.0.4 - November 2026
 
 - Settings is one page with one menu on the left.
