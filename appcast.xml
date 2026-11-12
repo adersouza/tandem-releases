@@ -3,6 +3,15 @@
   <channel>
     <title>Tandem</title>
     <item>
+      <title>Tandem 1.0.6</title>
+      <pubDate>Thu, 12 Nov 2026 04:57:09 +0000</pubDate>
+      <sparkle:version>3228</sparkle:version>
+      <sparkle:shortVersionString>1.0.6</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Setup ends with a starting plan. Limit presets on the Limits step. A Fund your accounts guide. Viewing: Practice | Real. One-line Desk health.</p>]]></description>
+      <enclosure url="https://github.com/adersouza/tandem-releases/releases/download/v1.0.6/Tandem-1.0.6.dmg" length="181851939" type="application/octet-stream" sparkle:edSignature="5OKwveTXPOAhTSQbvOpMXcf9hFftnaJGkWR4lGhoeLNm7X4JTvh7VobL+mKp9igU0/lKQJ+AW6oPSW4jiVGrAw=="/>
+    </item>
+    <item>
       <title>Tandem 1.0.5</title>
       <pubDate>Thu, 12 Nov 2026 03:11:53 +0000</pubDate>
       <sparkle:version>3221</sparkle:version>

@@ -2,6 +2,15 @@
 
 The newest version is first. Tandem shows this once after each update.
 
+## 1.0.6 - November 2026
+
+- Setup ends with Choose a starting plan: three templates, each with what it does, its evidence label and its limits. Nothing starts until you confirm, and Decide later is fine.
+- The Limits step has Cautious, Balanced and Wide presets that fill the per-order cap, the daily loss limit and the crypto cap. You can change every number.
+- A new Fund your accounts guide explains how to add money at each venue. Tandem never moves money.
+- The top bar says Viewing: Practice | Real. With no real-money account, the Real view says Real money is off and links to the Review step.
+- The amber strip across the top is gone. The view shows once, in the top bar.
+- Desk health is one line, such as Desk running · checked 2 min ago, with any problem in plain words.
+
 ## 1.0.5 - November 2026
 
 - Every page lists only the accounts you connected.

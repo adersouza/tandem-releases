@@ -8,7 +8,7 @@ Open Tandem. Read the short terms, then press Accept terms. If you closed them, 
 
 ## 2. Connect your accounts
 
-Open Settings, then Set up your desk. It is one checklist: accept the terms, connect your AI app, then each venue, then Limits, Phone alerts, Practice week and Test an account, in that order. A step opens only when the desk has checked the one before it. Mark a venue you do not use as Not using. An AI app is optional: if you don't use one, press Skip, no AI app and do each step yourself. Each step has Copy prompt for your AI app and Do it yourself.
+Open Settings, then Set up your desk. It is one checklist: accept the terms, connect your AI app, then each venue, then Limits, Phone alerts, Practice week and Test an account, in that order. The last step, Choose a starting plan, is optional. A step opens only when the desk has checked the one before it. Mark a venue you do not use as Not using. An AI app is optional: if you don't use one, press Skip, no AI app and do each step yourself. Each step has Copy prompt for your AI app and Do it yourself.
 
 - **Kalshi:** press Generate a key on this Mac. The desk keeps the private half in your Keychain and shows you the public key. Paste it on Kalshi's API Keys page with read and trade access, then paste the Key ID back.
 - **Webull:** apply for the Trading API on Webull's site (about 1 to 2 business days). When it is approved, press Generate Key on Webull, Copy, then Paste from clipboard in the desk. Approve the one-time code in the Webull app.
@@ -20,7 +20,7 @@ Each venue turns green after Test connection passes.
 
 ## 3. Limits
 
-Set the limits for each account on Accounts. The crypto cap is in Settings, Trading safety. Your AI can propose these; nothing saves until you confirm.
+On the Limits step, pick Cautious, Balanced or Wide for a practice account. Each fills the per-order cap, the daily loss limit and the crypto cap from the account's value; change any number, then Review limits and Confirm limits. More limits are on Accounts, and the crypto cap is also in Settings, Trading safety. Your AI can propose these; nothing saves until you confirm.
 
 ## 4. Phone alerts
 
@@ -42,6 +42,14 @@ Open the account check step, choose your account and press Check selected accoun
 - In System Settings, Energy, turn on "Start up automatically after a power failure".
 - A small UPS (battery backup) helps ride out short outages.
 - After any restart, log in, then check that the Tandem icon is in the menu bar.
+
+## 7. Choose a starting plan (optional)
+
+Pick Core only, Core plus followed leaders in practice, or Core plus a crypto sleeve. Each shows what it does, its evidence label from past tests and its limits. Review plan, then Confirm plan copies the strategies into My strategies, turned off; nothing trades until you turn one on in Strategies. Decide later is fine.
+
+## Adding money
+
+Tandem never moves money. When you're ready for real money, see [Fund your accounts](fund-your-accounts.md).
 
 ## If something looks wrong
 
