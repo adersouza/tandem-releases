@@ -2,6 +2,19 @@
 
 The newest version is first. Tandem shows this once after each update.
 
+## 1.0.7 - November 2026
+
+- A new ring logo, startup screen and a tighter sidebar.
+- Overview shows what changed since you last looked: trades filled, held and skipped, alerts and the value change.
+- A weekly summary arrives as a phone alert. Monthly statement PDFs are in Settings, Statements.
+- Take a tour with sample data from an empty Overview. Nothing in the tour is real or saved.
+- Trading words have short definitions. Point at a dotted word to read it.
+- An optional monthly reminder to add money to your accounts, in Settings, Alerts. Tandem never moves money.
+- Setup has a step for Tandem on your iPhone's Home Screen, and the phone shows a clear screen when offline.
+- A welcome screen, a market-closed line on Overview and a card when your practice week is done.
+- Get help in Settings, Help has diagnostics you can copy for support.
+- The Kalshi demo check finds a usable practice market more reliably.
+
 ## 1.0.6 - November 2026
 
 - Setup ends with Choose a starting plan: three templates, each with what it does, its evidence label and its limits. Nothing starts until you confirm, and Decide later is fine.
