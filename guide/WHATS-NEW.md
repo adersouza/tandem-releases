@@ -2,6 +2,15 @@
 
 The newest version is first. Tandem shows this once after each update.
 
+## 1.0.8 - November 2026
+
+- One app for everyone: no hidden Advanced section and no separate edition.
+- Setup shows every limit change before you confirm, and it can only lower the crypto cap.
+- Pages open on a fresh install before any data has been saved.
+- Phone alerts say so plainly when the Mac's Keychain can't store the alert key.
+- The venue practice checks have clearer names: Kalshi and Webull practice check, every 30 days.
+- Real-money order checks for Kalshi and Polymarket US match each venue's current documentation.
+
 ## 1.0.7 - November 2026
 
 - A new ring logo, startup screen and a tighter sidebar.

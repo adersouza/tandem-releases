@@ -41,6 +41,7 @@ Open the account check step, choose your account and press Check selected accoun
 - Start at login and keep-awake are on by default. You can change both in Settings, This Mac.
 - In System Settings, Energy, turn on "Start up automatically after a power failure".
 - A small UPS (battery backup) helps ride out short outages.
+- With FileVault on, a restart stops at the login screen. Tandem can't start until you log in.
 - After any restart, log in, then check that the Tandem icon is in the menu bar.
 
 ## 7. Choose a starting plan (optional)
