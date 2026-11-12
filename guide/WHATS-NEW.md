@@ -2,6 +2,19 @@
 
 The newest version is first. Tandem shows this once after each update.
 
+## 1.0.4 - November 2026
+
+- Settings is one page with one menu on the left.
+- Adding an account starts with four venue cards; you choose practice or real in the same steps.
+- A short terms screen shows once. After that, one slim line reminds you until you accept.
+- Presets open as a catalog of cards.
+- The AI assistant page is the chat, with the account chosen next to the message box.
+- Webull crypto is found on your saved Webull connection.
+- Your return no longer goes blank after the Mac was off for a few days. It counts across the gap and says how many days were not recorded.
+- A monthly statement starts at the last close before the 1st of its month.
+- The tax export lists crypto as crypto, keeps its decimals, and does not run the wash-sale estimate on it.
+- Settings, About lists one notice for the dashboard's open-source libraries and says where the Python licences are.
+
 ## 1.0.3 - November 2026
 
 - A Practice | Real switch at the top shows practice accounts or real-money accounts, never mixed. Practice shows an amber strip on every page. Switching only changes what you see.

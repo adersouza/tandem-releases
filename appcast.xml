@@ -3,6 +3,24 @@
   <channel>
     <title>Tandem</title>
     <item>
+      <title>Tandem 1.0.4</title>
+      <pubDate>Thu, 12 Nov 2026 00:55:40 +0000</pubDate>
+      <sparkle:version>3196</sparkle:version>
+      <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>- Settings is one page with one menu on the left.
+- Adding an account starts with four venue cards; you choose practice or real in the same steps.
+- A short terms screen shows once. After that, one slim line reminds you until you accept.
+- Presets open as a catalog of cards.
+- The AI assistant page is the chat, with the account chosen next to the message box.
+- Webull crypto is found on your saved Webull connection.
+- Your return no longer goes blank after the Mac was off for a few days. It counts across the gap and says how many days were not recorded.
+- A monthly statement starts at the last close before the 1st of its month.
+- The tax export lists crypto as crypto, keeps its decimals, and does not run the wash-sale estimate on it.
+- Settings, About lists one notice for the dashboard&#x27;s open-source libraries and says where the Python licences are.</p>]]></description>
+      <enclosure url="https://github.com/adersouza/tandem-releases/releases/download/v1.0.4/Tandem-1.0.4.dmg" length="181918832" type="application/octet-stream" sparkle:edSignature="iqCetmB2DzJ4UKWxPxlnY8d3Q6amk6BIX+0N9s6iIjxUuKKEF7XdGyVRePPnZjZ3MmRa/A6RVmw/xufI2dVwDQ=="/>
+    </item>
+    <item>
       <title>Tandem 1.0.3</title>
       <pubDate>Wed, 11 Nov 2026 23:47:00 +0000</pubDate>
       <sparkle:version>3169</sparkle:version>
