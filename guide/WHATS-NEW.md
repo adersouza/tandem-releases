@@ -2,6 +2,22 @@
 
 The newest version is first. Tandem shows this once after each update.
 
+## 1.0.11 - November 2026
+
+- World Monitor is in the sidebar on every desk: recent earthquakes and the news sources it follows, from public data, refreshed when you open it.
+- Your AI can read World Monitor too: ask it about recent earthquakes or what the news sources are reporting.
+- Overview's value, chart, Put in and Made now count the same accounts, and name any left out.
+- Copying a preset keeps its limits within your account's own limits.
+- Presets and starting plans list only what your connected accounts can trade.
+- The practice week reads Done only after its seven days, and ends when you turn on real money.
+- Not using and Decide later on setup are saved on the desk, so every browser sees them.
+- The terms show once, and Not now is remembered.
+- Setup, Accounts & keys and Strategies show plain names, not internal ids.
+- Strategies shows research cards only for research that ran on this desk, and keeps a card whose read failed.
+- A Kalshi busy answer during Test connection says to try again in a minute.
+- Demo keys made but never saved are deleted when the desk starts.
+- Background data updates work again in the installed app.
+
 ## 1.0.10 - November 2026
 
 - Accounts shows each account's AI mode, its recent orders and money in and out.
