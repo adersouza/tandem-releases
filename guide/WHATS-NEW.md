@@ -2,6 +2,22 @@
 
 The newest version is first. Tandem shows this once after each update.
 
+## 1.0.12 - November 2026
+
+- Every page has a new, calmer layout.
+- Every order, AI proposal and access renewal is confirmed in one Review sheet, showing your account before and after.
+- Ask AI is a bar at the bottom of each page. It suggests; you confirm.
+- Your phone rings less: no alerts for recoveries or brief order checks, and at most 4 routine alerts an hour.
+- Tandem is smaller: the download is about 40 MB lighter.
+- Orders to review, the breaker and approvals always come through, whatever the hourly limit.
+- After an emergency stop, Turn new trades back on resumes only what the stop stopped.
+- Emergency stop results read in words, such as "SPY: closed".
+- A cancelled order's receipt says so, and a refused cancel says nothing was sent.
+- When Webull is busy, Tandem says nothing was sent and to try again in a minute.
+- A routine that fails once tries again quietly; your phone rings if it fails twice in a row.
+- Markets shows the Prediction and Crypto research tabs only on desks that run research.
+- The assistant and setup screens name accounts and strategies plainly, not by internal ids.
+
 ## 1.0.11 - November 2026
 
 - World Monitor is in the sidebar on every desk: recent earthquakes and the news sources it follows, from public data, refreshed when you open it.

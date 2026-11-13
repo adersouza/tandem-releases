@@ -16,7 +16,7 @@ In Settings, Trading, select the exact account. Review instruments, maximum orde
 
 The desk checks limits again before sending. Unknown balances, exposure, prices or unchecked account records can block new trades. Market orders may be unavailable when the venue cannot enforce a price/notional bound.
 
-Two optional limits are off unless you set them. `max_order_equity_pct` caps one opening order's notional at that percent (above 0, at most 100) of the account's current sourced equity; unknown, stale or multi-currency equity holds the order. `max_event_group_notional` caps open plus pending notional, in USD, across contracts of one venue-sourced prediction event (for example several strikes of one Kalshi event); if the venue does not report an instrument's event, the opening holds. Cross-venue events are not combined. Neither limit ever blocks a close, reduction or cancellation. The settings form does not show them yet; they can be set through the policy API or requested by an agent for your review.
+Two optional limits are off unless you ask for them. One caps a single new order at a percent of the account's value; if the desk can't read that value, the order waits. The other caps how much you have open on one prediction event, such as several strikes of one Kalshi event; if the venue doesn't say which event a contract belongs to, the order waits. Neither limit ever blocks closing, reducing or cancelling. The settings form doesn't show them yet: ask the assistant to propose one, then confirm it in the desk.
 
 Arming does not guarantee that a particular operation is supported or permitted. Limits for one account do not apply to another. Lowering limits, expiry, a stop or changing credentials can invalidate authority.
 

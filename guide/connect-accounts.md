@@ -14,7 +14,7 @@ read it, and opens only after the steps before it. Venues you do not use can be 
 right page, and **Do it yourself**. Paste a prompt into an AI app that
 can use your browser. Every prompt tells the AI never to handle a password, code, secret or private
 key and to stop and ask; for Webull it stops before Generate Key so you copy the secret yourself and
-use **Paste from clipboard**. Prompts are versioned in `frontend/src/lib/setup-prompts.ts`.
+use **Paste from clipboard**.
 
 ## Alpaca paper
 
@@ -51,7 +51,7 @@ For a real Kalshi account, use that account's Profile Settings, API Keys and pro
 
 ## Venue acceptance
 
-Once a month the desk proves each demo/sandbox venue end to end: it reads the account, previews, places one limit order priced so it cannot fill (Kalshi demo: 1 contract bid at 1 cent; Webull sandbox: 1 SPY share bid at $1, market hours), cancels it and reconciles both through its order owner. A passing run marks those capabilities **observed** with the date; after 45 days they show amber until the next run. To run one now on the Mac: `scripts/venue-acceptance --mode kalshi_demo` or `--mode webull_sandbox`. Polymarket US has no sandbox and is real money, so the desk never runs it on its own.
+Once a month the desk proves each demo/sandbox venue end to end: it reads the account, previews, places one limit order priced so it cannot fill (Kalshi demo: 1 contract bid at 1 cent; Webull sandbox: 1 SPY share bid at $1, market hours), cancels it and reconciles both through its order owner. A passing run marks those capabilities **observed** with the date; after 45 days they show amber until the next run. To run one now, open Routines, find Kalshi practice check or Webull practice check, and choose Run now. Polymarket US has no sandbox and is real money, so the desk never runs it on its own.
 
 ## Polymarket US
 

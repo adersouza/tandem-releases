@@ -3,6 +3,27 @@
   <channel>
     <title>Tandem</title>
     <item>
+      <title>Tandem 1.0.12</title>
+      <pubDate>Fri, 13 Nov 2026 18:20:24 +0000</pubDate>
+      <sparkle:version>3512</sparkle:version>
+      <sparkle:shortVersionString>1.0.12</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>- Every page has a new, calmer layout.
+- Every order, AI proposal and access renewal is confirmed in one Review sheet, showing your account before and after.
+- Ask AI is a bar at the bottom of each page. It suggests; you confirm.
+- Your phone rings less: no alerts for recoveries or brief order checks, and at most 4 routine alerts an hour.
+- Tandem is smaller: the download is about 40 MB lighter.
+- Orders to review, the breaker and approvals always come through, whatever the hourly limit.
+- After an emergency stop, Turn new trades back on resumes only what the stop stopped.
+- Emergency stop results read in words, such as &quot;SPY: closed&quot;.
+- A cancelled order&#x27;s receipt says so, and a refused cancel says nothing was sent.
+- When Webull is busy, Tandem says nothing was sent and to try again in a minute.
+- A routine that fails once tries again quietly; your phone rings if it fails twice in a row.
+- Markets shows the Prediction and Crypto research tabs only on desks that run research.
+- The assistant and setup screens name accounts and strategies plainly, not by internal ids.</p>]]></description>
+      <enclosure url="https://github.com/adersouza/tandem-releases/releases/download/v1.0.12/Tandem-1.0.12.dmg" length="141941473" type="application/octet-stream" sparkle:edSignature="fcMin7MT3+YYL42ah91wJruaeGAG6944atsnJNqC18DWpBEjJ06gaHKV7J2y3xHdAfb+imZfe4PXL08q9whaBA=="/>
+    </item>
+    <item>
       <title>Tandem 1.0.11</title>
       <pubDate>Fri, 13 Nov 2026 00:43:41 +0000</pubDate>
       <sparkle:version>3378</sparkle:version>
