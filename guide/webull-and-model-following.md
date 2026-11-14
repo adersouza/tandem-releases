@@ -5,7 +5,7 @@ Webull is an optional connection. No Webull account, key or new trading permissi
 ## Connect Webull paper
 
 1. Obtain sandbox access through the [official Webull OpenAPI application process](https://developer.webull.com/apis/docs/authentication/IndividualApplicationAPI/). Use sandbox App Key and App Secret, not your brokerage password or production credentials.
-2. Open Settings → Accounts & keys → Webull paper. Save the App Key and App Secret (use **Paste from clipboard** so they go straight to the Keychain). Leave the access token blank: sandbox tokens are valid without an SMS code. The desk never automates a password login.
+2. Open **Settings → Accounts & keys → Webull → Account type → Practice**. Save the App Key and App Secret (use **Paste from clipboard** so they go straight to the Keychain). Leave the access token blank: sandbox tokens are valid without an SMS code. The desk never automates a password login.
 3. Save tests only account discovery. Select the discovered individual cash paper account and inspect its account records. Failed or missing reads remain unknown.
 4. Review that account's paper limits and explicit agent permission before enabling a strategy. An existing Alpaca permission grants no Webull access. This adapter uses the explicitly selected **since first observation** paper loss window; an unsupported calendar-day loss window holds orders.
 
@@ -19,7 +19,7 @@ Keep an existing Alpaca paper connection for free IEX quotes, daily history and 
 
 Presets includes **Actively Managed by InTheMoney**, **The Grok Portfolio**, **Wolff’s Flagship Fund**, **Pelosi Tracker+**, **Point 72**, **Inverse Cramer**, **Claude Portfolio** and **GPT Portfolio** as empty, disabled model-import templates. [Autopilot's catalog](https://www.joinautopilot.com/landing) supplies their identities, not their current holdings. Your [linked portfolio](https://www.joinautopilot.com/landing/1218/542069) is Actively Managed by InTheMoney.
 
-Copy a template and choose **Import model weights**. Enter the complete weights you are entitled to use, the actual source as-of time, expiry, a source URL without access tokens, and your permission/license reference. Weights below 100% retain cash. An explicitly complete all-cash model can reduce only this strategy's own inventory; it cannot liquidate unrelated holdings.
+Copy a template and choose **Import … model weights** (the button names the model's pilot). Enter the complete weights you are entitled to use, the actual source as-of time, expiry, a source URL without access tokens, and your permission/license reference. Weights below 100% retain cash. An explicitly complete all-cash model can reduce only this strategy's own inventory; it cannot liquidate unrelated holdings.
 
 Autopilot’s [terms, section 2](https://www.joinautopilot.com/terms-and-conditions) require written permission for automated collection. Public availability or an ordinary subscription does not establish that permission. Public-page watchers therefore require an owner-supplied written permission reference before any request, including robots retrieval.
 
@@ -53,7 +53,7 @@ Existing Pelosi/House, Renaissance, Scion, Berkshire and Citadel disclosure trac
 ## Connect Webull live
 
 1. Apply for the **Trading API in production** in Webull's developer portal (My Application). Approval takes about 1 to 2 business days ([Webull FAQ](https://developer.webull.com/apis/docs/faq)). Use the production App Key and App Secret, never your password.
-2. Open Settings → Accounts & keys → **Webull live** and save both with **Paste from clipboard**. The connection test reports `webull_token_missing` until step 3.
+2. Open **Settings → Accounts & keys → Webull → Account type → Real money** and save both with **Paste from clipboard**. The connection test reports `webull_token_missing` until step 3.
 3. Under **Webull live token** choose **Create token**. The desk calls Webull's Create Token API and keeps the token in your Keychain. Webull sends an SMS code: open the Webull app, Menu, Messages, OpenAPI Notifications, Check Now, enter the code and confirm within 5 minutes ([Webull token guide](https://developer.webull.com/apis/docs/authentication/token)). Until then **Needs you** shows **Approve in the Webull app**. Then choose **Check approval** and test the connection again.
 4. The token stays valid until 15 days pass with no API call. The daily account-value record and a daily token check keep it alive. If it lapses or the approval expired, Needs you asks for a new token.
 5. For live quotes, subscribe to **Nasdaq Basic for OpenAPI**, Webull's free Level 1 tier; crypto and event contracts need no subscription ([market data](https://developer.webull.com/apis/docs/market-data-api/overview/)). Until then the desk keeps using the connected Alpaca/IEX feed for stock prices.
@@ -78,11 +78,9 @@ Signals → **Autopilot public research** shows the six requested portfolios. Th
 
 ## Official broker research connections
 
-Before connecting anything, turn on **Show advanced**, then open **Settings → Accounts & keys → Official broker research MCP → Try it without credentials**. Choose a named template, enter invented sample weights as decimal fractions, and run offline practice. It imports the model, customizes/binds/starts a private sample strategy under Manage, simulates partial fills and a lost cancellation response, restarts/reconciles, checks for duplicate submissions and pauses. The result and five latest summaries survive page reloads. Research/Review/Trade/Manage behavior is recorded separately. The practice account, its F position and all prices are synthetic; your connected accounts, mandates and schedules are separate. This does not retrieve real Autopilot holdings or certify Robinhood financial execution.
+Official broker research connections and their offline practice live in an owner-only research area. The client app does not show them.
 
 Your agent can use `broker_practice_run` with `profile_id: "inthemoney-actively-managed"` and `weights: {"SPY":"0.6","TLT":"0.4"}`, then `broker_practice_results` to read the retained result. Any existing Research connection can run this isolated simulation; no broker keys, new financial grant, model call or external request is needed.
-
-Turn on **Show advanced**, then open **Settings → Accounts & keys → Official broker research MCP**. Choose **Review sign-in** to read the exact scope without registering anything; **Start provider sign-in** begins the fixed official OAuth flow. Complete sign-in and consent locally. No Robinhood account is included or created by the desk. These research connections are separate from Webull sandbox execution and cannot place orders through the desk.
 
 Robinhood's provider OAuth permission can include financial tools and brokerage, crypto, banking/card data and personal identifiers. Its Agentic account holds real money, not paper funds. The desk permits reviewed research reads only; private data is withheld from existing external-agent grants. No Robinhood financial adapter or paper mode has been qualified.
 

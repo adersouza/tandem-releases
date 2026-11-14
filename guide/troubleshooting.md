@@ -1,59 +1,139 @@
 # Troubleshooting
 
-## Client session unavailable
+Each problem below says what it means, what to check, what to do, and when to text Emerson. Your AI assistant reads this guide too, so you can also ask it.
 
-Reopen Tandem through its launcher. An old bookmark or a restarted backend can lose the authenticated session. Session-only MCP access may need approval again; remembered access also requires its valid client-specific bearer and unexpired grant. Never paste session tokens into config files.
+Two rules hold for every problem:
 
-## Connection saved but not ready
+- Never paste a key, password, code or private key into a chat, a text or a screenshot.
+- If the desk can't answer at all and you need to act now, sign in to the venue's own app or website and act there.
 
-Save stores and automatically tests a connection. Check the result, then check the discovered account’s records. Check that the provider and environment match the key. Confirm your account has the required entitlement. Do not generate replacements repeatedly; rotation can affect other apps.
+## The desk stopped
 
-## AI sign-in works but the desk says HOLD
+**What it means.** One of two things:
 
-The installed CLI may not meet the desk's isolation/version checks, the model may be unavailable, a quota may be reached, or the route may need review. Read the HOLD reason. Check the sign-in in the official CLI. Do not copy its saved tokens into the desk. Paid fallback is never automatic.
+- **"⚠ Desk stopped"** in the menu bar, or the window says "The desk stopped". The desk program itself isn't running. Nothing new is sent. Orders already at your venues stay there.
+- **"New trades stopped"** in the status bar or on **Accounts**. The desk is running, but someone pressed Stop, or a safety limit stopped new trades. Nothing new opens until you turn trading back on.
 
-## Real money and the first week
+**What to check.**
 
-The practice week never blocks real money. You can turn it on for an account any time through its Review and Confirm steps, and doing so during the week ends the week. If real money will not turn on, the message names the check that held it: the current terms not yet accepted, an expired review, an account that was stopped, or a limit. The Review step's readiness list (practice week, venue confirmed, first real-money fill) is information only and never holds anything. Older desks could show the hold `client_first_week_paper_only`; the desk no longer uses it.
+- The menu bar icon: "⚠ Desk stopped" means the desk program stopped.
+- The **Stop new trades** card on **Accounts**: it shows when trades stopped and why.
 
-## MCP server cannot start
+**What to do.**
 
-Check the displayed launcher path still exists and points to your installed release. Re-copy the snippets after moving/upgrading the app. A missing Python runtime or MCP package requires a repaired release; the launcher does not download dependencies. Keep your other MCP configuration entries when merging.
+- Desk program stopped: click the Tandem icon in the menu bar and choose **Restart desk**. If that doesn't help, choose **Quit Tandem**, then open Tandem again.
+- New trades stopped: read the reason on the card. When you're happy, choose **Turn back on…**, tick the accounts that should trade again, and confirm. Your AI can't do this for you.
 
-## MCP asks for approval again
+**Text Emerson when** the desk stops again after a restart, or you don't understand the reason on the card. First save a diagnostics file: **Settings → Help**, then **Save diagnostics file**.
 
-Check Settings → Set up your desk → Connect your AI app (under Do it yourself) and match the code in the intended AI app. Session-only connections use ephemeral process identity and may need pairing after a process/backend restart, session expiry or logout. Remembered access requires the matching `--client-id`, its Keychain bearer and an unexpired, unrevoked grant; it does not extend account trading permission. If the reviewed request expired, retry discovery, refresh connections and review the new matching code. Keep the same intended recipient, account, mode and lifetime. AI apps can have separate tool-use prompts; those do not expand the desk grant.
+## A venue is disconnected
 
-## Proposal missing or expired
+**What it means.** The desk can't reach one venue (Kalshi, Webull, Polymarket and the others) with the key you saved. Common causes: the internet is down, the venue is down for maintenance, or the key was changed, expired or deleted at the venue. Trades for that venue wait. The other venues keep working.
 
-Open the AI assistant, select the account approved for the connection, and refresh saved requests. Research-only connections have no trading account. An expired proposal needs a fresh review of sourced state; do not reuse a stale price or confirmation.
+**What to check.**
 
-## Order outcome unknown
+- **Settings → Accounts & keys**: the venue's row says whether it is connected.
+- The venue's own app or website: can you sign in, and is the key still listed?
 
-Do not resend or create a substitute intent. Stop new entries if needed. Reconcile orders and positions, and inspect the account at the venue. A timeout, acknowledgement or empty local list does not establish a fill, cancellation or absence of exposure.
+**What to do.**
 
-## Routine saved but no run appears
+1. Wait a few minutes. A short outage fixes itself.
+2. On **Accounts**, press **Check account** for that account.
+3. If it still fails, make a new key at the venue, delete the old one there, and paste the new one in **Settings → Accounts & keys**. Then choose **Save and test connection**. Changing a key turns real money off for that venue's accounts. Turn it back on yourself on **Accounts**.
 
-Keep Tandem running and allow about a minute for its built-in scheduler to check the saved schedule. Check pause state, due time, market-hours restrictions, stops and the intended account. AI-instruction routines need a tested AI route; deterministic allocation routines do not. A separate research supervisor is not required. Inspect run history for HOLD or unknown. An interrupted run is not automatically replayed; do not recreate it to bypass an unresolved claim.
+**Text Emerson when** a fresh key still doesn't connect, or the venue says the account is locked or restricted.
 
-## No consensus or prediction result
+## No alert came today
 
-Congress/13F consensus requires explicit sourced holdings, not just disclosures. Public-wallet coverage can be partial and copy verdicts can legitimately remain on the watchlist. Prediction spreads need reviewed equivalent pairs and fees; weather needs reviewed station rules and a genuine predecision forecast. Check the selected pair or station's retained review and missing-input reasons rather than adding invented values.
+**What it means.** Usually nothing is wrong. Alerts only come when something needs you, so a quiet day is normal. An alert can also be missing because the phone app is muted or logged out, or because the Mac was asleep or off.
 
-## Phone approval or notification did not arrive
+**What to check.**
 
-Telegram connection testing only checks bot identity. Check the exact account's phone settings and keep its panel receiving replies. ntfy uses the configured alert channel separately; inspect its delivery result and check the phone. An Inbox record alone does not prove delivery. Ambiguous delivery is not automatically resent. Expired/replayed approval codes cannot authorize another order. Check sourced order state before preparing any new action.
+- The Mac: is it awake, logged in, and is Tandem open?
+- **Settings → Accounts & keys → Phone alerts (ntfy)**: it shows the last test result.
+- Your phone: is the ntfy app subscribed, and are its notifications allowed?
 
-## Protective change refused
+**What to do.**
 
-Open holdings prevent cancellation of their protection, and stops may only tighten. Reconcile the sourced child IDs/revisions and use a supported amendment. Unknown lineage, capability or exposure remains held. Check the exact venue operation and latest sourced result; an earlier refusal is not permission to retry an ambiguous submission.
+- In **Settings → Accounts & keys → Phone alerts (ntfy)**, choose **Save and test connection** to send one test alert. If it arrives, alerts work.
+- If the outside heartbeat is set up, a "down" alert from Healthchecks means the Mac or the desk stopped. Go to the Mac and see "The desk stopped" above.
 
-## Asking for help
+**Text Emerson when** the test alert doesn't arrive after you check the phone app, or the heartbeat keeps saying the desk is down while the Mac is on.
 
-Share the release version, public error category, selected environment and steps taken. Remove account identifiers and private data from screenshots. Never share keys, sign-in tokens, raw private logs or configuration files containing credentials.
+## A number looks wrong
 
-## After an update
+**What it means.** The desk shows what each venue last reported. Numbers can lag: a deposit still clearing, a fill the venue hasn't reported yet, or prices from a closed market. A number can also be missing because a venue didn't answer. The desk shows a missing number as missing. It never makes one up.
 
-- Before the first start of each update, Tandem copies your data to `~/Library/Application Support/Options Desk/data/backups/pre-upgrade-<old version>-<time>/`. It keeps the newest three copies.
-- If Tandem says it could not copy your data before starting an update, nothing was changed. Free some disk space and open Tandem again.
-- If an update ever looks wrong, send the Help contact a diagnostics file before you change anything; the pre-update copy lets them put your data back.
+**What to check.**
+
+- How old the number is. Pages show when they last refreshed.
+- The same number in the venue's own app. The venue's number is the true one.
+
+**What to do.**
+
+1. On **Accounts**, press **Check account** to read the venue again.
+2. Wait a few minutes after a deposit, a fill or the market open.
+3. If the venue's app and the desk still disagree, trust the venue. Stop new trades for now if the wrong number could change what the desk buys.
+
+**Text Emerson when** the desk and the venue still disagree after **Check account**, especially on cash, positions or profit and loss. Send a screenshot with account numbers hidden.
+
+## An order is unknown or refused
+
+**What it means.**
+
+- **Unknown**: the desk sent the order but couldn't confirm what the venue did with it. It may have filled, or it may not exist. The desk never sends it again on its own.
+- **Refused** (or held): the desk or the venue said no. The desk names the reason, for example a limit, a closed market, not enough cash, or real money being off for that account.
+
+**What to check.**
+
+- The order on **Accounts**: its status and its reason.
+- For an unknown order, the venue's own app: look for the order and for any new position.
+
+**What to do.**
+
+- Unknown: don't place the same order again. Press **Check account**. The desk asks the venue and shows what really happened. Stop new trades first if you're worried.
+- Refused: read the reason. Ask your AI to explain it. It can look up why the desk held the order. Change the limit or setting only if you agree with the change.
+
+**Text Emerson when** an order stays unknown after **Check account**, or the venue shows a trade the desk doesn't.
+
+## An update failed
+
+**What it means.** Tandem couldn't download or install a new version, or it couldn't start after the update. Before each update starts, Tandem copies your data, so nothing is lost.
+
+**What to check.**
+
+- The message Tandem showed. "Could not copy your data before starting an update" means the Mac is low on disk space. Nothing was changed.
+- **Settings → Appearance → About** shows the version that's running.
+
+**What to do.**
+
+1. Free some disk space if the message asked for it.
+2. Quit Tandem and open it again.
+3. Choose **Check for Updates…** in the Tandem menu to try again.
+
+**Text Emerson when** Tandem won't start after an update, or the same update fails twice. Don't delete or move anything in the Tandem data folder.
+
+## Phone pairing expired
+
+**What it means.** A paired phone stays paired for 30 days. After that, opening the desk on the phone shows the pairing page instead of the desk. Your Mac and your trades aren't affected.
+
+**What to check.** On the Mac, **Settings → Phone → Phone access** lists the paired phones.
+
+**What to do.**
+
+1. On the Mac, open **Settings → Phone → Phone access** and choose **Show pairing code**.
+2. On the phone, open the pairing page and type the code. The code works once and expires in a few minutes, so do it right away.
+
+**Text Emerson when** the pairing page doesn't open on the phone, or a fresh code is refused.
+
+## Your AI app asks to connect again
+
+Open **Settings → AI → Connect your AI app** and check that the code matches the one in your AI app before you approve. A connection you chose to remember lasts until it expires or you revoke it. Connecting never gives the AI more trading permission than you chose.
+
+## A routine didn't run
+
+Keep the Mac awake and Tandem open, and allow about a minute after the scheduled time. On **Routines**, check that the routine isn't paused, that its account isn't stopped, and that the market was open if the routine needs it. Its history shows the reason for any skipped run. Don't make a copy of the routine to force a run.
+
+## Texting Emerson
+
+Say what you were doing, what you saw, and the time. Attach the diagnostics file from **Settings → Help → Save diagnostics file**. Hide account numbers in screenshots. Never send keys, passwords, codes or config files.

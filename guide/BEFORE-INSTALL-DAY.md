@@ -21,3 +21,5 @@ Install the free ntfy app from the App Store. The desk uses it to send alerts to
 ## On install day
 
 Download Tandem from the page you were sent. Open the file, drag Tandem into Applications and open it. Then follow the [quick start](quick-start.md).
+
+Before Emerson leaves, three things are checked with you: Tandem starts at login, the outside heartbeat is turned on, and one heartbeat ping has arrived.

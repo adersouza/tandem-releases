@@ -8,7 +8,7 @@ Open Tandem. Read the short terms, then press Accept terms. If you closed them, 
 
 ## 2. Connect your accounts
 
-Open Settings, then Set up your desk. It is one checklist: accept the terms, connect your AI app, then each venue, then Limits, Phone alerts, Practice week and Test an account, in that order. The last step, Choose a starting plan, is optional. A step opens only when the desk has checked the one before it. Mark a venue you do not use as Not using. An AI app is optional: if you don't use one, press Skip, no AI app and do each step yourself. Each step has Copy prompt for your AI app and Do it yourself.
+Open **Settings → Setup**. It is one checklist: accept the terms, connect your AI app, then each venue, then **Limits and goal**, Phone alerts, Practice week and **Test an account and check its records**, in that order. The last step, Choose a starting plan, is optional. A step opens only when the desk has checked the one before it. Mark a venue you do not use as Not using. An AI app is optional: if you don't use one, press Skip, no AI app and do each step yourself. Each step has Copy prompt for your AI app and Do it yourself.
 
 - **Kalshi:** press Generate a key on this Mac. The desk keeps the private half in your Keychain and shows you the public key. Paste it on Kalshi's API Keys page with read and trade access, then paste the Key ID back.
 - **Webull:** apply for the Trading API on Webull's site (about 1 to 2 business days). When it is approved, press Generate Key on Webull, Copy, then Paste from clipboard in the desk. Approve the one-time code in the Webull app.
@@ -16,11 +16,11 @@ Open Settings, then Set up your desk. It is one checklist: accept the terms, con
 
 Paste from clipboard saves the value straight to your Keychain and clears the clipboard. Never paste a key into a chat or an email.
 
-Each venue turns green after Test connection passes.
+Each venue turns green after **Save and test connection** passes.
 
 ## 3. Limits
 
-On the Limits step, pick Cautious, Balanced or Wide for a practice account. Each fills the per-order cap, the daily loss limit and the crypto cap from the account's value; change any number, then Review limits and Confirm limits. More limits are on Accounts, and the crypto cap is also in Settings, Trading safety. Your AI can propose these; nothing saves until you confirm.
+On the **Limits and goal** step, pick Cautious, Balanced or Wide for a practice account. Each fills the per-order cap, the daily loss limit and the crypto cap from the account's value; change any number, then Review limits and Confirm limits. More limits are on Accounts, and the crypto cap is also in Settings, Trading safety. Your AI can propose these; nothing saves until you confirm.
 
 ## 4. Phone alerts
 
@@ -34,7 +34,7 @@ If real money was already on before this version, nothing changes and nothing is
 
 ## 6. Test an account
 
-Open the account check step, choose your account and press Check selected account. Anything the venue did not report stays unknown, never zero.
+Open the **Test an account and check its records** step, choose your account and press Check selected account. Anything the venue did not report stays unknown, never zero.
 
 ## Keep the Mac running
 
@@ -54,4 +54,4 @@ Tandem never moves money. When you're ready for real money, see [Fund your accou
 
 ## If something looks wrong
 
-Press Emergency stop. Then Settings, Diagnostics and family note, Save diagnostics file, and send it to the Help contact shown there.
+On **Accounts**, under **Trading controls**, press **Stop new trades**. Then **Settings → Help → Diagnostics and family note**, **Save diagnostics file**, and send it to the Help contact shown there.

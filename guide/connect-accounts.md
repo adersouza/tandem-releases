@@ -18,36 +18,28 @@ use **Paste from clipboard**.
 
 ## Alpaca paper
 
-1. Sign in to the [Alpaca dashboard](https://app.alpaca.markets/). Switch the account view to Paper Trading before finding API Keys.
-2. In the API Keys area, use the paper key ID and secret. If no keys exist, choose the key-generation control. Generating replacements may invalidate keys another app uses; check before doing so.
-3. In desk Settings → Accounts & keys, choose alpaca and paper. Enter a connection ID, api key and api secret, then save.
-4. Save automatically tests the connection. In Setup, Check account records, choose the discovered paper account and check its records.
-
-Paper fills are simulated by Alpaca. Data entitlements and available instruments depend on the account. [Alpaca paper guide](https://docs.alpaca.markets/us/docs/paper-trading).
+Alpaca can no longer be added as a new account. An Alpaca connection you already saved still shows in **Settings → Accounts & keys**, with its account type.
 
 ## Webull paper, then live
 
-Use the official OpenAPI sandbox App Key and App Secret in Settings → Accounts & keys → **Webull paper**. Leave the access token blank: sandbox tokens need no SMS code. Never enter your brokerage password. Paper supports individual cash and margin accounts (cash-only risk) for long-only whole-share stock/ETF limit orders with existing Alpaca/IEX quotes, plus a separate crypto account. See [Webull setup and model following](webull-and-model-following.md).
+Use the official OpenAPI sandbox App Key and App Secret in **Settings → Accounts & keys → Webull → Connect → Account type → Practice**. Leave the access token blank: sandbox tokens need no SMS code. Never enter your brokerage password. Paper supports individual cash and margin accounts (cash-only risk) for long-only whole-share stock/ETF limit orders with existing Alpaca/IEX quotes, plus a separate crypto account. See [Webull setup and model following](webull-and-model-following.md).
 
-**Webull live** uses the production Trading API, which you apply for in Webull's developer portal (about 1 to 2 business days). Save the production App Key and App Secret on the Webull live card with **Paste from clipboard**; the desk saves each straight to your Keychain and clears the clipboard. Then choose **Create token**: Webull texts an SMS code that you approve once in the Webull app within 5 minutes. The token stays valid while the desk calls Webull at least once every 15 days, which the daily account-value record does. If it lapses, **Needs you** says so and you create a new one. Subscribe to Nasdaq Basic for OpenAPI (free Level 1) for live quotes. Live stays paper until the owner arms production.
+Webull real money uses the production Trading API, which you apply for in Webull's developer portal (about 1 to 2 business days). Save the production App Key and App Secret on **Webull** with **Account type → Real money**, using **Paste from clipboard**; the desk saves each straight to your Keychain and clears the clipboard. Then choose **Create token**: Webull texts an SMS code that you approve once in the Webull app within 5 minutes. The token stays valid while the desk calls Webull at least once every 15 days, which the daily account-value record does. If it lapses, **Needs you** says so and you create a new one. Subscribe to Nasdaq Basic for OpenAPI (free Level 1) for live quotes. Live stays paper until the owner arms production.
 
 **Paste from clipboard** works for any secret field on this Mac: copy the value on the provider's page, then press the button next to the field. The value is never shown in the desk, logged or sent back to the page. It does not work from a paired phone.
 
 ## Tradier sandbox
 
-1. Sign in to Tradier. Open [API Settings](https://web.tradier.com/user/api).
-2. Find the Sandbox token, separately from the production token. Find your sandbox account number in the sandbox account view; do not substitute a production account number.
-3. In the desk choose tradier and sandbox. Enter access token and account id, save. The desk automatically tests the connection.
-4. Reconcile the discovered sandbox account. Sandbox data may be delayed. [Tradier getting started](https://docs.tradier.com/docs/getting-started).
+Tradier can no longer be added as a new account. A Tradier connection you already saved still shows in **Settings → Accounts & keys**, with its account type.
 
 ## Kalshi demo
 
-1. In the desk choose kalshi and demo, then **Generate a key on this Mac**. The desk makes an Ed25519 key pair, saves the private key in your Keychain and shows the public key. Copy it.
+1. In **Settings → Accounts & keys**, choose **Connect** on **Kalshi**, set **Account type** to **Practice**, then choose **Generate a key on this Mac**. The desk makes an Ed25519 key pair, saves the private key in your Keychain and shows the public key. Copy it.
 2. Sign in to the [Kalshi demo](https://demo.kalshi.co/), which uses separate credentials from production. Open Profile Settings, then API Keys, and add a key using your own public key. Give it **Read** and **Trade** only, not **Transfers**, and restrict it to one subaccount where Kalshi offers that: such a key reads and trades only that subaccount and cannot transfer funds.
 3. Copy the key ID Kalshi shows and press **Paste from clipboard** next to Key ID. Save. The desk automatically tests the connection; the result repeats the scope notice, because no Kalshi read returns a key's scopes.
 4. A key Kalshi generated for you (Ed25519 or RSA) also works: paste its key ID and private key instead.
 
-For a real Kalshi account, use that account's Profile Settings, API Keys and production environment, and check its account records separately. Saving real credentials leaves real-money mode off. [Kalshi key instructions](https://docs.kalshi.com/getting_started/api_keys), [scopes and subaccounts](https://docs.kalshi.com/getting_started/sub_users_vs_subaccounts.md).
+For a real Kalshi account, use that account's Profile Settings and API Keys, set **Account type** to **Real money** in the desk, and check its account records separately. Saving real credentials leaves real-money mode off. [Kalshi key instructions](https://docs.kalshi.com/getting_started/api_keys), [scopes and subaccounts](https://docs.kalshi.com/getting_started/sub_users_vs_subaccounts.md).
 
 ## Venue acceptance
 
@@ -57,20 +49,18 @@ Once a month the desk proves each demo/sandbox venue end to end: it reads the ac
 
 1. Sign in at the [Polymarket US developer page](https://polymarket.us/developer) with the sign-in method used for your US account. Complete any access or eligibility requirements shown there.
 2. Use the page's API-key creation flow and retain the key ID and private signing key securely. If the page does not offer key creation, contact Polymarket US support; do not use International credentials instead.
-3. In the desk choose polymarket us and production. Enter key id and private key, save. The desk automatically tests the connection.
-4. Reconcile the observed US account. Production here identifies the provider environment; it does not arm trading. There is no desk Polymarket US sandbox choice.
+3. In **Settings → Accounts & keys**, choose **Connect** on **Polymarket US** (it shows **Real money only**). Enter the **Key ID** and **Private signing key**, save. The desk automatically tests the connection.
+4. Reconcile the observed US account. **Real money only** names the account type; it does not arm trading. There is no Polymarket US practice choice.
 
 US and International are separate services. Connecting one does not connect the other. An unavailable capability, missing permission or unknown account coverage remains HOLD even when the key is accepted.
 
 ## Webull paper and official broker research
 
-Webull sandbox stocks/ETFs use the normal desk account, limits and OrderOwner path. Connect with sandbox App Key/Secret in **Settings → Accounts & keys → Webull paper**; an existing Alpaca grant supplies no Webull authority. Keep the existing Alpaca free-data connection for quotes/history. See [Webull setup and supported limits](webull-and-model-following.md).
+Webull sandbox stocks/ETFs use the normal desk account, limits and OrderOwner path. Connect with sandbox App Key/Secret in **Settings → Accounts & keys → Webull → Connect → Account type → Practice**; an existing Alpaca grant supplies no Webull authority. Keep the existing Alpaca free-data connection for quotes/history. See [Webull setup and supported limits](webull-and-model-following.md).
 
-For optional Webull or Robinhood research, turn on **Show advanced**, then open **Settings → Accounts & keys → Official broker research MCP**. Review scope first, then start the provider's own sign-in. This is separate from sandbox account setup and does not enable financial execution. Robinhood requires your own account; no paper mode has been verified. Its provider grant can include trading tools and broad private data even though the desk permits only reviewed reads. See [broker research setup and agent tools](webull-and-model-following.md).
+Official broker research for Webull or Robinhood lives in an owner-only research area. The client app does not show it.
 
 ## After connecting
-
-For implementation review, **Capture tool schemas** in the broker research card saves provider definitions without invoking a tool. **View saved schemas** and its JSON download work locally after disconnect. Missing output schemas and partial discovery stay explicit; this does not enable trading. Review the metadata for private defaults before sharing it.
 
 Review the exact account and environment each time. Keep [paper and live limits](paper-and-limits.md) separate. Rotating or deleting keys can interrupt other apps and disarm desk authority. Reconcile before requesting another action after an interruption.
 

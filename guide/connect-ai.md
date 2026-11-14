@@ -2,27 +2,14 @@
 
 Choose an AI inside the desk for its built-in assistant, or connect an existing AI app using [MCP setup](mcp-setup.md). These are separate connections. Never paste passwords or sign-in tokens into the desk or a chat.
 
-## Your Claude plan through Claude Code
+## Your Claude plan
 
-1. Install the official Claude Code app or CLI using the [Claude Code quickstart](https://code.claude.com/docs/en/quickstart).
-2. Open Terminal, enter `claude`, and follow the sign-in prompt. Choose your Claude subscription account when offered; finish the browser sign-in. If already open, use `/login` to change sign-in.
-3. In Tandem, open Settings → Accounts & keys. Choose Provider: claude cli, Environment: local. Give it a connection ID such as my-claude and save.
-4. Save automatically tests that connection. Check its result. In AI routes, choose the connection/provider and model for the feature you want to use. Review the caps before confirming the route.
+1. In Tandem, open Settings, Accounts & keys, and choose Claude plan via Claude Code.
+2. If Claude Code isn't on this Mac yet, press Install Claude Code. It takes a minute or two.
+3. Press Sign in with Claude and sign in with your Claude plan in the browser. If Claude shows a code, paste it into Tandem and press Send code.
+4. Save. Tandem tests the connection. In AI routes, choose the model for each feature and review the limits before confirming.
 
-Your plan must include Claude Code. Usage limits still apply. Provider-side extra usage can cost money; check your Claude billing settings. A signed-in CLI may still be held if this installed version cannot be safely isolated.
-
-## Your ChatGPT plan through Codex
-
-1. Install the official Codex CLI from the [Codex sign-in guide](https://learn.chatgpt.com/docs/auth).
-2. In Terminal, enter `codex login`. Choose Sign in with ChatGPT when prompted and complete the browser flow with your own account.
-3. In the desk's Settings → Accounts & keys, choose codex cli and local, give it a connection ID and save. The desk automatically tests the connection.
-4. In AI routes, choose the provider/model and review the limits before confirming. Sign-in does not automatically enable a route or approve trading.
-
-Included usage and extra usage depend on your plan. App call limits do not measure activity outside this app. See the provider's billing controls before enabling overflow.
-
-Codex generation is enabled after you explicitly acknowledge possible subscription overflow and enable the task's route. The desk checks the supported CLI version (0.165.0) and ChatGPT login before each request. It runs in an empty temporary workspace with an isolated Codex home that links only the CLI-owned login; native tools, web, MCP and plugins are disabled, with a read-only tool sandbox and no tool network access. The desk does not import your CLI customization or read sign-in tokens.
-
-Each call requests your output-token limit in its prompt, closes stdin, and enforces a deadline and a 250,000-byte stdout bound by killing the process group. Responses reporting more output tokens than requested are withheld with unknown status; their reported usage still counts against the app's budget. Invalid responses and timeouts are never retried, and transport retries are disabled. A missing or incomplete usage report remains unknown. These bounds do not guarantee that generation stops at the requested token count or prevent provider-side overflow charges. The [Codex configuration reference](https://developers.openai.com/codex/config-reference/) and [CLI reference](https://developers.openai.com/codex/cli/reference/) currently document no generation output-token or turn-limit setting, so the desk does not pass an invented config key. A successful sign-in check alone does not establish generation acceptance.
+Your plan must include Claude Code. Usage limits still apply, and extra usage can cost money; check your Claude billing settings.
 
 ## An API key
 
@@ -32,7 +19,7 @@ In Settings → Accounts & keys, select that provider and paste the key only in 
 
 ## Ollama on this Mac
 
-Install and open Ollama from its [official download](https://ollama.com/download). Install a model you can run locally using its [model library](https://ollama.com/library). Turn on Show advanced (the Local AI group is hidden without it), then in Settings → Accounts & keys choose ollama and local, save. The desk automatically tests the connection. Select from the downloaded local models listed in AI routes. Saving pins that model’s digest; a changed or missing digest blocks generation until you save a new selection. Remote Ollama aliases are excluded. If the desk reports HOLD, use the exact endpoint/model supported by your installed release. It will not silently switch to a paid model.
+Install and open Ollama from its [official download](https://ollama.com/download). Install a model you can run locally using its [model library](https://ollama.com/library). In **Settings → Accounts & keys**, open **More connections → Local AI**, choose **Ollama on this Mac** and save. The desk automatically tests the connection. Select from the downloaded local models listed in AI routes. Saving pins that model’s digest; a changed or missing digest blocks generation until you save a new selection. Remote Ollama aliases are excluded. If the desk reports HOLD, use the exact endpoint/model supported by your installed release. It will not silently switch to a paid model.
 
 ## Use the connection
 

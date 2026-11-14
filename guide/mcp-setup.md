@@ -2,8 +2,9 @@
 
 ## One standing mandate, then automatic actions
 
-For a client who wants the agent to build and operate strategies, choose **Manage**
-in the account autonomy form and **Account-wide — existing permissions** when
+For a client who wants the agent to build and operate strategies, choose
+**Strategy management and trading, Alpaca practice only** under **Delegation level
+for this account** and **Account-wide (current permissions)** when
 connecting the AI app. A selected-strategy connection deliberately stays restricted
 to that copy; it cannot create unrelated strategies. Existing remembered connections
 keep their originally approved scope until the client disconnects and pairs again.
@@ -36,13 +37,13 @@ code. Automatic mode retains account, instrument, capability, capital, loss, act
 and expiry ceilings. The client approves a new or expanded mandate once. The agent
 cannot grant itself more authority or arm real-money trading.
 
-MCP lets a local AI app use the same desk tools as the AI assistant. Open Tandem, then Settings → Set up your desk → Connect your AI app (under Do it yourself). Keep the desk running. Copy the config shown there; it contains the actual installed launcher path and no account keys. The bridge launcher is `scripts/desk-mcp`; the generated snippets supply its absolute path and the desk's explicit loopback `--origin`. Do not substitute a checkout path for an installed release.
+MCP lets a local AI app use the same desk tools as the AI assistant. Open Tandem, then **Settings → AI → Connect your AI app**. Keep the desk running. Copy the config shown there; it contains the actual installed launcher path and no account keys. The bridge launcher is `scripts/desk-mcp`; the generated snippets supply its absolute path and the desk's explicit loopback `--origin`. Do not substitute a checkout path for an installed release.
 
 ## Claude Desktop: one-click extension (easiest)
 
-Double-click `options-desk.mcpb` (built with `python packaging/mcpb/pack.py`, which writes `dist/options-desk.mcpb`) and choose Install in Claude Desktop. It runs the installed desk's own bridge, talks only to the desk on 127.0.0.1 and asks for no keys. Its settings form has the desk address (leave the default unless the Connect your AI app panel in Set up your desk shows another port) and an optional bridge path for unusual installs. Then open Tandem, Settings → Set up your desk → Connect your AI app (under Do it yourself), and approve the connection code with the grant you want. The extension remembers its connection in Keychain as `claude-desktop`.
+If you were given the Tandem extension file (`options-desk.mcpb`), double-click it and choose Install in Claude Desktop. Otherwise use the manual config below. It runs the installed desk's own bridge, talks only to the desk on 127.0.0.1 and asks for no keys. Its settings form has the desk address (leave the default unless the **Connect your AI app** panel in **Settings → AI** shows another port) and an optional bridge path for unusual installs. Then open Tandem, **Settings → AI → Connect your AI app**, and approve the connection code with the grant you want. The extension remembers its connection in Keychain as `claude-desktop`.
 
-With a Review grant, an order the AI proposes shows a Confirm or Decline card inside Claude. Confirm runs the desk's own confirm (same checks, same order owner); Decline leaves no order. Apps without that card keep the desk's confirm. If the app accepts the card but never shows it, the request gives up after 4 minutes and nothing is sent. A held request reports the desk's own reason code (for example `client_reconciliation_unknown`), not a generic hold. `desk_status` tells the AI which mode and account its own connection has (`this_connection`), whether first-week practice mode is on and whether phone alerts are set up. When the desk's tool list changes, the bridge tells the app to reload it (`tools/list_changed`), so a new tool appears without reinstalling. Settings › AI privacy and cost › Explain only limits every AI app to reading and explaining, with no balances, positions or orders.
+With a Review grant, an order the AI proposes shows a Confirm or Decline card inside Claude. Confirm runs the desk's own confirm (same checks, same order owner); Decline leaves no order. Apps without that card keep the desk's confirm. If the app accepts the card but never shows it, the request gives up after 4 minutes and nothing is sent. A held request reports the desk's own reason code (for example `client_reconciliation_unknown`), not a generic hold. `desk_status` tells the AI which mode and account its own connection has (`this_connection`), whether first-week practice mode is on and whether phone alerts are set up. When the desk's tool list changes, the bridge tells the app to reload it (`tools/list_changed`), so a new tool appears without reinstalling. **Settings → AI → AI privacy and cost → Explain only: AI apps see no balances or positions** limits every AI app to reading and explaining, with no balances, positions or orders.
 
 The extension also lists the desk guides as resources and three prompts: weekly review, explain this hold, set up a venue. For a new install the AI can call `setup_status`, `next_setup_step` and `verify_connection`; `propose_settings` only creates a change you confirm in the desk.
 
@@ -50,20 +51,16 @@ The extension also lists the desk guides as resources and three prompts: weekly 
 
 Open the Claude menu, Settings, Desktop app, then the Extensions Manage control. Under Local MCP servers choose Edit config. Older versions use Settings, Developer, Edit Config. This opens `claude_desktop_config.json`, normally under `~/Library/Application Support/Claude/` on a Mac. Merge the desk's JSON into your existing `mcpServers` object; keep other servers. Save and fully quit/reopen Claude Desktop. [Official MCP Desktop setup](https://github.com/modelcontextprotocol/docs/blob/main/quickstart/user.mdx).
 
-## Claude Code
+## Developer tools
 
-Copy the `claude mcp add --transport stdio --scope user options-desk -- ...` command from the desk into Terminal. Start Claude Code and use `/mcp` to inspect or reconnect options-desk. [Claude Code MCP instructions](https://code.claude.com/docs/en/mcp).
+Claude Code and Codex users can add the desk with the command shown in Connect your AI app.
 
-## Codex
-
-Merge the displayed `[mcp_servers.options-desk]` section into `~/.codex/config.toml` and restart Codex. Keep existing sections. Alternatively, use the displayed `codex mcp add options-desk -- ...` command.
-
-Hosted web clients cannot launch this local script. Use a client that supports a local STDIO server and keep the desk on loopback. [Official OpenAI MCP setup](https://learn.chatgpt.com/docs/extend/mcp).
+Web versions of AI apps cannot reach the desk on this Mac; use a desktop app.
 
 ## Choose connection authority once
 
-1. Discover desk tools in your AI app, then match its connection code in Settings → Set up your desk → Connect your AI app (under Do it yourself). The code is a comparison label, not a credential. Discovery can wait briefly; actions never automatically retry.
-2. Choose the account and authority: **Research** reads only; **Review** proposes each action; **Trade** executes qualifying orders inside the saved account grant; **Manage** also configures, binds, starts and pauses supported strategies. Automatic modes require the matching enabled account grant. Existing connections keep their original review-only behavior until you choose otherwise.
+1. Discover desk tools in your AI app, then match its connection code in **Settings → AI → Connect your AI app**. The code is a comparison label, not a credential. Discovery can wait briefly; actions never automatically retry.
+2. Choose the account and authority: **Research only** reads only; **Review each action** proposes each action; **Automatic actions within saved limits** executes qualifying orders inside the saved account grant; **Delegated strategy management and automatic actions** also configures, binds, starts and pauses supported strategies. Automatic modes require the matching enabled account grant. Existing connections keep their original review-only behavior until you choose otherwise.
 3. Choose session-only, seven days or thirty days and review the exact account, mode and lifetime before confirming. Account trading caps and expiry remain independent. The agent cannot widen them. You can request a new grant from your agent with `request_autonomy`; the client confirms that initial or expanded grant once.
 4. Use the new client-specific setup snippet for remembered access. `--client-id` gives Claude Desktop, Claude Code and Codex separate bearer identities in macOS Keychain; the server stores only their hashes and grant scope. Without this flag the bridge remains ephemeral and a restarted bridge needs pairing again. First Keychain access may need your local approval.
 5. A remembered grant survives dashboard restarts until its chosen expiry or Disconnect. Session-only access still expires with the dashboard session, at most eight hours. Disconnect revokes remembered access as well. AI apps can have their own trusted-tool prompts; configure those in the AI app rather than treating tools as read-only when they trade.
@@ -101,7 +98,7 @@ assigned to the routine's current account.
 ## Workspace scope
 
 For a new connection, choose a single saved research workspace or **All my research
-workspaces** in Settings → Set up your desk → Connect your AI app (under Do it yourself). All-workspaces scope additionally
+workspaces, including new ones** in **Settings → AI → Connect your AI app**. All-workspaces scope additionally
 permits creating desks. Review the matching code, mode, scope and lifetime before
 connecting. Existing connections keep their original permissions.
 

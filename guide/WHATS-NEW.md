@@ -2,6 +2,20 @@
 
 The newest version is first. Tandem shows this once after each update.
 
+## 1.0.13 - November 2026
+
+- Connect your Claude plan without Terminal: Install Claude Code and Sign in with Claude are in Set up your desk.
+- Company filings wait in your inbox and no longer ring your phone, unless you turn them on.
+- Emergency stop, routines, phone approval and AI settings show names, not internal ids.
+- The assistant reads replies that contain line breaks.
+- The assistant never places real-money orders on its own. It proposes them, and you confirm.
+- A Telegram approval message now shows the order it approves.
+- Your phone can reach the desk only after pairing, even from inside your Tailscale network.
+- The assistant has room for ordinary questions, shows your question beside its reply, and says plainly why when it can't answer.
+- A calmer, plainer desk: practice and real money in the same words everywhere, one-line empty states, neutral colours except for money, and a value chart that shows gain since you started.
+- On a phone: bigger buttons, no zoom when you type, and the stop notice and Ask AI fit the screen.
+- Stop new trades works from a paired phone.
+
 ## 1.0.12 - November 2026
 
 - Every page has a new, calmer layout.

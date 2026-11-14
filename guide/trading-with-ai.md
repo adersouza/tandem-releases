@@ -12,11 +12,11 @@ Ask for a proposed action. Review the account, environment, instruments, quantit
 
 In Review mode, a proposal ID means an action is waiting for your review. In Trade or Manage mode, a proposal wrapper can also contain an automatic execution result: inspect `execution` and its saved receipt. Neither a proposal nor an acknowledgement establishes a fill. Unattempted review proposals expire; the AI cannot confirm its own Review proposal or initial/expanded authority grant.
 
-External AI requests made through MCP appear as saved requests in the AI assistant for the connected account. Use Refresh saved if needed. Their selected connection mode and matching saved account grant determine whether a supported action needs confirmation. Research reads only; Review waits for your confirmation; Trade can execute qualifying orders; Manage can also configure supported strategies. Changing the in-app mode does not upgrade an existing MCP connection.
+External AI requests made through MCP appear as saved requests in the AI assistant for the connected account. Open **History** to find them. Their selected connection mode and matching saved account grant determine whether a supported action needs confirmation. Research reads only; Review waits for your confirmation; Trade can execute qualifying orders; Manage can also configure supported strategies. Changing the in-app mode does not upgrade an existing MCP connection.
 
 ## Routines, signals and copy proposals
 
-Open Routines or ask the assistant to draft a named task. For manual setup, choose the account/source scope, schedule and mode, then review and confirm the schedule. Propose is the default: runs save confirm cards rather than sending trades. Notify is read-only. In Review mode, create, edit, pause/resume and Run now need client confirmation. Manage can perform supported account-scoped controls inside its explicit management grant without another confirmation. Run now still respects market-hours and stop checks. Inspect run history and the inbox for receipts, proposals and missing inputs.
+Open Routines or ask the assistant to draft a named task. For manual setup, choose the account/source scope, schedule and mode, then review and confirm the schedule. **Propose actions for my approval** is the default: runs save confirm cards rather than sending trades. **Tell me what changed** is read-only. In Review mode, create, edit, pause/resume and Run now need client confirmation. Manage can perform supported account-scoped controls inside its explicit management grant without another confirmation. Run now still respects market-hours and stop checks. Inspect run history and the inbox for receipts, proposals and missing inputs.
 
 Signals watches client-permitted public HTTPS feeds/pages or retained Congress/13F research targets. Review the source's access terms when adding a watcher. A changed page or ticker mention is not a purchase signal. There is no qualified inverse-Cramer source. ntfy notifications depend on configured alerts; check the delivery result and your phone separately from the saved Inbox record.
 
@@ -40,7 +40,7 @@ Trade summaries show sourced fills, orders and open positions. Wins/losses and r
 
 ## Autonomy
 
-In the AI assistant, review the account's autonomy policy separately. It narrows allowed capabilities/instruments, order and risk limits, daily action/notional budgets and expiry. It cannot enlarge the account policy. Choose Research, Review, Automatic trading or Delegated strategy management for each in-app request. Research is enforced read-only; automatic modes need the saved account grant. Only an explicit management grant lets the agent change supported strategy settings without another confirmation. Production also requires an armed live policy.
+In the AI assistant, review the account's autonomy policy separately. It narrows allowed capabilities/instruments, order and risk limits, daily action/notional budgets and expiry. It cannot enlarge the account policy. Choose **Research**, **Review**, **Automatic** or **Manage** for each in-app request. Research is enforced read-only; automatic modes need the saved account grant. Only an explicit management grant lets the agent change supported strategy settings without another confirmation. Production also requires an armed live policy.
 
 Use **Operate with agent** on a copied strategy to select that exact policy, or restrict an MCP connection to it during review. A stale selection stops. Pick a preset or customize supported typed settings; the agent reads saved strategy status and uses the same runner as the app. The strategy schedule has its own Research, Review, Trade or Manage choice. Research may collect free source evidence but cannot create financial orders. Review proposals from deterministic schedules appear in Routines/Inbox. Virtual Kalshi simulation has a separate reviewed strategy grant and no broker authority; its active level and expiry also bound accountless app/MCP requests.
 
@@ -65,7 +65,7 @@ share a symbol and period within each group; unlink a panel to keep its own cont
 Move, resize, focus, open and close panels with their labeled controls. Layouts are
 saved on this Mac and restored after restart. Unsupported data coverage stays visible.
 
-Use **Ask my AI about this workspace** to select its nonfinancial scope. Research
+Use **Open workspace agent** to select its nonfinancial scope. Research
 reads; Review prepares changes you confirm; Manage can arrange this desk, save
 options analyses and create, edit or pause its watches without per-edit approval.
 The Trade mode belongs to the separately authorized saved-strategy workflow.

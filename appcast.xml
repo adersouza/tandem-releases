@@ -3,6 +3,25 @@
   <channel>
     <title>Tandem</title>
     <item>
+      <title>Tandem 1.0.13</title>
+      <pubDate>Sat, 14 Nov 2026 06:58:32 +0000</pubDate>
+      <sparkle:version>3736</sparkle:version>
+      <sparkle:shortVersionString>1.0.13</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>- Connect your Claude plan without Terminal: Install Claude Code and Sign in with Claude are in Set up your desk.
+- Company filings wait in your inbox and no longer ring your phone, unless you turn them on.
+- Emergency stop, routines, phone approval and AI settings show names, not internal ids.
+- The assistant reads replies that contain line breaks.
+- The assistant never places real-money orders on its own. It proposes them, and you confirm.
+- A Telegram approval message now shows the order it approves.
+- Your phone can reach the desk only after pairing, even from inside your Tailscale network.
+- The assistant has room for ordinary questions, shows your question beside its reply, and says plainly why when it can&#x27;t answer.
+- A calmer, plainer desk: practice and real money in the same words everywhere, one-line empty states, neutral colours except for money, and a value chart that shows gain since you started.
+- On a phone: bigger buttons, no zoom when you type, and the stop notice and Ask AI fit the screen.
+- Stop new trades works from a paired phone.</p>]]></description>
+      <enclosure url="https://github.com/adersouza/tandem-releases/releases/download/v1.0.13/Tandem-1.0.13.dmg" length="142431398" type="application/octet-stream" sparkle:edSignature="yxET53630a9NHaJABsce9BkZJcoWQhtVV++f7cla1EcMRufiyzCT/LIU5HOtADHyY5M/ZXjHAb4u6VykTLCTCA=="/>
+    </item>
+    <item>
       <title>Tandem 1.0.12</title>
       <pubDate>Fri, 13 Nov 2026 18:20:24 +0000</pubDate>
       <sparkle:version>3512</sparkle:version>

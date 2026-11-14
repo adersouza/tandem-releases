@@ -1,6 +1,6 @@
 # Emergency stop
 
-Open **Accounts**. In the **Stop new trades** card, choose **Stop new trades…**, type a short reason, then press and hold **Stop new trades now** until it finishes. This stops new trades on every account. The card then shows **New trades stopped** with the time and your reason. **Release the stop** in the same card turns trading back on.
+Open **Accounts**. In the **Stop new trades** card, choose **Stop new trades**, type a short reason, then press and hold **Stop new trades now** until it finishes. This stops new trades on every account. The card then shows **New trades stopped** with the time and your reason. **Turn back on…** in the same card opens **Turn new trades back on**, where you turn trading back on.
 
 The stop persists an entry halt. A “requested” message is not proof that the backend saved it. Refresh the account state and verify the saved stop. If the app cannot respond, inspect your account directly at the venue.
 

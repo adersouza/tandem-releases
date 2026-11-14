@@ -1,6 +1,6 @@
 # Markets page
 
-Open Markets in the desk navigation. The default view shows popular stocks/ETFs and open prediction questions. Select Crypto or Options in the asset-class filter to browse those separately. Alpaca assets are filtered to active, tradable instruments and paged locally; Tradier starts with popular symbols because it has no full instrument catalog. Search a company or symbol for more results.
+Open Markets in the desk navigation. It opens on **Overview**. **Browse & trade** shows popular stocks/ETFs and open prediction questions. Choose **crypto** or **option** under **Asset class** to browse those separately. Alpaca assets are filtered to active, tradable instruments and paged locally; Tradier starts with popular symbols because it has no full instrument catalog. Search a company or symbol for more results.
 
 Visible cards refresh quotes in small batches every 30 seconds. Alpaca stock snapshots use IEX; option quotes are indicative. Tradier sandbox quotes are delayed 15 minutes. Source timestamps are separate from fetch times, and old or missing source clocks remain visible. Prediction cards show question titles, sourced YES/NO prices in cents, close dates and volume when available. A missing outcome price is never filled with a calculated complement.
 
@@ -10,7 +10,7 @@ Read the source, observation time, environment and coverage before acting. A dis
 
 ## Ask your AI
 
-Use the market's Ask AI action to pass its instrument identity to the AI assistant. The assistant fetches sourced facts rather than treating market prose as instructions. Select the exact account before requesting an account action.
+Use the market's **Ask my AI** action to pass its instrument identity to the AI assistant. The assistant fetches sourced facts rather than treating market prose as instructions. Select the exact account before requesting an account action.
 
 ## Prepare an order
 
@@ -22,7 +22,7 @@ The same stock symbol appears on one card with a price-source switcher. Each cho
 
 ## Prediction-market research
 
-Open Prediction-market research within Markets. Choose a view, import its JSON source packet and select Evaluate imported inputs. Export the result to retain it; source packets are evaluated in memory. Public collection actions are explicit and bounded. These tools create no account, fills or orders and do not automatically hand a result to a ticket.
+Open **Markets → Browse & trade → Prediction-market research**. Choose a view, import its JSON source packet and select Evaluate imported inputs. Export the result to retain it; source packets are evaluated in memory. Public collection actions are explicit and bounded. These tools create no account, fills or orders and do not automatically hand a result to a ticket.
 
 - Venue spreads compares reviewed Kalshi and Polymarket US equivalents with depth and market-specific fees. Similar question titles are insufficient. Check that the selected pair has a retained review before using it.
 - Options fair value estimates terminal binary threshold/range probabilities from sourced spot, volatility and explicit assumptions. A compatible listed broker vertical is an approximation, not an executable conversion or a calibrated forecast.

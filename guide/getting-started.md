@@ -14,11 +14,11 @@ Tandem then lives in the menu bar. Closing the window keeps it running; use the 
 
 ## First run
 
-Open Settings, then Set up your desk. It is one checklist, and each step opens only when the desk has checked the one before it:
+Open **Settings → Setup**. **Set up your desk** is one checklist, and each step opens only when the desk has checked the one before it:
 
 1. Accept the terms.
 2. Connect your AI app. Under Do it yourself, The desk's own AI (optional) holds the AI provider and the models and usage limits. Do not enable paid overflow unless you want that billing behavior.
-3. Kalshi, Webull and Polymarket US. Connect at least one in paper, sandbox or demo mode where available, and mark the others Not using. A venue is done when its connection test passes.
+3. Kalshi, Webull and Polymarket US. Connect at least one with **Account type → Practice** where available, and mark the others Not using. A venue is done when its connection test passes.
 4. Limits and goal, phone alerts and the practice week.
 5. Test an account and check its records: inspect the connection test, then choose your account and click Check selected account. Any missing balances, orders or positions stay unknown.
 

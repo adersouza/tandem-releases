@@ -4,19 +4,19 @@ Real-money mode starts OFF for each account. Adding a connection, using an AI or
 
 ## Environments
 
-- Paper, sandbox and demo use simulated money where that venue supports them. Their fills and data can differ from a real market.
+- **Practice** uses simulated money where that venue supports it. Its fills and data can differ from a real market.
 - Read-only lets you inspect available sources without sending trades.
-- Production is the provider's real environment. It can be connected for reads while trading remains OFF.
+- **Real money** is the provider's real environment. Polymarket US is **Real money only**. It can be connected for reads while trading remains OFF.
 
 There is no invented Polymarket sandbox. A backtest, fixture or paper gain does not establish live performance.
 
 ## Your account limits
 
-In Settings, Trading, select the exact account. Review instruments, maximum order amount, maximum open risk, daily loss limit, timezone and expiry. The live controls require a separate review and client confirmation. Only you can arm the exact account policy; AI chat and MCP cannot do that.
+In **Accounts → Trading → Permissions**, select the exact account. Review instruments, maximum order amount, maximum open risk, daily loss limit, timezone and expiry. The live controls require a separate review and client confirmation. Only you can arm the exact account policy; AI chat and MCP cannot do that.
 
 The desk checks limits again before sending. Unknown balances, exposure, prices or unchecked account records can block new trades. Market orders may be unavailable when the venue cannot enforce a price/notional bound.
 
-Two optional limits are off unless you ask for them. One caps a single new order at a percent of the account's value; if the desk can't read that value, the order waits. The other caps how much you have open on one prediction event, such as several strikes of one Kalshi event; if the venue doesn't say which event a contract belongs to, the order waits. Neither limit ever blocks closing, reducing or cancelling. The settings form doesn't show them yet: ask the assistant to propose one, then confirm it in the desk.
+Two optional limits are off unless you ask for them. One caps a single new order at a percent of the account's value; if the desk can't read that value, the order waits. The other caps how much you have open on one prediction event, such as several strikes of one Kalshi event; if the venue doesn't say which event a contract belongs to, the order waits. Neither limit ever blocks closing, reducing or cancelling. Set them in the same form: **Order size limit, % of account value (optional)** and **Event group limit, USD (optional)**.
 
 Arming does not guarantee that a particular operation is supported or permitted. Limits for one account do not apply to another. Lowering limits, expiry, a stop or changing credentials can invalidate authority.
 
