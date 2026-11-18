@@ -1,0 +1,10 @@
+{
+  "client_id": "https://adersouza.github.io/tandem-releases/kalshi-mcp-client.json",
+  "client_name": "Tandem",
+  "logo_uri": "https://adersouza.github.io/tandem-releases/icon.png",
+  "redirect_uris": ["http://127.0.0.1:8766/callback"],
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "scope": "read::mcp_portfolio read::mcp_alerts write::mcp_alerts",
+  "token_endpoint_auth_method": "none"
+}
