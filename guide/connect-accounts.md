@@ -8,7 +8,47 @@ Keys are like account passwords. Paste them only into Tandem's own connect sheet
 
 **Settings → Support → Connect everything → Show** lists every account Tandem connects and your AI app, each with its state: **Connected**, **Not yet** or **Not using**. Each row shows how long it takes, opens its guide, and has **Connect** and **Copy for your AI**. A row turns Connected only when the desk's own connection test passes, never because you copied a prompt. Mark an account you don't use as **Not using** during first-launch setup.
 
-Start with practice. Every account except Polymarket US has a practice version, with its own keys.
+Start with Practice where available. Practice keys are separate from live account keys.
+
+## Coinbase
+
+Coinbase trades spot crypto in Tandem, 24/7, with **Practice** and **Real** accounts. Choose **Coinbase** in **Add a connection** or in **Setup**, or press **⌘K** and type "Connect Coinbase".
+
+**Practice needs no key.** Choose **Practice**, then **Start Practice**. Tandem simulates a Coinbase account with $5,000 of pretend USD. Orders fill against Coinbase's public order book with Coinbase's entry-tier fees (0.6% maker, 1.2% taker). Nothing is sent to Coinbase.
+
+**Real uses your own API key.** Choose **Real** and follow the steps in the sheet (⌘K "Coinbase key steps" opens them too):
+
+1. Sign in at the [Coinbase Developer Platform](https://portal.cdp.coinbase.com/projects/api-keys) and open **API Keys**.
+2. Choose **Create API key** and pick the portfolio Tandem should trade. Default is fine.
+3. Under API restrictions, tick **View** and **Trade**. Leave **Transfer** off. Tandem never moves money, so it never needs Transfer.
+4. Under **Advanced**, keep the signature algorithm **ECDSA**. Ed25519 also works.
+5. If you set an **IP allowlist**, add this Mac's public IP address. Otherwise Coinbase refuses the key.
+6. Create the key. Copy the **key name** and the **private key**: Coinbase shows the private key only once.
+7. Paste both into Tandem and choose **Save and check**. Tandem saves the key only in this Mac's Keychain.
+
+The check shows the account, the portfolio, your fee tier and the time Coinbase answered. Saving a key keeps real money off. Turn Real on for the account in **Accounts** when you're ready.
+
+**What works.** Any USD spot pair Coinbase lists (BTC/USD, ETH/USD, SOL/USD and more). Market orders always carry your price limit. Limit, stop-limit and sell brackets, and a take-profit and stop-loss attached to a buy. Change or cancel a working order. Review shows Coinbase's own fee estimate and re-checks a fresh quote before you Confirm. Stop sells held coins at the bid.
+
+**Recurring buys.** In **Strategies → Routines → Recurring buys**, choose the Coinbase account and a USD pair such as BTC/USD. Coinbase plans run every day of the week, weekends included, as a capped immediate order at a fresh ask. Review plans wait for your Confirm; Automatic plans need a saved Automatic grant for that account.
+
+**Following.** A Coinbase account can follow an allocation whose every leg is crypto, such as 60% BTC/USD and 40% ETH/USD, in Practice or Real. Choose it as the destination in **Following**. Stock, Congress and 13F follows need a stock account. Each copy is a capped immediate order at a fresh quote through the same Review and limits.
+
+**Protect a coin.** On the Coinbase account choose **Protect**. Tandem fills in the held coin and quantity; enter a take-profit price and a stop-loss trigger, then Review and Confirm. It is Coinbase's own sell bracket, so Coinbase runs it even when this Mac is off.
+
+**Watch orders.** A watch on a price can propose a Coinbase buy or sell of a USD pair when it fires. You confirm each one in Review.
+
+**Futures and payment methods (read only).** On a Real Coinbase account, Tandem shows what Coinbase returns for your futures account: futures buying power, margin, the liquidation threshold and buffer, and open futures positions. It also lists your payment methods and what each one allows. If Coinbase returns no futures account for your key, Tandem says so and does not claim you are eligible. Tandem places no futures orders yet and moves no money. Practice accounts have neither.
+
+**Convert USD and USDC.** Open the Coinbase account and choose **Convert** (or ⌘K "Convert USD and USDC"). Pick the direction and amount, then **Review convert**: Tandem asks Coinbase for a quote and shows its rate and fee. Nothing moves until you **Confirm**, which commits that exact quote once. A quote that expired, changed amount, is more than 0.5% off 1:1, or charges more than 1.2% is held. Coinbase may require the key's Transfer permission for Convert; if it refuses, the convert is held and nothing moves.
+
+**What isn't supported yet.** Deposits, withdrawals and sending crypto (Tandem never moves money), futures, and orders in non-USD pairs. Tandem values USDC at $1. A coin with no USD price leaves the account value unknown, and new buys wait until it can be valued.
+
+**Kraken** stays read only: in Kraken Pro create an API key with **Query Funds**, **Query Open Orders & Trades** and **Query Closed Orders & Trades**, then paste the API key and private key. [Kraken Pro API key setup](https://support.kraken.com/articles/how-to-create-an-api-key-on-kraken-pro)
+
+## Open a connected account
+
+Choose a row under **Accounts** in the sidebar, or press **⌘K** and search by account name. Both Practice and Real accounts are available from these shortcuts. Hover over a row or focus it with Tab to see its full name, balance when available, and connection status. The highlighted row is the account you have open. Collapse the sidebar to keep the account icons in view. On a phone, open **More → Accounts** for the same shortcuts.
 
 ## Copy for your AI
 
@@ -59,7 +99,7 @@ Webull keys grant Market Data and Trading. Tandem stores keys on this Mac. You h
 If it doesn't connect:
 
 - Key refused? Use a matching App key and App secret from the same Webull environment. Check any IP restrictions in Developer Console.
-- Approval ran out? Press Ask again. After 15 days without API use, press Create token again.
+- Approval ran out? Press Reconnect. After 15 days without API use, press Create token again.
 - Quotes missing? On webull.com, open Advanced Quotes, then OpenAPI Advanced Quotes. Check your stocks, OPRA or futures permissions. Non-display access does not include a license to show quotes. [Market data FAQ](https://developer.webull.com/apis/docs/market-data-api/faq/)
 - Crypto and event quotes need no extra plan. Check the fees for each trade in Review.
 - Webull busy? Wait a minute and test again. If you reset a key on Webull, replace both values in Tandem. [Rate limits](https://developer.webull.com/apis/docs/rate-limits/)
@@ -104,30 +144,27 @@ Perpetual futures. Practice: About 20 minutes, on [demo.kalshi.co](https://demo.
 
 **Practice**
 
-1. In Tandem, open Settings, New features and turn on Kalshi Perps.
-2. Sign in at demo.kalshi.co. The demo site has its own sign-in, separate from kalshi.com.
-3. Open Perps and start the Invest account. Kalshi asks about your experience and finances and shows the Kalshi Prime terms: answer and accept them yourself.
-4. Add demo cash to the Perps account. Demo cash isn't real money.
-5. Click your profile icon, then Account Settings, API Keys, Create New API Key. Name it Tandem Perps and give it Read and Trade only.
-6. Kalshi shows a Key ID and downloads the private key once, as a file. Don't open it in a browser or share it.
-7. In Tandem, open Settings, Accounts & keys, press Add a connection, open Other connections and choose Kalshi Perps. Pick Practice. Paste the Key ID. Open the downloaded file, copy all of it, and press Paste from clipboard next to Private key.
-8. Press Save and test connection. When it says Connected, delete the downloaded file; Tandem keeps the key in the Keychain.
+1. Sign in at demo.kalshi.co. The demo site has its own sign-in, separate from kalshi.com.
+2. Open Perps and start the Invest account. Kalshi asks about your experience and finances and shows the Kalshi Prime terms: answer and accept them yourself.
+3. Add demo cash to the Perps account. Demo cash isn't real money.
+4. Click your profile icon, then Account Settings, API Keys, Create New API Key. Name it Tandem Perps and give it Read and Trade only.
+5. Kalshi shows a Key ID and downloads the private key once, as a file. Don't open it in a browser or share it.
+6. In Tandem, open Settings, Accounts & keys, press Add a connection and choose Kalshi Perps. Pick Practice. Paste the Key ID. Open the downloaded file, copy all of it, and press Paste from clipboard next to Private key.
+7. Press Save and test connection. When it says Connected, delete the downloaded file; Tandem keeps the key in the Keychain.
 
 **Real money**
 
-1. In Tandem, open Settings, New features and turn on Kalshi Perps.
-2. Sign in to your verified U.S. account at kalshi.com and open Perpetuals.
-3. Fill in the margin account application and accept the Kalshi Prime terms yourself, then wait for Kalshi's review and finish its short tutorial.
-4. Click your profile icon, then Account Settings, API Keys, Create New API Key. Name it Tandem Perps and give it Read and Trade only.
-5. Kalshi shows a Key ID and downloads the private key once, as a file. Don't open it in a browser or share it.
-6. In Tandem, open Settings, Accounts & keys, press Add a connection, open Other connections and choose Kalshi Perps. Pick Real money. Paste the Key ID. Open the downloaded file, copy all of it, and press Paste from clipboard next to Private key.
-7. Press Save and test connection. When it says Connected, delete the downloaded file; Tandem keeps the key in the Keychain.
+1. Sign in to your verified U.S. account at kalshi.com and open Perpetuals.
+2. Fill in the margin account application and accept the Kalshi Prime terms yourself, then wait for Kalshi's review and finish its short tutorial.
+3. Click your profile icon, then Account Settings, API Keys, Create New API Key. Name it Tandem Perps and give it Read and Trade only.
+4. Kalshi shows a Key ID and downloads the private key once, as a file. Don't open it in a browser or share it.
+5. In Tandem, open Settings, Accounts & keys, press Add a connection and choose Kalshi Perps. Pick Real money. Paste the Key ID. Open the downloaded file, copy all of it, and press Paste from clipboard next to Private key.
+6. Press Save and test connection. When it says Connected, delete the downloaded file; Tandem keeps the key in the Keychain.
 
 Read and Trade only. Never Transfers or withdrawals. Perps use a separate Kalshi Prime account. Check your Perps trading fees and funding rates on Kalshi. Use the Perps portfolio for funding. Tandem cash movement starts off under **New features**. [Perps eligibility](https://help.kalshi.com/en/articles/15357656-applying-for-perpetuals-access) · [Perps fees](https://help.kalshi.com/en/articles/16071417-perps-fees-explained)
 
 If it doesn't connect:
 
-- No Perps tile in Tandem: turn on Kalshi Perps in Settings, New features.
 - Perps unavailable? Check the application and tutorial on the matching Kalshi site.
 - Wrong site: a demo key works only in Practice and a kalshi.com key only in Real money.
 - Key rejected: paste the whole file, from BEGIN to END, into Private key.
@@ -138,7 +175,7 @@ If it doesn't connect:
 **Practice**
 
 1. Open a Paper Trading account at Alpaca.
-2. In Tandem, open Settings, Accounts & keys, press Add a connection and choose Alpaca. Pick Practice. Press Sign in with Alpaca, then Open Alpaca.
+2. In Tandem, open Settings, Accounts & keys, press Add a connection and choose Alpaca. Pick Practice. Press Sign in with Alpaca, then Finish provider approval.
 3. Choose your paper account on Alpaca, allow access and return to Tandem. Connected means Tandem could read the account.
 4. If you prefer keys, press Use an API key.
 5. In Alpaca, switch to Paper Trading. Under API Keys, choose Generate New Key if needed. Keep the page open to copy both values.
@@ -148,7 +185,7 @@ If it doesn't connect:
 **Real**
 
 1. Open a live brokerage account at Alpaca and finish its identity check. Ask Alpaca for the options level you need.
-2. In Tandem, open Settings, Accounts & keys, press Add a connection and choose Alpaca. Pick Real. Press Sign in with Alpaca, then Open Alpaca.
+2. In Tandem, open Settings, Accounts & keys, press Add a connection and choose Alpaca. Pick Real. Press Sign in with Alpaca, then Finish provider approval.
 3. Choose your live account on Alpaca, allow access and return to Tandem. Turn on Real money separately when you are ready.
 4. If you prefer keys, press Use an API key.
 5. In Alpaca, switch to your live account. Under API Keys, choose Generate New Key if needed. Keep the page open to copy both values.
@@ -219,6 +256,8 @@ Allow about 15 minutes after Polymarket approves your identity. Use a self-direc
 4. In Tandem, open Settings, Accounts & keys, press Add a connection and choose Polymarket US.
 5. Press Paste from clipboard for Key ID and Private signing key. Use the Secret Key for the second field.
 6. Press Save and test connection. Connected means Tandem could read the account.
+
+To replace keys for a saved Polymarket US profile, choose **Manage → Reconnect** on that connection and use keys from the saved account. Tandem verifies the profile before replacing its keys when it has a saved account identity.
 
 Use the same Apple, Google or email sign-in on both devices. Wait until Polymarket approves your identity. Keep the key page open until Tandem has both values. You can also open the form from **Accounts → Add a connection**. Tandem keeps the key in your Mac’s Keychain. Keep it out of chat. To start trading, switch the account to **Real** and turn it on. Review and confirm each order in Tandem. [Retail API authentication](https://docs.polymarket.us/api-reference/authentication)
 

@@ -51,6 +51,12 @@ Turn on **Kalshi combos and quotes** in **Settings → New features** when you u
 
 AI tools: `kalshi_combo_create`, `kalshi_quote_request`, `kalshi_combo_quotes`, `kalshi_combo_take_quote` and `kalshi_quote_withdraw`. Creating a market, asking for a price and withdrawing the request place no order. Review prepares a quote take for confirmation in Tandem. Automatic can execute an eligible take through the OrderOwner under the saved grant.
 
+## Two-sided quoting
+
+On the Mac, open **Accounts → Kalshi Demo → Two-sided quoting**, above **Waiting to fill**. Choose **Set up quoting** and enter the market code, spread, contracts per side, inventory limit, loss limit and a time limit of 1 to 60 minutes. Choose **Review quoting** to check the market and the bid and ask, then **Confirm quoting** to start.
+
+Start with a flat market and no working orders. The card shows the run's status and limits, plus working quotes and inventory when available. **Stop quoting** stops new quotes and requests cancellation of working quotes in one click. **Stopping** means Tandem is still checking the outcome. Filled contracts remain in the account. On a Real account, you can view and stop a run from the account. Starting one uses a connected assistant with an Automatic grant for that market. [Trading with AI](trading-with-ai.md)
+
 ## Maker quotes
 
 **Kalshi maker quotes** starts off in New features. It lets you offer your own Yes and No bids to another trader. Read the maker inbox or your sent quotes with `kalshi_rfqs`. Publish with `kalshi_maker_quote`; withdraw an unconfirmed quote with `kalshi_maker_withdraw`.
@@ -78,5 +84,7 @@ Perps requires a separate entitled Kalshi Perps account, environment and collate
 The Perps ticket uses the venue's contract version, quantity step and dollar-price grid. A close uses a capped, reduce-only immediate-or-cancel order for a proven holding. `kalshi_perps_close` prepares that ordinary Owner reduction for client confirmation; it never settles or sends by itself. A price change that requires cancel-and-new waits for a sourced terminal cancellation before reviewing the remaining quantity against current risk. Fills during cancellation reduce that quantity.
 
 Use `kalshi_perps_account` to read balances, risk, positions, orders, fills, funding and history. Funding is read for the requested date window; corporate actions report the venue's recent/upcoming notices. A final-settlement notice is a market term, not proof your account received cash. Kalshi offers no manual Perps settlement endpoint, and Tandem never invents a settlement payment. The history reader reports missing settlement-payment coverage.
+
+In Tandem, open **Accounts → Kalshi Perps → More → Cash and value** (or search for **Find Perps orders, triggers and order groups** with ⌘K) to read **Order groups** and **Isolated exits**. A group or exit that Tandem cannot prove stays unknown; it is never shown as placed or cancelled.
 
 AI action results include `confirm_step`. Show its `show_the_client` text, the money mode and the actual outcome to the client. Real-money orders still require confirmation in Tandem. No tool grants itself authority to fund an account, change a credential or turn on real money.

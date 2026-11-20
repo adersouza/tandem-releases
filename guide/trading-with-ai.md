@@ -14,6 +14,10 @@ In Review mode, a proposal ID means an action is waiting for your review. In Tra
 
 External AI requests made through MCP appear as saved requests in the AI assistant for the connected account. Open **History** to find them. Their selected connection mode and matching saved account grant determine whether a supported action needs confirmation. Research reads only; Review waits for your confirmation; Trade can execute qualifying orders; Manage can also configure supported strategies. Changing the in-app mode does not upgrade an existing MCP connection.
 
+### Roll a held option
+
+On the selected Tradier or Alpaca account, use `option_roll_choices` to find replacements for the exact held contract and `propose_option_roll` to prepare a whole-contract roll. Check both legs, the net limit and estimated replacement payoff in the proposal. Review waits for your confirmation. Automatic sends one combined order only when your saved grant covers the account, both contracts and the order’s risk, and Tandem’s fresh-quote and holdings checks pass. If either fill is unclear, check the order before retrying.
+
 ## Routines, signals and copy proposals
 
 Open Routines or ask the assistant to draft a task. Save the account, schedule and mode. **Tell me what changed** is read-only. Review prepares a manual order proposal. An Automatic routine can trade within its saved grant. **Run now** on a task that can trade uses one Confirm and keeps market-hours and Stop checks. Inspect run history for what happened.
@@ -36,6 +40,12 @@ Tandem checks the venue’s current trading status and market deadline, the held
 
 
 To buy the same Kalshi outcome at several limit prices, open **Accounts → Kalshi → More → Batch orders and cancel all**. Enter the same market and side on each row with a different limit and size, then review the batch and confirm once. To offer contracts you already hold at a target price, use **Sell**, choose **Set my price**, and review a resting limit. It fills only if the venue can match it at your limit or better.
+
+## Read a Desk team discussion
+
+Open **AI assistant → Desk team → View run** for the saved decision, account and permission used. Expand **Transcript** to read what each role said. Ask AI for `desk_team_history` on the selected account, or request it through `find_capability` in a paired app. Reading a run makes no model calls.
+
+In the Tandem Mac app, choose **Dictate to Chief** on **AI assistant → Desk team**, allow the microphone, speak, then choose **Done**. The Mac turns your speech into text on this Mac, so you can read it before you send it. If the microphone is blocked, choose **Open System Settings** or type your question.
 
 ## Protection and trade review
 
@@ -69,6 +79,8 @@ Trade summaries show sourced fills, orders and open positions. Wins/losses and r
 In the AI assistant, review the account's autonomy policy separately. It narrows allowed capabilities/instruments, order and risk limits, daily action/notional budgets and expiry. Blank per-order and daily dollar caps mean no cap set for those amounts. Tandem holds an automatic order over a saved cap. Open the held order in **Needs you** to see the amount over and choose **Go over once** or **Turn this cap off**. Turning a cap off leaves the order waiting for your confirmation and offers **Undo**. Change caps any time in **Settings → Trading safety**. Account policy and venue protections still apply. Choose **Research**, **Review**, **Automatic** or **Manage** for each in-app request. Research is enforced read-only; automatic modes need the saved account grant. Only an explicit management grant lets the agent change supported strategy settings without another confirmation. Production also requires an armed live policy.
 
 In **Strategies → Edit strategy**, set an optional **Strategy loss limit** in dollars. For a followed wallet, open **Review a wallet trade** to set its limit. The field starts blank. Tandem counts realized gains and losses after recorded fees for that strategy on its destination account, starting when it was bound or the wallet was followed. The limit does not reset each day. If losses reach the saved amount, the next opening order waits in **Overview → Needs you** on the Mac and paired phone. Choose **Go over once** for that order, **Turn this limit off** to remove the limit, or **Not now** to leave the order waiting. Turning it off leaves the order waiting for confirmation. If the realized result cannot be verified, you can turn the limit off or wait for the records. Exits remain available under the existing order checks. Ask your connected AI for the strategy's saved loss limit using the strategy status tool.
+
+Use **Open Needs you** in the loss limit’s Info to find a held order and read the reason in Review.
 
 
 Use **Operate with agent** on a copied strategy to select that exact policy, or restrict an MCP connection to it during review. A stale selection stops. Pick a preset or customize supported typed settings; the agent reads saved strategy status and uses the same runner as the app. The strategy schedule has its own Research, Review, Trade or Manage choice. Research may collect free source evidence but cannot create financial orders. Review proposals from deterministic schedules appear in Routines/Inbox. Virtual Kalshi simulation has a separate reviewed strategy grant and no broker authority; its active level and expiry also bound accountless app/MCP requests.
@@ -148,7 +160,7 @@ Use the same request ID to check an order after a timeout. Check its result in T
 
 ## Kalshi two-sided quoting
 
-Open **Accounts → Kalshi Demo → More → Maker quotes → Two-sided quoting**. Enter one market code, the spread, contracts per side, max inventory, loss cap and a time window from 1 to 60 minutes. Review shows the market and the bid and ask read at the time of review. Confirm once to start the Demo run.
+On the Mac, open **Accounts → Kalshi Demo → Two-sided quoting**, above **Waiting to fill**. Choose **Set up quoting**. Enter one market code, the spread, contracts per side, inventory limit, loss limit and a time limit of 1 to 60 minutes. **Review quoting** shows the market and the bid and ask read at the time of review. Choose **Confirm quoting** to start the Demo run.
 
 Start with a flat market and no working orders. Tandem reads the book again before placing each post-only quote. When the book moves, Tandem checks that replaced quotes are gone and accounts for any intervening fills before sending replacements. The loss cap bounds the run's projected downside, including pending fills and fees. Profit or loss uses recorded fills and fees and the last readable external book price. Check the timestamp beside the figure.
 

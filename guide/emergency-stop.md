@@ -12,4 +12,8 @@ Where available, review the close-all plan separately. Check the exact account, 
 
 Do not resend an order whose outcome is unknown. Check it at the venue and use **Check account** in Tandem before another action.
 
-Review the reason for the stop before turning trading back on from the Mac. Your AI cannot clear the stop or arm real-money trading. See [Troubleshooting](troubleshooting.md) if the saved outcome cannot be read.
+## Turn new trades back on
+
+Choose **Resume** in the stopped banner, or search for **Turn new trades back on** with **⌘K**. For accounts that turn back on, watch orders wait for a fresh match and recurring buys pick up at the next scheduled date. Recurring dates missed during Stop are skipped. Manually paused watches and plans stay paused. Watch orders and recurring buys that were waiting for review before Stop stay withdrawn.
+
+Ask your AI for a plan to resume trading with `plan_trading_resume`. A paired app can call it through `find_capability`. The AI points you to the Tandem control, where you review the reason for the stop and turn new trades back on. See [Troubleshooting](troubleshooting.md) if the saved outcome cannot be read.

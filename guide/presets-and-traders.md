@@ -12,6 +12,8 @@ Choose a supported Real or Practice account in **Running**. Availability depends
 
 Open the strategy’s schedule from **Routines** and choose **Edit**. Under **Run on**, select the days in New York time. When **Only while the NYSE is open** is selected, holidays and early closes also apply. To change one strategy without affecting others, use **Pause** or **Resume** on its schedule. **Run now** still requires confirmation and follows market-hours and account checks. MCP clients edit the same schedule through `routine_control`, using `schedule.weekdays` with values such as `["mon", "wed", "fri"]`.
 
+The saved routine shows which days it runs on.
+
 The Kalshi calibration preset is a separate virtual experiment. Its simulated fills use observed public books and modeled fees; it cannot send an order to Kalshi or use real money. It has its own reviewed virtual permission, described below.
 
 ## Swing, position and day trading
@@ -32,17 +34,41 @@ Keep the desk running. An offline app, unavailable quotes, safety hold, exhauste
 
 [Webull and model following](webull-and-model-following.md) explains the Grok, GPT, Claude, Wolff, Pelosi+, InTheMoney, Point 72 and Inverse Cramer templates. They reuse the allocation engine with dated owner-provided or licensed weights, source receipts, expiry checks and explicit all-cash handling. Missing or expired source inputs hold; complete automatic Autopilot mirroring still requires a permitted complete feed. Signals exposes the official partial JSON summaries for research, not complete target weights. Manage agents can use the existing typed policy tools inside their account mandate.
 
+## Copy someone
+
+Choose **Copy someone** on **Following** (also on Overview and in ⌘K). Paste one thing into **Paste a name, wallet address, profile link or ID** and choose **Look up**:
+
+- a Polymarket wallet address (0x…), a Polymarket profile link, or a Polymarket username such as @name;
+- a member of the House by name, such as Nancy Pelosi;
+- a fund by its SEC CIK, or by name for the funds Tandem already tracks (Berkshire Hathaway, Scion, Renaissance, Citadel);
+- a listed Autopilot public portfolio link;
+- the name of a portfolio file you already imported (it is already followed; manage it in Strategies).
+
+If the name is shared, Tandem lists the matches to choose from. If it can't find anyone, it says what formats work. You can also drop a CSV or JSON portfolio file on the sheet. Tandem opens **Add portfolio source** with the file filled in.
+
+Tandem shows who it found, what they trade, their latest public activity, and which of your accounts can copy it. Prediction bets copy to Kalshi or Polymarket US; stock trades copy to Alpaca, Webull or Tradier. Then choose:
+
+- **Watch** keeps them in Following. Nothing is bought. This is the default, in the app and in the AI preview.
+- **Practice mirror** copies a Polymarket wallet with simulated money.
+- **Copy** saves a copy to the account you choose, with trading off. For stocks, open the copy, set its amount and limits, then turn it on. Every order still goes through Review → Confirm or a saved Automatic permission.
+
+A stock copy can take an amount, which becomes its spending limit inside the account's own limits. Wallet copies and Congress copies start from new trades only; a fund copy follows its reported holdings, so it includes what the fund holds now. Tandem never copies a wallet's existing bets. A Real account needs one extra confirmation to save the copy, and it stays off until you turn Real on and enable it.
+
+If Tandem can't match what you pasted, it lists each kind it tried and why. Kalshi profiles can't be copied: Kalshi doesn't publish what its traders buy or sell. Senate members aren't covered, and a fund Tandem doesn't track needs its CIK (find it on SEC EDGAR).
+
+Ask your AI to "copy" someone and it uses `copy_someone`, which returns the same preview and choices without saving anything.
+
 ## Follow a trader
 
 Open **Following → Follow a portfolio**. Choose a source or look up its name, link or public wallet. Check the source date. Stock disclosures can arrive weeks after the original trade.
 
-- **Stock disclosures.** Choose an eligible Webull or Alpaca stock account under **Destination account**. Real accounts appear first and are marked **Real**. Choose the eligible Real or Practice account you want to use. **Save copy** starts with trading off. Review its limits in **Strategies** before enabling it.
+- **Stock disclosures.** Choose an eligible Webull or Alpaca stock account under **Destination account**. Real accounts appear first and are marked **Real**. Choose the eligible Real or Practice account you want to use. **Follow** starts with trading off. Review its limits in **Strategies** before enabling it.
 - **Polymarket wallets.** Start a **Practice mirror** to simulate copies with public prices. A wallet signal can trade on Kalshi or Polymarket US only when Tandem verifies an exact contract match and the destination account permits it. Use the practice mirror when the signal has no exact match.
 - **Copy Decisions.** Check the saved source, destination account, outcome and reason. If an order outcome is uncertain, check its status before requesting another order.
 
 ### Run a stock copy automatically in Practice
 
-1. In **Following → Follow a portfolio**, choose a House disclosure source or a supported 13F fund. Pick your Alpaca or Webull **Practice** account and select **Save copy**. For Webull stock copies, keep an Alpaca quote connection available for fresh prices.
+1. In **Following → Follow a portfolio**, choose a House disclosure source or a supported 13F fund. Pick your Alpaca or Webull **Practice** account and select **Follow**. For Webull stock copies, keep an Alpaca quote connection available for fresh prices.
 2. Open the copy in **Strategies** and set the total budget, the most it can use for one order and the maximum new positions per session. Review the account's permission and expiry. A House or 13F copy needs permission for the symbols that future filings can introduce.
 3. In the strategy's schedule, select **Trade** and confirm the schedule once. Keep Tandem running. It checks for current source data during the scheduled market-hours runs, sizes trades within your limits and sends eligible orders automatically. **Review** waits for your approval on each order.
 4. Open **Copy Decisions** for the source and decision, **Activity** for order and fill receipts, and **Routines** for run history. With fill alerts enabled, Tandem sends a notice when it records a sourced fill. A new qualifying filing can trigger a rebalance of the shares the copy owns. A missing source, stale quote or uncertain order can hold the next trade.
@@ -50,6 +76,14 @@ Open **Following → Follow a portfolio**. Choose a source or look up its name, 
 Use **Pause strategy schedule** to stop that copy, or **Stop new trades** to stop account automation. Previously submitted orders can still fill. Check **Activity** or the broker for their current state. Imported model weights need a fresh authorized snapshot and schedule review when the model changes.
 
 Do not treat a public wallet, leaderboard or social post as complete positions, settled cash or proven performance. Missing transactions and settlement remain unknown. Any proposed order still passes your account's ordinary review, limits and sole execution owner.
+
+## Test a portfolio source
+
+Open **Following → You follow → Test this source**. Choose a disclosure replay or enter a public Polymarket wallet for a shadow test. Tandem saves the result in **Research**. Search for **Compare saved source tests** to reopen the results and their coverage. A replay uses historical inputs and modeled costs. A wallet shadow test begins observing when you start it.
+
+In the sample desk, use **Test this source → Open Research** to see a saved replay. Open **Follower results** there for saved Practice copy decisions, timing and reported costs.
+
+Ask AI for `source_test_results`, or use `research` with action `source_tests` in a paired app. Use `run_source_test` to prepare a replay of a retained source for Review. A source test places no orders.
 
 ## Copy verdicts
 
@@ -104,6 +138,8 @@ evidence of investment returns or authorization for real-money trading.
 ## Recurring buys
 
 Open **Strategies → Routines → New recurring buy** on the Mac. Choose a stock or ETF symbol or a USD crypto pair, an account, an amount per buy and a total cap. Choose daily, weekly or monthly, with inclusive start and end dates. Choose **Save recurring buy**. Weekly buys use the start date’s weekday. Monthly buys use its day of the month or the last day of a shorter month.
+
+Open the saved plan to check its end date and remaining cap before the next buy.
 
 Tandem starts checking at 9:30 a.m. New York time. A stock or ETF buy waits for the next regular market open within the plan’s dates. If several buys came due while the market was closed or the Mac was asleep, Tandem checks one buy when it can run. Crypto buys can run any day. Keep the Mac awake and Tandem running for scheduled checks.
 

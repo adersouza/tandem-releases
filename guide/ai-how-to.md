@@ -2,7 +2,19 @@
 
 In Tandem, open **AI assistant**. In Claude Desktop, ChatGPT desktop, or Codex, connect through **Settings → AI → Connect an AI app** in Tandem. Start with `tandem_brief` for your desk and `tandem_fix` for trouble. Read **Onboarding** for the full setup.
 
-A paired AI app sees task tools such as `holdings_and_accounts`. Each takes an action and the inputs for that action. Use `find_capability` to find and use a named tool outside those groups. Tandem’s own assistant sees the named tools directly. In Research the AI reads. In Review it prepares the exact action for you. Automatic acts only where the saved grant and OrderOwner permit it. Report the returned result and distinguish an order sent from an order filled. For a missing price or unresolved outcome, say what Tandem knows and link the record.
+A paired app uses task tools like `holdings_and_accounts` and `find_capability` for named tools. Tandem’s own assistant sees named tools directly. Research reads. Review prepares the exact action. Automatic requires a saved grant and OrderOwner approval. Report the saved result, distinguishing sent from filled. If a price is missing or an order is unresolved, link the record.
+
+For **Explore the sample desk** in setup or Help, read `desk_guide` with topic `client-guide`. On your own desk, use `desk_team_history`, `research_collector_status` and `recurring_buy_status` for the saved records.
+
+When Tandem uses Ollama, ask one how-to question at a time. The assistant reads the matching section and can look up another by its heading. In **Search** (⌘K), choose **AI guide for Ollama** to open the full guide.
+
+## How do I open my year-end tax report?
+
+Ask, “Show me where to review my 2026 year-end tax report.” The assistant proposes where to open the report. In Tandem, review the saved FIFO lots and wash-sale flags, then choose **Download CSV**. For one account, open **Accounts → your account → Records**. Your broker's 1099 is the official record.
+
+## How do I trade on Coinbase?
+
+Use `coinbase_spot_order` (MCP `propose_trade` action `coinbase_spot`) with a USD pair, side, quantity and price bound; futures: `coinbase_futures_order`. Confirm in Tandem. It runs alone only in a saved automatic grant.
 
 ## How do I add money?
 
@@ -10,7 +22,15 @@ Choose **Add money** next to the account. The AI can look up the official fundin
 
 ## How do I change an order from the chart?
 
-Drag an editable price line, or select the working order and choose **Change**. To have the AI prepare it, tell it the exact order and the new price. It reads the working order and revision with `holdings_and_accounts` action `orders` and gets the venue's amend or replace schema. Use `propose_trade` action `order` or the in-app `propose_order` for Review. Use `chart_price_change` for a price-only chart command. For Polymarket US read `polymarket_order_terms` first. Retain exact venue terms and linked-order revisions. The OrderOwner checks the current working order, its price grid and fresh quote. Automatic uses the saved grant where the order type is eligible. If a change is unsettled, check the working order before retrying.
+Drag an editable price line, or select the working order and choose **Change**. To have the AI prepare it, tell it the exact order and the new price. It reads the working order and revision with `holdings_and_accounts` action `orders` and gets the venue's amend or replace schema. Use `propose_trade` action `order` or the in-app `propose_order` for Review. Use `chart_price_change` for a price-only chart command. For Polymarket US read `polymarket_order_terms` first. The OrderOwner checks the current working order, its price grid and fresh quote. Automatic uses the saved grant where the order type is eligible. If a change is unsettled, check the working order first.
+
+## How do I roll an option?
+
+Ask for `option_roll_choices` and use `propose_option_roll` for the selected contracts. [Trading with AI](trading-with-ai.md#roll-a-held-option)
+
+## How do I hedge or check my risk?
+
+A connected app finds these with `find_capability` (search “hedge”) in Research, Review and Automatic, and the assistant has them directly. Ask for `hedge_proposal` on the selected account for a protective put, collar or portfolio hedge, `hedge_portfolio_risk` or `hedge_greeks` for sensitivity, `hedge_allocation` for weights and `hedge_event` for a prediction hedge you have matched exactly. It sends nothing; open Review in Tandem to place it. [Hedging and position risk](client-guide.md#hedging-and-position-risk)
 
 ## How do I set a strategy loss limit?
 
@@ -26,11 +46,15 @@ Open **Settings → Trading safety → AI and routine order caps** and expand th
 
 ## How do I use a local model?
 
-Open Ollama on your Mac. In **Settings → AI → Default AI → Local model**, choose **Check again**. Select a model, download it if needed, then choose **Use this model**. Use **Prefer connected AI** to restore priority to the connected assistant. The local model can prepare Review proposals. Confirm the exact action in Tandem.
+Open Ollama on your Mac. In **Settings → AI → Set up Tandem's assistant**, expand **Provider settings → Local model**. Choose **Check again**, pick a model, and download it if needed. Choose **Use this model** or **Prefer hosted assistant** to return to your configured provider. Confirm Review proposals in Tandem.
 
 ## How do I approve from my phone?
 
-Open **Settings → Alerts and phone** on the Mac and pair your phone. Tap the alert and open its review, then approve or decline on your own phone where the review allows it. Some actions send you back to the Mac. Use `phone_approval_status` to check the account’s approval setting and `desk_status` to check alert delivery setup. The AI never handles your pairing code, phone approval code, sign-in or confirmation.
+Use **Settings → Alerts and phone** to pair your phone. Open **Needs you** and read the order review before approving. Use `phone_approval_status` to check pairing and account approval settings. Keep each pairing and approval code on your device.
+
+## How do I change phone alerts?
+
+Read switches, quiet hours and Show amounts with `desk_preferences`. Ask `propose_settings` for a draft and confirm it on the Mac. [Phone setup](client-guide.md#phone-access-and-approvals)
 
 ## How do I clear Needs you?
 
@@ -38,7 +62,7 @@ Open **Overview → Needs you** or tap the bell. Ask the AI to use `needs_you` f
 
 ## How do I set up recurring buys?
 
-Open **Strategies → Routines → New recurring buy**. Choose the symbol, eligible account, dollar amount, total cap, frequency and dates. Choose **Review each buy** or **Automatic** under **Order approval**, then **Save recurring buy**.
+Open **Strategies → Routines → New recurring buy**. Set the account, symbol, amount, total cap, frequency and dates. Choose **Review each buy** or **Automatic**, then **Save recurring buy**. Confirm when enabling **Real Automatic**.
 
 In a paired app, use `find_capability` for `recurring_buy_status` to read the selected account’s plans and saved outcomes. Use `recurring_buy` to prepare a change and confirm it in Tandem. For **Review each buy**, open the exact order when it is due and confirm it separately.
 
@@ -51,6 +75,8 @@ Add the offered protection fields on a stock or option ticket or in the supporte
 Open **World Monitor → Watches → New watch**. Under **When it fires**, choose **Propose an order** or **Automatic order** where offered. Enter the account, instrument, side, size, price limit, frequency and expiry. Choose **Save watch**. Use **Review order** when an eligible proposal is ready.
 
 Use `workspace_watch_change` or the paired app’s `watch` action `change` to prepare a saved watch with a typed Review order. Confirm the watch change in Tandem. When it fires, review and confirm the order separately. Set up **Automatic order** in Tandem using the eligible account’s saved grant.
+
+For a ready order, use `workspace_watch_order_review` with its exact proposal ID from `workspace_watches` and confirm in Tandem.
 
 ## How do I place or cancel a resting Kalshi order?
 
@@ -84,11 +110,11 @@ In the selected Webull stock account, open **More → Linked orders**. Choose th
 
 ## How do I refresh missing Alpaca activity?
 
-Open the selected Alpaca account and choose **More → Account activity**. When Tandem reports a gap, choose **Refresh account activity** to read the exact missing window. Check the retained events and the gap notice after the refresh. The AI can read account records. Perform activity recovery in Tandem.
+Open the selected Alpaca account and choose **More → Account activity**. When Tandem reports a gap, choose **Refresh account activity** to read the exact missing window. The AI can read account records. Perform activity recovery in Tandem.
 
 ## How do I find activity on Overview?
 
-In **What the desk did**, choose **Trades** for orders and decisions or **Everything** to include available desk records and headlines. Ask for the `tandem_brief` for the saved summary. A headline is context, not a trade receipt.
+In **What the desk did**, choose **Trades** for orders and decisions or **Everything** to include available desk records and headlines. Ask for the `tandem_brief` for the saved summary.
 
 In **Ask AI**, type **What did the desk do today?** and press Enter to request that summary. If the request fails, choose **Try again** to send the same question.
 
@@ -110,9 +136,9 @@ Read `strategy_status` and `routines`. Use `strategy_control` to pause a strateg
 
 ## Following, strategies and routines with an AI app
 
-Use **Research** for saved data. Use **Review** to prepare a change for approval in Tandem. An eligible **Automatic** action uses the saved account permission. Ask the AI to report whether Tandem saved a change, held it, or needs you to confirm it.
+Use **Research** to read saved data and **Review** to prepare a proposal. Eligible **Automatic** actions use your saved grant. Check the proposal’s account and mode. Ask whether Tandem saved the change, held it or needs confirmation.
 
-- Use `research` with `portfolios` or `resolve_portfolio` to identify a source. Use `follow` with its resolution ID or `follow_stock_preset` with the preset and version. Read `follows` before `unfollow`. Use `research.track_wallet` to follow public activity without a mirror. For wallet Practice mirrors, find `wallet_mirror_follow` and `wallet_mirror_pause`. For an exact wallet order, use `propose_trade.wallet_signal` with the destination and a maximum spend. Tandem checks the contract match and execution evidence.
+- Identify a source with `research.portfolios` or `resolve_portfolio`. Use `portfolio_entry` to preview its saved allocation and source date. Use `follow` with its resolution ID or `follow_stock_preset` with its preset and version. Read `follows` before `unfollow`. Use `research.track_wallet` to watch public activity. Find `wallet_mirror_follow` and `wallet_mirror_pause` for Practice. Use `propose_trade.wallet_signal` with the account and maximum spend. Tandem checks the contract match and execution evidence.
 - Use `research` with `source_evidence`, `copy_efficiency` or `copy_holds` to read what happened. Use `explain.copy_history` with the source and money mode, then `explain.decision` with the exact reference. `answer_copy_hold` uses the saved copy and OrderOwner checks. Use `copy_safety` to read the current rules and revision before `change_copy_safety`. Tandem checks the ceilings again when you confirm.
 - Use `research.source_tests` to read disclosure replays and wallet shadow tests. `run_source_test` uses retained evidence. `wallet_shadow_test` changes a research simulation. Use `research.leaders` before preparing `change_leader`. Use `change_research_list` to review a list save, refresh or suggestions.
 - Use `strategy.list`, `strategy.results` or `strategy.status` to get a strategy ID and revision. Read `practice_replay` for a published simulation. `copy_preset`, `bind`, `edit` and `budget` use the saved strategy. `set_loss_limit` uses the separate loss-limit revision from `status`. `prepare_orders` creates individual reviews for you to confirm in Tandem. `write_recap` uses your existing AI plan after confirmation and requires an AI connection allowed to read all accounts.
@@ -139,19 +165,73 @@ Use `backup_status` to check the last saved local backup and folder copy state. 
 
 Ask `price_alert` to list, set, edit, rearm or remove an exact rule. Use `chart` for a moving-average, drawing, bar or settlement alert. Choose the market source and threshold. Enable Kalshi-hosted alerts only if you request it and the connected venue grants it. Ask `desk_preferences` for notifications and quiet hours. A fired alert says what was observed and opens no order.
 
+Read the [Markets guide](markets.md) for combined watches, saved charts and the daily brief.
+
 ## How do I change my settings?
 
-Use `desk_preferences` to read the saved goal, crypto cap, alerts, filings watch and deposit reminder. Use `propose_settings` for a written change you confirm in Tandem. For appearance, local security, privacy, connections, backing up to a new folder, app updates or access grants, open the named Settings section on your Mac. In **Accounts & keys**, use **Manage** beside **Claude plan** to open **Settings → AI**. In a connection’s removal prompt, choose **Keep it** to leave the connection in place. Use Tandem's native **Save diagnostics** to create a local file.
+Use `desk_preferences` to read the saved goal, crypto cap, alerts, filings watch and deposit reminder. Use `propose_settings` for a written change you confirm in Tandem. For appearance, local security, privacy, connections, backing up to a new folder, app updates or access grants, open the named Settings section on your Mac. Use Tandem's native **Save diagnostics** to create a local file. In **Accounts & keys**, use **Manage** beside **Claude plan** to open **Settings → AI**. In a connection’s removal prompt, choose **Keep it** to leave the connection in place.
 
 In **Accounts & keys → Alerts and watching**, choose **Manage watched wallets**. Open the removal review for the exact address. Use **Keep it** or **Not now** to close the review and retain the address. To remove it, hold **Confirm remove** in Tandem.
 
 ## How do I stop new trades?
 
-Use `stop_new_trades` or the account’s **Stop new trades**. Read the receipt and any resting-opening cancellation outcomes. Holdings and eligible exits are retained. For a desk-wide stop or a tripped breaker, follow Tandem’s own controls. If the app cannot read the venue’s answer, check the open orders before repeating anything.
+Use `stop_new_trades` or the account’s **Stop new trades**. Read the receipt and any resting-opening cancellation outcomes. Holdings and eligible exits are retained. For a desk-wide stop or a tripped breaker, follow Tandem’s own controls. In a desk-wide Review session, ask for `review_emergency_stop` and press **Stop new trades** in Tandem to stop the desk and freeze a recovery plan. Check cancellation progress and the saved plan in **Stop**.
+
+## How do I close a stopped account?
+
+Stop the selected account first. Ask for `review_account_close_all` to prepare the current venue-sourced Close all plan. Check the cancellations, exits and held holdings in Review. Confirm the exact plan in Tandem and check the receipt for holdings still open or unknown.
+
+## How do I act on a frozen emergency plan?
+
+In **Stop** on the Mac, select one exact account from the active recovery plan and review its steps. The legacy plan can need retained quotes or broker action. Complete its per-account confirmation on the Mac. For a connected account, use **Close all** to prepare a current plan through OrderOwner.
+
+## How do I set or raise an optional AI cap?
+
+Use `account_policy` for the exact saved grant revision and cap. Ask for `review_grant_cap` with the selected account, field, previous value and new dollar limit. In Tandem, save a tighter limit in one action and confirm a higher limit after checking both amounts.
+
+## How do I start or end vacation mode?
+
+Use `review_vacation_mode` with the end date to start vacation or request resume to end the active hold. Confirm in Tandem. Working orders and exits remain available. Desk and account Stops remain in effect when vacation ends.
+
+## How do I change the Trading safety guardrails?
+
+Read `guardrail_limits`, then pass its saved revision and all four percentages to `review_guardrail_limits`. The Review shows the saved and proposed values for every Practice and Real account. Save a tighter change in one action. Confirm a looser change yourself in Tandem. Use Trading safety to repair unreadable settings.
+
+## How do I change or check a saved-input research alert?
+
+Read `desk_records` with section `alert_rules`. Use `review_research_alert` to create, edit, delete or evaluate the exact rule. For saved rules pass the rule ID and revision. Confirm in Tandem. An evaluation can send a notification when the saved rule enables delivery. Use the workspace watch tools for alerts attached to a workspace.
+
+## What are the top news stories on my desk?
+
+Ask AI uses `holdings_news`. Paired AI apps use `world` → `my_news`. Both read the ranked stories in **Overview → News and what’s next** and **World Monitor → Touches you**, with publisher links and dates or times.
+
+## How do I mute or unmute holdings news?
+
+Read `news_alert_preferences` for the exact source and holding keys shown in the bell. Pass the key and `muted` to `change_news_alert_mute`. The preference applies to your news alerts.
+
+## How do I reopen one saved study?
+
+Use `dashboard_view` with the supported view and exact `result_id` from its saved study, run or capture. Use a connection allowed to read all accounts. If Tandem cannot read the requested record, its result is unknown.
+
+## How do I run a study with saved inputs?
+
+Use `review_saved_research_run` to prepare a market brief, intraday replay, walk-forward study, Market views analysis, factor backtest or one of the supported native studies. Select the saved input IDs and exact settings shown in the workbench. Confirm Run now in Tandem. Read the saved result and its source limits after it runs.
+
+## Which controls do I complete on my device?
+
+Use the mounted Tandem controls for focus and keyboard navigation, sheet dismissal, chart gestures, local drafts and display selections. Read the saved facts with the named tool for that screen. Apply the domain action separately with its own Review when required.
+
+An AI connection uses the named tools with its saved access. The on-device app owns its internal requests and records actual performance measurements from its browser.
+
+Restart an offline desk from Tandem on your Mac. The offline sheet can save diagnostics as a local file.
+
+Discard a manual order review in the ticket that prepared it. The AI cannot use its one-use challenge. In AI → Proposals, decline an AI proposal by its saved ID.
+
+Approve an Automatic grant or turn on Real yourself in Tandem. The AI can request a grant with `request_autonomy`. Enter passwords, connection keys, a Finnhub key and heartbeat URLs directly in their Tandem forms. Generate a new private key on the Mac. The AI can explain the setup and read verification status. Check funding instructions in Accounts. Approve and send funds yourself through the saved destination.
 
 ## How do I find records, research or help?
 
-Use **Activity** for a trade or decision, **Statements** for saved statements, **Markets** for quotes, **Following** for source snapshots and holds, **World Monitor** for news and Watches, and **Research** for studies and workspaces. Ask `explain_decision`, `desk_records`, `market_data`, `workspace_read` or `tandem_fix` as appropriate. Explain the source, date and coverage of any figure. For a device action such as copying a link, exporting a local file or picking a folder, give the exact page and button.
+Use **Activity** for a trade or decision, **Statements** for saved statements, **Markets** for quotes, **Following** for source snapshots and holds, **World Monitor** for news and Watches, and **Research** for studies and workspaces. Ask `explain_decision`, `desk_records`, `market_data`, `workspace_read` or `tandem_fix` as appropriate. Explain the source, date and coverage of any figure.
 
 ## How do I answer a cash question?
 
@@ -175,13 +255,17 @@ Use `stop_crypto_change` with the exact change ID on the selected account. Check
 
 Use `save_autopilot_summary` with the exact picker entry ID and its listed source URL. Tandem checks the two refer to the same summary and saves it as watch only.
 
+## How do I copy someone?
+
+Use `copy_someone` with a wallet, profile link, @username, House member, fund or CIK, or an imported file's name. It returns who it is, what they trade, last activity, `can_follow_into` accounts and the scopes offered, or candidates if ambiguous. Then call `portfolio_follow` with its `resolution_id`, plus `account_ref`, `amount` and `scope` (`new_trades_only` by default) if chosen. Watch is the default.
+
 ## How do I follow and start a Practice mirror?
 
-Use `wallet_mirror_follow` with the exact wallet. If the client chooses to replace a mirror, pass the chosen `pause_wallet`. The old records are retained. The mirror uses simulated money.
+Use `wallet_mirror_follow` with the exact wallet. If the client chooses to replace a mirror, pass the chosen `pause_wallet`.  The mirror uses simulated money.
 
 ## How do I pause or resume an existing Practice mirror?
 
-Use `set_wallet_mirror_paused` with the exact wallet and `paused` true or false. Tandem keeps the mirror history. The mirror uses simulated money.
+Use `set_wallet_mirror_paused` with the exact wallet and `paused` true or false.
 
 ## How do I check a Kalshi batch again?
 
@@ -348,6 +432,14 @@ Use `webull_data` on the selected account. Read order history with `order-histor
 
 Use `queued_orders` on the selected account to read its saved queue and status. Use `cancel_queued_order` with the exact queued ID under the saved Automatic grant. It cancels a waiting instruction in Tandem. If the order has already reached the venue, read its working terms and use the ordinary order cancellation path. In Review, open Queued orders on the selected account in Tandem.
 
+## How do I review or remove a saved prediction exit?
+
+Use `plan_prediction_exit` to save a time or bid target. Read `prediction_exit_plans` on the selected account. Send the exact plan ID to `review_prediction_exit` for Review and Confirm in Tandem. The order checks the saved trigger and current held side. Use `remove_prediction_exit` to cancel or dismiss the plan under the saved Automatic grant for that account and market. If the grant has an approval threshold, remove the plan directly in Tandem. An unresolved venue order keeps the plan and its reservation.
+
+## How do I cancel a desk-managed protection?
+
+Read `held_exit_protections` on the selected account. Use `cancel_held_exit` with the exact protection ID and its saved Automatic grant. If the grant has an approval threshold, cancel the protection directly in Tandem. Once the exit is working or unresolved, check the order in Tandem.
+
 ## How do I edit the Markets watchlist?
 
 Use `set_market_watchlist_symbols` with the exact list of extra symbols. For Save and capture, use `save_and_capture_watchlist` to request completed daily closes after saving. A capture problem can leave the saved list in place.
@@ -434,4 +526,24 @@ Use `save_market_interests` with the three lists. Three empty lists save Skip. U
 
 ## How do I run saved research or refresh World sources?
 
-Use `queue_prediction_research` for an exact retained dataset, market, as-of cutoff and query. Use `run_local_research_job` or `run_prediction_research_job` with the exact saved job ID, then confirm its run in Tandem. Use `analyze_public_wallet` with the public address and optional regime date. Use `research_collector_status` for the weather, source inbox and supervisor reads. Use `capture_world_public_references` with a profile shown in the World inbox, and `unmute_holdings_news` with the exact saved source or holding key.
+Use `queue_prediction_research` for an exact retained dataset, market, as-of cutoff and query. Use `run_local_research_job` or `run_prediction_research_job` with the exact saved job ID, then confirm its run in Tandem. Use `analyze_public_wallet` with the public address and optional regime date. Use `research_collector_status` for the weather, source inbox and supervisor reads. Use `capture_world_public_references` with a profile shown in the World inbox, and `unmute_holdings_news` with the saved key.
+
+## How do I change the limits on one account?
+
+Select the exact account and ask for `review_account_limits` with the dollar or percentage limits you want to change. Set an optional limit to null to remove it. Open Details to check the saved and proposed values, then confirm in Tandem. A limit change keeps the current Real switch and Stop state.
+
+## How do I cancel all working stock or option orders?
+
+Select the Alpaca or Webull account and ask for `review_cancel_stock_orders`. Open Details to check the exact working orders and any skipped orders. Confirm that saved set in Tandem. Cancellations remain available during Stop. Check the receipt for each order.
+
+## How do I change the desk-wide Stop thresholds?
+
+Use a desk-wide session and ask for `review_desk_stop_thresholds` with the enabled setting, day loss and drawdown percentages, and number of stopped accounts. Check the thresholds in Details and confirm in Tandem. Account-scoped sessions cannot propose the change. Use the Stop sheet for the desk emergency controls and saved recovery plan.
+
+## How do I run every Desk team research role once?
+
+Ask for `routine_control` with operation `run`, the saved routine ID and revision, and `full_team: true`. Select the routine’s account, check the run in Details, and confirm in Tandem. The saved team uses its existing source permissions, market-hours and cost limits. Stop holds the run.
+
+## How do I change my saved workspace?
+
+Read the exact layout and revision with `workspace_read`. Use `workspace_change` to focus, move, resize or close a panel, set a linked or panel context, or edit the saved references. Review and confirm the selected workspace change in Tandem, or use a saved Manage grant for that workspace.

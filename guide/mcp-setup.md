@@ -4,7 +4,7 @@
 
 For help with the desk or an AI connection, see [Troubleshooting](troubleshooting.md) or email contact@monchera.com.
 
-MCP connects a local AI app to Tandem's tools and permissions. The default catalog has **16 tools**, including `find_capability` and `manage_price_alerts`. A connection may see fewer under its saved scope.
+MCP connects a local AI app to Tandem's tools and permissions. Pairing works independently of the built-in Ask AI assistant. The default catalog has **16 tools**, including `find_capability` and `manage_price_alerts`. A connection may see fewer under its saved scope.
 
 - `tandem_brief`: balances, results, positions, today's actions and Needs you.
 - `tandem_fix`: numbered recovery checks when something is not working.
@@ -19,7 +19,7 @@ For example, ask the AI to call `desk_overview` with `action: "guide"` and `argu
 
 ## Choose the scope and authority
 
-**Settings → AI → Connect your AI app** preselects Automatic for new connections. Choose the account, mode, read scope and lifetime when you approve the matching code. Research and Review are available in the same list. Existing connections keep the mode you approved.
+**Settings → AI → Connect an external AI app** preselects Automatic for new connections. Choose the account, mode, read scope and lifetime when you approve the matching code. Research and Review are available in the same list. Existing connections keep the mode you approved.
 
 - **Research** only reads permitted sources.
 - **Review** prepares actions for your review and confirmation.
@@ -52,13 +52,13 @@ code. Automatic mode retains account, instrument, capability, capital, loss, act
 and expiry ceilings. The client approves a new or expanded mandate once. The agent
 cannot grant itself more authority or arm real-money trading.
 
-MCP lets a local AI app use the desk tools. Keep Tandem running and open **Settings → AI → Connect an AI app**. Select your app, then choose **Save to this app**. Tandem adds its installed launcher and keeps the other saved settings. Start a new session or reopen the AI app. Match the connection code in Tandem and choose the account, access level and duration. Use **Revoke** in the same Settings section to end access.
+MCP lets a local AI app use the desk tools. Keep Tandem running and open **Settings → AI → Connect an external AI app**. Select your app, then choose **Save to this app**. Tandem adds its installed launcher and keeps the other saved settings. Start a new session or reopen the AI app. Match the connection code in Tandem and choose the account, access level and duration. Use **Revoke** in the same Settings section to end access.
 
 After updating Tandem, use **Save to this app** again if the AI app lost its connection. Tandem can refresh a launcher it saved for an earlier version of the same installation.
 
 ## Claude Desktop: one-click extension (easiest)
 
-Tandem ships the extension (`options-desk.mcpb`, inside the app under `Contents/Resources`). In **Settings → AI → Connect an AI app**, choose the Claude Desktop tab and **Add to Claude Desktop**: Tandem hands the file to Claude Desktop, which asks you to install it. Choose Install there. If Claude Desktop isn't on this Mac, or this copy of Tandem has no extension (running from source without the packer), the button explains why and the manual config below still works. It runs the installed desk's own bridge, talks only to the desk on 127.0.0.1 and asks for no keys. Its settings form has the desk address (leave the default unless the **Connect your AI app** panel in **Settings → AI** shows another port) and an optional bridge path for unusual installs. Then open Tandem, **Settings → AI → Connect your AI app**, and approve the connection code with the grant you want. The extension remembers its connection in Keychain as `claude-desktop`.
+Tandem ships the extension (`options-desk.mcpb`, inside the app under `Contents/Resources`). In **Settings → AI → Connect an external AI app**, choose the Claude Desktop tab and **Add to Claude Desktop**: Tandem hands the file to Claude Desktop, which asks you to install it. Choose Install there. If Claude Desktop isn't on this Mac, or this copy of Tandem has no extension (running from source without the packer), the button explains why and the manual config below still works. It runs the installed desk's own bridge, talks only to the desk on 127.0.0.1 and asks for no keys. Its settings form has the desk address (leave the default unless the **Connect an external AI app** panel in **Settings → AI** shows another port) and an optional bridge path for unusual installs. Then open Tandem, **Settings → AI → Connect an external AI app**, and approve the connection code with the grant you want. The extension remembers its connection in Keychain as `claude-desktop`.
 
 With a Review grant, an eligible practice order can show a Confirm or Decline card inside a host that supports MCP confirmation forms. With a Review grant, confirm real-money proposals in Tandem on the Mac. Confirm runs the desk's own confirm (same checks, same order owner); Decline leaves no order. Apps without that card keep the desk's confirm. If the app accepts the card but never shows it, the request gives up after 4 minutes and nothing is sent. A held request retains its detailed reason for inspection; the AI should explain it in plain words. `desk_overview` action `status` tells the AI its connection's mode and account, whether first-week practice mode is on and whether phone alerts are set up. When the desk's tool list changes, the bridge tells the app to reload it (`tools/list_changed`), so a new tool appears without reinstalling. **Settings → AI → Keep amounts private** restricts connected AI apps to public, research-only reads even if their saved connection has Trade or Manage authority. The built-in assistant keeps its existing action permissions while withholding sourced account details, saved personal context and prior conversation turns from its model. Full personal-performance answers are unavailable while those details are hidden. Anything you type into a hosted AI, including amounts, is still sent to that provider. Tandem can still show private details locally. See [AI privacy](connect-ai.md).
 
@@ -74,9 +74,11 @@ For Claude Code and Codex, choose **Save to this app** and start a new session. 
 
 Keep Tandem open when starting Codex. If you add the launcher manually, include `required = true` and `startup_timeout_sec = 55` under `[mcp_servers.options-desk]` so Codex waits for the tool list before its first answer.
 
+If **Connect an external AI app → Codex** shows a startup error, open Tandem, choose **Try again**, and start a new Codex session once setup is available.
+
 ## ChatGPT desktop
 
-In Tandem, choose **Settings → AI → Connect an AI app → ChatGPT desktop → Save to this app**. In ChatGPT, open **Settings → MCP servers** and restart the Tandem server. Ask it to use `tandem_brief`, then approve the matching connection code in Tandem. ChatGPT desktop and Codex share the local configuration and appear as Codex in Tandem.
+In Tandem, choose **Settings → AI → Connect an external AI app → ChatGPT desktop → Save to this app**. In ChatGPT, open **Settings → MCP servers** and restart the Tandem server. Ask it to use `tandem_brief`, then approve the matching connection code in Tandem. ChatGPT desktop and Codex share the local configuration and appear as Codex in Tandem.
 
 You can also use ChatGPT's **Add server → STDIO** form. Take `command` and every item of `args` from the settings shown in Tandem, then save and restart the server. The isolated Tandem install verified that **Save to this app** and **Copy settings** use the local launcher and desk address. The matching code and first scoped read still need to be verified in the external ChatGPT desktop app. [Official OpenAI MCP setup](https://learn.chatgpt.com/docs/extend/mcp).
 
@@ -84,7 +86,7 @@ Use the desktop setup for this release. ChatGPT web requires a hosted MCP server
 
 ## Choose connection authority once
 
-1. Discover desk tools in your AI app, then match its connection code in **Settings → AI → Connect your AI app**. The code is a comparison label, not a credential. Discovery can wait briefly; actions never automatically retry.
+1. Discover desk tools in your AI app, then match its connection code in **Settings → AI → Connect an external AI app**. The code is a comparison label, not a credential. Discovery can wait briefly; actions never automatically retry.
 2. Choose the account and mode. **Automatic** shows each selected account as Practice or Real, with its expiry and any optional per-order or daily dollar caps. Leave either cap empty to set no cap of that kind. Tandem holds automatic orders above a saved cap for your decision. Turn on Real separately in Accounts before adding a Real grant. Pair again to add accounts or authorize Real on a previously paired app. **Research** reads and **Review** prepares proposals for you to confirm. Stop new trades halts automatic openings.
 3. Review the read scope. The default shares financial data for the selected account only. Enable **Read all connected accounts** only when you want the AI app to see balances, holdings and activity across every account, including real-money accounts. This does not broaden its order authority. Choose **Session**, **1 day**, **7 days** or **30 days**. Research and Review also offer **Until I revoke**. Check the account, access and duration before approving. Account trading caps and expiry remain independent. The agent cannot widen them. You can request a new grant from your agent with `request_autonomy`; the client confirms that initial or expanded grant once.
 4. Use the new client-specific setup snippet for remembered access. `--client-id` gives Claude Desktop, Claude Code and Codex separate bearer identities in macOS Keychain; the server stores only their hashes and grant scope. Without this flag the bridge remains ephemeral and a restarted bridge needs pairing again. First Keychain access may need your local approval.
@@ -94,7 +96,7 @@ Use the desktop setup for this release. ChatGPT web requires a hosted MCP server
 
 Use `portfolio_resolve` to identify a source, then call `portfolio_follow` with its `resolution_id`. For stock disclosures, pass the client’s chosen `account_ref`. If the client hasn’t chosen and exactly one eligible Real account exists, Tandem selects it. Otherwise, ask the client to choose from the returned eligible accounts, with Real first and Practice next. If none are eligible, connect an Alpaca or Webull stock account in **Settings → Accounts & keys**.
 
-Show the destination, whether the strategy is on, and any holds from the saved follow receipt. Review connections prepare a proposal in Tandem. An Automatic connection can enable a stock copy when its saved permission covers the destination and strategy. Otherwise the new copy starts off. To turn it on, open the copy in **Strategies** and choose **Enable strategy**. For a Real destination with trading off, turn on Real for the account in **Accounts** first. Follow setup sends no orders. Future orders still go through the desk’s source, quote, account and OrderOwner checks. Wallet follows use the Practice mirror, and partial public summaries can be saved for research.
+Show the destination, whether the strategy is on, and any holds from the saved follow receipt. Review connections prepare a proposal in Tandem. An Automatic connection can enable a stock copy when its saved permission covers the destination and strategy. Otherwise the new copy starts off. To turn it on, open the copy in **Strategies** and choose **Enable strategy**. For a Real destination with trading off, turn on Real for the account in **Accounts** first. Follow setup sends no orders. Future orders still go through the desk’s source, quote, account and OrderOwner checks. Through MCP, a wallet follow saved without a mode is Watch only (a refollow after Unfollow never revives an old copy destination); wallet follows can also start the Practice mirror; copying a wallet signal to an account is prepared as a reviewed order in Tandem, and partial public summaries can be saved for research.
 
 Use `portfolio_follows` to read the saved follow IDs and `portfolio_unfollow` to stop new copies from a source. The desk keeps existing positions. Use `arbitrage_package` to execute a fresh saved opportunity or close its sourced exposed leg. Every leg’s account must be within the same Automatic connection grant. Tandem retains the package and individual-leg receipts.
 
@@ -152,7 +154,7 @@ assigned to the routine's current account.
 ## Research workspace scope
 
 For a new connection, choose a single saved research workspace or **All my research
-workspaces, including new ones** in **Settings → AI → Connect your AI app**. All-workspaces scope additionally
+workspaces, including new ones** in **Settings → AI → Connect an external AI app**. All-workspaces scope additionally
 permits creating desks. Review the matching code, mode, scope and lifetime before
 connecting. Existing connections keep their original permissions.
 

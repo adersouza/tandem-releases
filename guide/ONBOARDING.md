@@ -26,6 +26,12 @@ Words in **bold** are names you will see in the app. Where this guide says "chec
 
 ## 3. Create your own accounts and keys
 
+On first launch, choose **Connect one account**, **Explore the sample desk**, or **Restore from backup**. After your first read, review the balance and mode, then dismiss the **Practice order preview**. AI, iPhone pairing and starter plans are optional on **You’re set**. You can use **Finish later** and reopen setup from **Settings → Accounts & keys**.
+
+Choose **Take the tour** from the sample banner. The walkthrough takes you through account status, ⌘K Search, news, sourced dates, Copy Decisions, recurring buys, phone alerts and the year-end report. The sample uses Practice examples and stays on the Mac.
+
+In the sample desk, open **Overview → Your return**, try the **Screener** or open a saved watch in **World Monitor → Watches**. Use ⌘K to find **Daily market brief** or **Recurring buy**. Choose **Exit sample desk** to return to your own desk.
+
 Start with the account you want to use. You can connect **Real**, **Practice**, or both where the venue offers them. Saving a connection lets Tandem check the account. To enable real-money trading, open that account in **Accounts**.
 
 General rules for every venue:
@@ -40,7 +46,7 @@ Start with one connection for what you want to do first.
 - **Follow a Polymarket wallet.** You can start a **Practice mirror** without connecting a trading account. To review an exact-match copy, connect a **Real** Kalshi or Polymarket US account, or Kalshi Demo for **Practice**.
 - **Use another account for your own trades.** Open **Settings → Accounts & keys** for the other connections, including Tradier and Kalshi Perps where available. Use the venue and account shown in the order review.
 
-Open **Settings → Accounts & keys → Add a connection**, or choose **Show steps** beside a venue. Pick **Practice** or **Real money** where offered. Enter the key in the matching fields and save and test. On a saved connection, choose **Manage → Check now** to test again. A **Connected** result verifies an account read. Order and data permissions are separate. See [Connect your accounts](connect-accounts.md) for the full steps.
+Open **Settings → Accounts & keys → Add a connection**, or choose **Show steps** beside a venue. Pick **Practice** or **Real money** where offered. Enter the key in the matching fields and save and test. On a saved connection, use **Check again** to read it again. A **Connected** result verifies an account read. Order and data permissions are separate. See [Connect your accounts](connect-accounts.md) for the full steps.
 
 ### Alpaca (optional: stocks and ETFs)
 
@@ -107,36 +113,25 @@ Check the source and update time beside the quote in **Markets**. Start with the
 
 ### What the phone sees
 
-Every phone message from the desk says "Tandem: something needs your attention. Open the desk to check.", a short fixed category such as "order needs review" or "operations alert", and the time. It never carries balances, tickers, account names or strategy names. Open the desk on your Mac to see the details.
-
-### Setting up the phone alert channel
-
-The desk sends phone alerts through ntfy. Everything is done in the app and on your phone:
-
-1. Install the free ntfy app on your phone.
-2. On the Mac, open **Settings → Alerts and phone → Phone → Phone alerts → Set up**. Choose **Make one for me** to generate a topic. Point your phone camera at the QR code and copy the topic.
-3. In the ntfy app, tap **+** (Subscribe to topic), paste the topic and subscribe. No QR code? Copy it from the desk with **Show** instead.
-4. Back in the desk, choose **Save and test connection**. One real test alert, "Tandem: test alert. Open the desk to check.", arrives on your phone. The desk reports whether it was delivered, refused (check the topic or token) or could not reach ntfy.
-
-Leave the access token and server blank unless you run your own ntfy server (https only). The topic name is a secret. Anyone who knows it can read your alerts, so keep it out of chats and screenshots. It is stored in your Keychain and never shown again.
+The paired Tandem app can show fills, held copies, limits, stops, unconfirmed orders and price alerts. Use **Settings → Alerts and phone** to choose the types and quiet hours. Lock Screen text starts with the alert category. **Show amounts** adds known fill quantities and observed prices. Tap the alert to open the saved item.
 
 ### Pair your phone to review decisions
 
-Pair your phone from **Settings → Alerts and phone → Phone**. Sign in to the same Tailscale network on both devices and enable HTTPS for [private Tailscale Serve](https://tailscale.com/docs/features/tailscale-serve). On the Mac, choose **Set up phone access**, or enter its existing private Serve address.
+Reuse your existing pairing, or select **Settings → Alerts and phone → Manage pairing**. Sign in to the same Tailscale network on both devices and enable HTTPS for [private Tailscale Serve](https://tailscale.com/docs/features/tailscale-serve). On the Mac, choose **Set up phone access**, or enter its existing private Serve address.
 
 Choose **Show code**, open the displayed address on the phone, and enter the code. It works once and expires after a few minutes. A phone stays paired for 30 days. Open a waiting decision in Tandem and check the account, **Real** or **Practice**, and what the action would do. Use the confirmation shown in the review, including holding to confirm when prompted. Set up keys and turn on real-money trading in **Accounts** on the Mac. **Turn off** revokes Tandem phone access and all pairings. Tailscale manages its proxy separately.
 
-On iPhone, open Tandem in Safari and use **Share → Add to Home Screen**, then turn on **Open as Web App** if shown. Open the new icon, go to **Settings → Alerts and phone → Notifications on this device** and allow notifications if you want them. Check the icon over cellular with Tailscale connected and confirm a test alert arrives on the phone. [Apple’s iPhone guide](https://support.apple.com/guide/iphone/open-as-web-app-iphea86e5236/ios)
+On iPhone, open Tandem in Safari and use **Share → Add to Home Screen**, then turn on **Open as Web App** if shown. Open the new icon. Under **Settings → Alerts and phone → Notifications on this device**, choose **Turn on**, then **Send test**. Check for the test on your phone. If push is unavailable, the paired desk shows alerts and an unread badge in the bell. [Apple’s iPhone guide](https://support.apple.com/guide/iphone/open-as-web-app-iphea86e5236/ios)
 
 ### The outside heartbeat (optional, Healthchecks.io)
 
 The heartbeat tells your phone if the Mac or the desk is down. The desk itself cannot tell you when the Mac is off, so this check runs from outside.
 
-1. Create your own free account at https://healthchecks.io and a new check. Set a 5-minute period and a 10-minute grace.
+1. Create your own free account at https://healthchecks.io and a new check. Set a 5-minute period and a 15-minute grace.
 2. In Healthchecks, add your phone as a way to be notified (see https://healthchecks.io/docs/ ).
 3. Copy the check's ping URL (https://hc-ping.com/...).
 4. Open **Settings → Desk health → Background checks → Heartbeat → Add**. Paste the URL and choose **Save and test connection**. Leave the allowed host blank unless you run your own Healthchecks server. The URL goes in your Keychain.
-5. Open **More heartbeat actions**, choose **Install** for the outside heartbeat and review **Confirm install**. The helper runs every five minutes. It retries a failed local check once. Two failed cycles in a row can send a failure ping. **Heartbeat history** shows the saved results. Use **Send test ping** and confirm a **Log** event in Healthchecks. macOS may request permission for background Keychain access.
+5. Open **More heartbeat actions**, choose **Install** for the outside heartbeat and review **Confirm install**. The helper runs every five minutes. It retries a failed local check once. Three failed cycles in a row (about 15 minutes) can send a failure ping. **Heartbeat history** shows the saved results. Use **Send test ping** and confirm a **Log** event in Healthchecks. macOS may request permission for background Keychain access.
 6. Pings carry no balances, positions or account details.
 
 A down alert means the heartbeat missed its grace period or reported a failure. Wake the Mac, sign in and check **Desk health**. After a restart, unlock FileVault and sign in. Read any safety stop or unknown order before placing or approving a trade.
@@ -188,9 +183,9 @@ On **Your limits** in setup, each starting plan offers eligible Webull and Alpac
 
 Open **Following → Follow a portfolio**. Choose a source from the list or paste a wallet, member name, fund CIK or link and choose **Look up**. Check the name and latest filing or activity. Filings can arrive weeks after the original trades.
 
-- **Stock disclosures.** Under **Destination account**, choose your Webull or Alpaca stock account and select **Save copy**. Eligible **Real** accounts appear first. A new copy starts with trading off. If your account is unavailable, choose **Choose later**. When the account is ready, open the saved strategy in **Strategies**, choose **Edit**, select the account and choose **Save destination**. Review the strategy before enabling it.
+- **Stock disclosures.** Under **Destination account**, choose your Webull or Alpaca stock account and select **Follow**. Eligible **Real** accounts appear first. A new copy starts with trading off. If your account is unavailable, choose **Choose later**. When the account is ready, open the saved strategy in **Strategies**, choose **Edit**, select the account and choose **Save destination**. Review the strategy before enabling it.
 - **Polymarket wallet.** Choose **Start practice mirror** to simulate trades with public prices. To review a single trade, choose **Review a trade** on the wallet in **You follow**. Choose **Track new trades** if an older follow needs a start date. Pick your Kalshi or Polymarket US account and set **Maximum spend (USD)**, including fees. Choose **Ask AI in Review** and send the prepared question. Check the contract, account and maximum spend in the review. Real copies require an exact match and an enabled Real account. If Tandem can’t match the contract, inspect the decision or use the Practice mirror.
-- **Watch-only source.** If the source is a partial public summary, such as Autopilot, choose **Watch**, then **Save to Following**. It appears in **You follow** for research, with no brokerage account needed.
+- **Watch-only source.** If the source is a partial public summary, such as Autopilot, choose **View source**, then **Watch**. It appears in **You follow** for research, with no brokerage account needed.
 
 Return to **Following** to see the destination and strategy status. If the account needs attention, **Check connection** opens **Accounts & keys**. For a copy receipt, select **Real** or **Practice** to match the destination, then open **Copy decisions**. **Held copies** also links to the decision. **Check again** refreshes the saved receipt. If it still shows an unconfirmed order, check the venue before acting on the signal again.
 
@@ -248,7 +243,7 @@ Choose **Take the tour** on the first setup screen or in **Help**. It uses sampl
 
 ## 10. Prompt for your AI assistant
 
-In setup, choose **Claude Desktop**, **ChatGPT desktop** or **Codex** in **Your AI**. Use **Copy test question** to bring up the pairing code. Choose the account and access in Tandem, and approve only the matching code. ChatGPT desktop and Codex share one connection, shown as Codex.
+In setup, choose **Set up Tandem's assistant** to use Ask AI and run a sourced test. Use **Connect an external AI app** to pair **Claude Desktop**, **Claude Code**, **ChatGPT desktop** or **Codex**. Each path works on its own. Use **Copy test question** to bring up the pairing code. Choose the account and access in Tandem, and approve only the matching code. ChatGPT desktop and Codex share one connection, shown as Codex.
 
 When your AI app is connected, start with `desk_guide` topic `ONBOARDING` and `desk_status` for the scope you approved. Use `markets` to find a venue's source and read prices, `holdings_and_accounts` for account data, and `world` action `my_news` for saved news about your holdings, bets and followed portfolios. Use `find_capability` to discover venue-specific operations and their exact fields.
 

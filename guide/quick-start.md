@@ -2,11 +2,11 @@
 
 ## Open Tandem
 
-On **Connect your accounts**, choose **Take the tour** to explore with sample data. The tour returns to **Overview** when you leave. Use **Settings → Accounts & keys → Reopen setup** to revisit a setup step.
+Choose **Connect one account** or **Explore the sample desk**. If you are moving Macs, choose **Restore from backup**. Use **Finish later** to leave setup and **Settings → Accounts & keys → Reopen setup** to return.
 
 ## Connect one account
 
-In **Settings → Accounts & keys**, choose **Add a connection**. Pick a venue and the matching account type. Enter keys only in Tandem. Use **Save and test connection** or **Save and test**. A connected account is ready to read. Its Real switch starts off. [Connect your accounts](connect-accounts.md)
+In **Settings → Accounts & keys**, choose **Add a connection**. Pick a venue and the matching account type. Enter keys only in Tandem. Use **Save and test connection** or **Save and test**. A connected account is ready to read. Its Real switch starts off. In setup, review the balance, mode and read time, then open and dismiss the **Practice order preview**. **Overview** points out **Activity** and **Stop** on your first visit. [Connect your accounts](connect-accounts.md)
 
 ## Try one task
 

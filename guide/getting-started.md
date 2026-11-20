@@ -14,14 +14,18 @@ Tandem then lives in the menu bar. Closing the window keeps it running; use the 
 
 ## First run
 
-First launch guides you through your accounts, optional AI setup and limits. You can try the sample desk before connecting anything.
+First launch guides you through an account read and a Practice preview. You can explore the sample desk before connecting anything.
 
-1. **Connect your accounts.** Add a Real or Practice account for a venue you use. Saving keys does not activate Real. Choose **Skip** to connect later in **Settings → Accounts & keys**. **Take the tour** opens a sample desk. When you leave, Tandem returns to **Overview** and keeps your saved setup progress.
-2. **Connect your AI.** Choose Claude Desktop, ChatGPT desktop or Codex. Use **Copy test question**, choose your account and access, and approve the matching code. The built-in assistant has its own settings under **Settings → AI**.
-3. **Your limits.** Choose an eligible starting plan and **Destination account**, or choose **Decide later**. **Use this plan** saves the strategies with trading off. Review your limits and accept the terms. Turning on real money requires your decision on **Accounts**.
-4. **You're set.** Read the recap. Choose **Open Tandem** for **Overview** or **Open Following** to try a follow.
+1. **Connect one account.** Add an account for a venue you use. Saving keys does not activate Real. Choose **Finish later** to connect later in **Settings → Accounts & keys**.
+2. **Your first account read.** Check that Tandem can show the balance for the account you connected.
+3. **Preview a Practice order.** Check its quantity, limit price and maximum cost. The example sends nothing.
+4. **You’re set.** Choose **Set up AI** to set up Tandem's assistant or connect an external AI app. Each path works on its own. You can also pair your iPhone, choose a starter plan or open Tandem and come back later. [Connect your AI](connect-ai.md)
+
+From the sample banner, choose **Take the tour** for the walkthrough. It opens sample stories, dates, Copy Decisions, recurring buys and Practice records. On your own desk, press **⌘K** and type the workflow name, or use **Search help**.
 
 Tandem saves setup progress. Return through **Settings → Accounts & keys → Reopen setup**. Choose **Finish** or **Redo** next to the step you want. The checklist shows **Not read** when a check is unavailable.
+
+In the sample desk, open **Following → Test this source → Open Research** for a saved replay. Open **AI assistant → Desk team** for a sample discussion and its run history.
 
 ## Choose your next task
 

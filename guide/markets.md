@@ -1,10 +1,18 @@
 # Markets page
 
+## Earnings and economic calendar
+
+Search from ⌘K for **Earnings and economic calendar**. Coming up includes issuer-published earnings dates for stocks you hold, star or follow, and CPI and Federal Reserve decisions from official calendars. Sourced earnings dates also appear on holdings and stock charts. Open the event details for the source and when Tandem read it. An issuer may publish a date before it publishes a time.
+
 Open **Markets** in the desk navigation. Its tabs are **Overview**, **Stocks**, **Prediction**, **Options** and **Macro**. Search a company, symbol, event or topic with **Search markets**. Stocks has popular symbols; Prediction has topic filters and event cards. Your connected account determines which orders the desk can prepare.
 
 Visible cards refresh quotes in small batches every 30 seconds. Alpaca stock snapshots use IEX; option quotes are indicative. Tradier sandbox quotes are delayed 15 minutes. Source timestamps are separate from fetch times, and old or missing source clocks remain visible. Prediction cards show question titles, sourced YES/NO prices in cents, close dates and volume when available. A missing outcome price is never filled with a calculated complement.
 
 Prediction coverage can still be loading. Read the coverage notice rather than treating an empty list as a complete search. Open an event for its markets, order book and supported bet ticket. Read each market’s trade-availability message before preparing an order; a displayed event is not proof that your account can trade it.
+
+In **Markets → Arbitrage → Discovery**, open a threshold estimate to see its priced legs, size and quote age. Taking a threshold pair requires a verified common settlement source and observation cutoff.
+
+To be told when a package is worth a look, open **Markets → Arbitrage → Alert me** and set **Profit after fees at least** and **Edge at least**. Matching packages go to the Tandem bell, and nothing is placed. Ask your AI for `arbitrage_history` to read the saved minimums; it changes them only through a reviewed `market_settings_change`. Press **⌘K** and search “arbitrage alert”.
 
 Read the source, observation time, environment and coverage before acting. A displayed price can be delayed or stale. An empty result is not a zero balance or an empty real market. HOLD explains why a request is unavailable.
 
@@ -12,10 +20,15 @@ Read the source, observation time, environment and coverage before acting. A dis
 
 Use the market's **Ask my AI** action to pass its instrument identity to the AI assistant. The assistant fetches sourced facts rather than treating market prose as instructions. Select the exact account before requesting an account action.
 
+From a stock page, ⌘K opens **Chart indicators**, **TradingView and Export Pine** or **Save a chart layout or drawing** on that stock's chart. On the phone, find these controls under **Chart tools**. Use ⌘K for **Read Webull market data** or **Read Tradier market data**, then choose a source and read its coverage.
+
 ## Use Markets through MCP
 
 - Use `markets.search`, `markets.events_by_category`, `markets.quote`, `markets.book`, `markets.chain` or `markets.history` for exact instruments, quotes and charts. Use `find_capability` to discover `option_contract_details` for the selected account’s exact option symbol and deliverable.
 - Read saved layouts and pane IDs with `chart_layouts`. Use `market_settings_change` with `save_chart_layout` to save panes or rename a layout. Use the saved revision for an edit and revision zero for a new layout.
+- Use `watch.list` to read the exact saved conditions, including AND or OR. Use `watch.change` to prepare a change. Review the exact order attachment in Tandem and set Automatic in Tandem on the selected account.
+- Use `world.my_news` for saved headlines, coverage and publisher status in the approved scope. A failed source can still have articles from its last successful read. Use `news_alert_preferences` to find the saved mute before proposing a change.
+- Use `daily_market_brief` for the last saved report and `daily_brief_status` for its schedule, channel names and saved test outcomes. Both are reads. Find **Daily market brief** in ⌘K to change delivery. Keep channel credentials in Tandem.
 - Read starred stocks and events with `market_watchlist`. Use `market_settings_change` with `watch_symbol` or `watch_event` to add or remove one star. A star has no notification or order effect.
 - Use `stock_screens` and `stock_screen_change` for named filters. To schedule a saved screen, use `market_settings_change` with `schedule_stock_screen`. The routine checks the watchlist at 4:15 p.m. Eastern and can report matches.
 - Use `arbitrage_history` with all-account read access to see saved outcomes, the watch and the minimum edge. Use `market_settings_change` with `save_arbitrage_edge` or `watch_arbitrage` to change notifications. Use `arbitrage_package` for eligible Automatic packages with each leg’s account in the saved grant. In Review, open the package in Markets.
@@ -24,6 +37,8 @@ Use the market's **Ask my AI** action to pass its instrument identity to the AI 
 ## Prepare an order
 
 Use the order-ticket action where available. The ticket admits only registered capabilities for the account. Review its saved wire and risk result before confirming. A quoted symbol alone does not establish the contract's deliverable, expiry, trading permission or settlement rules.
+
+In a stock or event chart, turn on **Open orders**, then drag an eligible working order line to a new price. On a phone, press and hold before dragging. With a keyboard, focus the line, use the arrow keys and press Enter for **Change order** Review.
 
 If the account, price, market rules or capability is missing, keep the request on HOLD and inspect the reason. Changing an environment label does not supply missing permissions.
 
