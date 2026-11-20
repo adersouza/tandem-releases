@@ -1,15 +1,15 @@
 # Emergency stop
 
-Open **Accounts**. In the **Stop new trades** card, choose **Stop new trades**, type a short reason, then press and hold **Stop new trades now** until it finishes. This stops new trades on every account. The card then shows **New trades stopped** with the time and your reason. **Turn back on…** in the same card opens **Turn new trades back on**, where you turn trading back on.
+Click **Stop new trades** in the Mac sidebar. On your phone, open **More → Stop new trades**, then tap **Stop new trades** in the sheet. **Settings → Trading safety → Stop new trades** also shows the stop and its saved state.
 
-The stop persists an entry halt. A “requested” message is not proof that the backend saved it. Refresh the account state and verify the saved stop. If the app cannot respond, inspect your account directly at the venue.
+Read the outcome: **New trades stopped on every account** confirms the saved stop. Tandem also reports its attempts to cancel resting buy orders. Check those cancellation results; a cancellation request is not proof that the venue cancelled an order. Refresh the account state if the outcome is missing. If Tandem cannot respond, check your accounts in each venue's own app or website. A timeout does not prove that trading stopped.
 
-## Stopping and flattening are different
+## Stopping and closing are different
 
-Stopping blocks new entries. It does not guarantee existing orders are cancelled or positions closed.
+The stop blocks new entries and attempts to cancel resting buys. It does not close your positions or guarantee that every waiting order was cancelled. Existing orders may still fill. Selling and closing remain separate actions.
 
-Where available, review the flatten plan separately. It may cancel orders and propose limited position reductions for the exact account. Confirm that plan only after checking its scope. A closed market, unavailable price, ambiguous order or missing exposure can leave part of the plan unresolved.
+Where available, review the close-all plan separately. Check the exact account, orders and position reductions before its Review → Confirm. A closed market, unavailable price, ambiguous order or missing exposure can leave part of the plan unresolved.
 
-Do not assume a request timeout means nothing happened. Reconcile before another action. Keep unknown outcomes visible and do not resend ambiguous operations.
+Do not resend an order whose outcome is unknown. Check it at the venue and use **Check account** in Tandem before another action.
 
-Your AI cannot clear the stop or arm real-money trading. In Review mode MCP can propose a stop; a supported Manage grant can stop new entries directly. The **Stop new trades** card on **Accounts** is the direct control to use in an emergency.
+Review the reason for the stop before turning trading back on from the Mac. Your AI cannot clear the stop or arm real-money trading. See [Troubleshooting](troubleshooting.md) if the saved outcome cannot be read.

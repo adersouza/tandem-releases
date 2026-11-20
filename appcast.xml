@@ -3,6 +3,16 @@
   <channel>
     <title>Tandem</title>
     <item>
+      <title>Tandem 1.0.17</title>
+      <link>https://github.com/adersouza/tandem-releases/releases/tag/v1.0.17</link>
+      <pubDate>Fri, 20 Nov 2026 07:39:34 +0000</pubDate>
+      <sparkle:version>7503</sparkle:version>
+      <sparkle:shortVersionString>1.0.17</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>What&#x27;s new<br /><br />- Schedule hands-off copying for eligible stock portfolios. Tandem checks new disclosures during market hours and places eligible orders within your saved limits.<br />- Schedule recurring dollar buys with a budget and an end date. Attach a price-limited order to a watch and choose Review or Automatic where supported.<br />- Ask a connected AI app to handle more tasks you can do in Tandem, including reading accounts, checking copy decisions and proposing order changes.<br />- Choose a local model through Ollama to ask about your desk and prepare proposals for Review.<br />- Research is included for everyone. Findings shows public-data studies on SPY and Central Park temperatures. Buy-and-hold beat the tested SPY rules in the historical simulation. The temperature study lacked enough matched Kalshi prices for an exchange comparison.<br /><br />Fixes<br /><br />- Tandem no longer loses its connection to the desk when a hung desk recovers. The menu reconnects once it verifies the desk is running again.<br />- Working orders have clearer fill, fee and time details. An unclear venue response stays pending while Tandem checks the outcome.<br /><br />Safety<br /><br />- Set optional per-order and daily AI and routine caps. Tandem holds automatic orders above a saved cap for your decision.<br />- Real money starts off on each account. Manual orders and changes still use Review → Confirm. Automatic orders use your saved permissions, fresh prices and trading limits, and respect Stop.</p>]]></description>
+      <enclosure url="https://github.com/adersouza/tandem-releases/releases/download/v1.0.17/Tandem-1.0.17.dmg" length="230457389" type="application/octet-stream" sparkle:edSignature="A9y+YCNakskQTyFFzlbWnlA2y5UYeKT6CNXA/5ISzzCHGDfM7AN9kPhj0oBRlwf4XEDMcYiwTxZhsV748mKCDA=="/>
+    </item>
+    <item>
       <title>Tandem 1.0.14</title>
       <pubDate>Mon, 16 Nov 2026 04:49:57 +0000</pubDate>
       <sparkle:version>4207</sparkle:version>

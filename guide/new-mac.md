@@ -1,32 +1,42 @@
 # New Mac
 
-If the Mac that runs the desk dies or is replaced, this gets you back. Open orders and positions stay at each venue the whole time; the desk holds no money.
+Open orders and positions stay at each venue when a Mac is lost or replaced. Check the venue's own app or website before another trade. Run only one active Tandem desk for an account; do not leave the old Mac trading while the new one takes over.
 
-## What protects your records
+## Find your records before starting fresh
 
-- Each day the desk saves a checked copy of its records on this Mac and keeps the last 7 (**Settings → This Mac → Backups**).
-- Time Machine backs those copies up with the rest of your Mac. Turn Time Machine on if it isn't.
+The daily local backup protects against a damaged desk, but a copy kept only on a lost Mac cannot help. **Settings → Desk health → Backup folder** can copy records, settings, routines and strategies to your chosen folder, including iCloud Drive. Check the last completed copy and its date. Turning copying on, choosing iCloud or seeing a local backup does not prove that an off-Mac copy finished or synced. Time Machine is a separate way to protect the Mac's records.
 
-## Moving to a new Mac
+New folder backups include the verified disclosure archives and original filings referenced by saved strategies. Older folder backups can restore the strategy records without their filing evidence.
 
-1. **Move your account.** On the new Mac, use Migration Assistant from the old Mac or from your Time Machine backup. It brings Tandem, its records and your login Keychain.
-2. **Open Tandem.** Overview shows your accounts, Needs you is empty, and the weekly card shows past weeks.
-3. **Check your keys.** Open **Settings → Setup**. If a venue step says to connect again, follow it (Kalshi: **Generate a key on this Mac** and replace the public key on Kalshi's page). Delete keys you no longer use at each venue.
-4. **Check phone alerts.** In **Settings → Accounts & keys**, on **Phone alerts**, choose **Manage**, then **Test again**. If nothing arrives, set it up again there.
+A record backup excludes keys and AI/phone pairings. It cannot recover newer venue activity that happened after the backup. Encrypted key transfer is separate from record recovery.
 
-## Copy just your keys to another Mac
+## Restore a folder or iCloud backup
 
-Use this when you set up a new Mac without Migration Assistant, or run Tandem on a second Mac.
+1. Install Tandem on the new Mac. Make the backup folder available there; if you used iCloud Drive, wait for the files to download.
+2. On first launch, review **Restore from a backup?** and the backup's date before **Confirm restore**. You can also open **Settings → Backup → Restore backup → Find backups**, then **Restore…**. Tandem archives the records it replaces and applies the restore when it starts again.
+3. If backups could not be checked, use **Retry**. A failed search does not mean there is no backup. **Start fresh** means continuing without restored history; choose it only after checking your other copies. You can look again from Settings.
+4. After restore, new trades and trading routines stay paused. Connect each account through **Settings → Accounts & keys**, or import its keys using the separate encrypted setup file below. Check current limits and reconcile orders and holdings with each venue before resuming. Real accounts need to be armed again. Turn on the routines you want to run and pair your AI and phone again. Old approvals and unsent queued orders need a fresh review.
+5. Use **Check account** on every account. Compare positions, cash and working orders with the venue. Review **Needs you** and routine history; they may contain unresolved work. Activity after the backup must be reconciled before resuming, and an unknown order must never be resent.
+6. Check every routine's account, limits, schedule and last result. Reconnect AI apps and pair phones again. Send a test alert and check receipt on the phone. Turn trading back on yourself only after the account checks; restoring records does not authorize trading.
 
-1. On the Mac that is set up, open **Settings → This Mac → Move to another Mac** and choose **Save setup file**. Pick a passphrase of at least 12 characters. The file is saved to Downloads.
-2. Move the file to the other Mac's Downloads or Desktop, for example with AirDrop. Send the passphrase a different way, or just remember it.
-3. On the other Mac, install Tandem, open the same place and choose **Open setup file**. Pick the file, type the passphrase and choose **Add connections**. Each connection is tested as it is added.
-4. Real money stays off on the new Mac until you turn it on there with Review and Confirm.
-5. Phone approvals and the outside heartbeat are not in the file. Set them up again on the new Mac.
-6. Delete the setup file from both Macs when you are done. Anyone with the file and the passphrase can use your keys.
+## Move with Migration Assistant or Time Machine
 
-The desk's history is not in this file. Use Migration Assistant or Time Machine to keep it.
+Use macOS Migration Assistant to move your login account from the old Mac or a Time Machine backup. It may bring the app, records and login Keychain, but verify access rather than assuming every key moved. Stop new trades on the old Mac before using the new desk, and keep it from running the same accounts again.
 
-## If the old Mac is gone and there is no Time Machine backup
+Open Tandem on the new Mac, check **Accounts & keys**, use **Check account** for every account, and review **Needs you**, routines and notification delivery before resuming. Do not assume the attention queue is empty or that older records include later venue activity.
 
-Install Tandem and set it up again. Your accounts at each venue are unaffected; the desk's history starts fresh.
+## Transfer keys separately
+
+Use this when the old Mac is available but you are not migrating its login account. It transfers connections, not trade history.
+
+1. On the old Mac, open **Settings → Desk health → Move to another Mac → Save setup file**. Choose a passphrase of at least 12 characters. The encrypted file is saved to Downloads.
+2. Move the file to the new Mac, for example with AirDrop. Send the passphrase separately, or remember it. Never send the file or passphrase to an AI or support chat.
+3. In the same section on the new Mac, choose **Open setup file**, pick it, enter the passphrase and choose **Add connections**. Read the result for every connection; some may need setting up again.
+4. Real money stays off on the new Mac until you turn it on there. Phone approvals and the outside heartbeat must be set up separately. Check every account before resuming.
+5. Remove the encrypted transfer file from both Macs when it is no longer needed. Anyone with that file and its passphrase can use the included keys.
+
+## If no record backup can be recovered
+
+Check the folder you chose, iCloud Drive, the old Mac and Time Machine before choosing **Start fresh**. You can reconnect accounts and read current venue activity, but that does not recreate missing desk history. New trades should stay stopped while you resolve unknown orders and compare each account with the venue.
+
+For a failed search or restore, use **Settings → Help → Save diagnostics → Save and show** and [Troubleshooting](troubleshooting.md). Saving diagnostics creates a local file. For Tandem support, email contact@monchera.com.

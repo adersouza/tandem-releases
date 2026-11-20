@@ -2,7 +2,7 @@
 
 New here? The one-page [quick start](quick-start.md) gets you running. The step-by-step [onboarding guide](ONBOARDING.md) has every detail. Replacing the Mac? See [New Mac](new-mac.md).
 
-Tandem keeps your desk on your Mac. Start with paper trading or research. Real-money trading starts off.
+Tandem keeps your desk on your Mac. Every download includes the same trading and research tools. Only you can turn on real money per account. Practice is available where supported.
 
 ## Install and open
 
@@ -14,22 +14,21 @@ Tandem then lives in the menu bar. Closing the window keeps it running; use the 
 
 ## First run
 
-Open **Settings → Setup**. **Set up your desk** is one checklist, and each step opens only when the desk has checked the one before it:
+First launch guides you through your accounts, optional AI setup and limits. You can try the sample desk before connecting anything.
 
-1. Accept the terms.
-2. Connect your AI app. Under Do it yourself, The desk's own AI (optional) holds the AI provider and the models and usage limits. Do not enable paid overflow unless you want that billing behavior.
-3. Kalshi, Webull and Polymarket US. Connect at least one with **Account type → Practice** where available, and mark the others Not using. A venue is done when its connection test passes.
-4. Limits and goal, phone alerts and the practice week.
-5. Test an account and check its records: inspect the connection test, then choose your account and click Check selected account. Any missing balances, orders or positions stay unknown.
+1. **Connect your accounts.** Add a Real or Practice account for a venue you use. Saving keys does not activate Real. Choose **Skip** to connect later in **Settings → Accounts & keys**. **Take the tour** opens a sample desk. When you leave, Tandem returns to **Overview** and keeps your saved setup progress.
+2. **Connect your AI.** Choose Claude Desktop, ChatGPT desktop or Codex. Use **Copy test question**, choose your account and access, and approve the matching code. The built-in assistant has its own settings under **Settings → AI**.
+3. **Your limits.** Choose an eligible starting plan and **Destination account**, or choose **Decide later**. **Use this plan** saves the strategies with trading off. Review your limits and accept the terms. Turning on real money requires your decision on **Accounts**.
+4. **You're set.** Read the recap. Choose **Open Tandem** for **Overview** or **Open Following** to try a follow.
 
-A step the desk could not read shows Not read. Each step has Copy prompt, a page link and Help. Completing setup never arms real-money trading.
+Tandem saves setup progress. Return through **Settings → Accounts & keys → Reopen setup**. Choose **Finish** or **Redo** next to the step you want. The checklist shows **Not read** when a check is unavailable.
 
 ## Choose your next task
 
-- Use the [AI assistant](trading-with-ai.md) for sourced answers, confirm cards, scheduled routines and trade review. A tested AI connection and reviewed route are needed for inference.
-- Connect an external AI app with [MCP setup](mcp-setup.md). Its requests use the same desk tools under the Research, Review, Trade or Manage scope you select; automatic modes still require a matching saved account grant.
+- Use the [AI assistant](trading-with-ai.md) for sourced answers, manual trade review and automatic orders within a saved grant. A tested AI connection and reviewed route are needed for inference.
+- Connect an external AI app with [MCP setup](mcp-setup.md). Choose Research to read, Review to check proposals yourself, or Automatic with explicit accounts, limits and an expiry.
 - Open [Markets](markets.md) for quotes, order tickets and prediction research: spreads, fair value, weather edge and wallet analysis.
-- Open [Presets](presets-and-traders.md) for disabled paper copies, smart-money verdicts, followed lists, consensus and exit alerts.
+- Open **Following** to save a trader or portfolio and read its Copy Decisions. Open **Strategies → Presets** for [strategy templates](presets-and-traders.md).
 - Use Routines and Signals for scheduled work, permitted public watchers and the inbox. Keep Tandem running for its built-in scheduler; inspect run history to verify what actually happened.
 - Use the account ticket for supported protective orders, the trade time machine and optional Telegram approval. See [Trading with your AI](trading-with-ai.md).
 

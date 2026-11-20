@@ -1,16 +1,25 @@
 # Markets page
 
-Open Markets in the desk navigation. It opens on **Overview**. **Browse & trade** shows popular stocks/ETFs and open prediction questions. Choose **crypto** or **option** under **Asset class** to browse those separately. Alpaca assets are filtered to active, tradable instruments and paged locally; Tradier starts with popular symbols because it has no full instrument catalog. Search a company or symbol for more results.
+Open **Markets** in the desk navigation. Its tabs are **Overview**, **Stocks**, **Prediction**, **Options** and **Macro**. Search a company, symbol, event or topic with **Search markets**. Stocks has popular symbols; Prediction has topic filters and event cards. Your connected account determines which orders the desk can prepare.
 
 Visible cards refresh quotes in small batches every 30 seconds. Alpaca stock snapshots use IEX; option quotes are indicative. Tradier sandbox quotes are delayed 15 minutes. Source timestamps are separate from fetch times, and old or missing source clocks remain visible. Prediction cards show question titles, sourced YES/NO prices in cents, close dates and volume when available. A missing outcome price is never filled with a calculated complement.
 
-Expand each venue status line for fetch times, feed details and reasons. Filters apply to loaded prediction pages; load more venue pages to expand coverage. Explore venue catalogs below the cards for events, series, option chains, order books and history.
+Prediction coverage can still be loading. Read the coverage notice rather than treating an empty list as a complete search. Open an event for its markets, order book and supported bet ticket. Read each market’s trade-availability message before preparing an order; a displayed event is not proof that your account can trade it.
 
 Read the source, observation time, environment and coverage before acting. A displayed price can be delayed or stale. An empty result is not a zero balance or an empty real market. HOLD explains why a request is unavailable.
 
 ## Ask your AI
 
 Use the market's **Ask my AI** action to pass its instrument identity to the AI assistant. The assistant fetches sourced facts rather than treating market prose as instructions. Select the exact account before requesting an account action.
+
+## Use Markets through MCP
+
+- Use `markets.search`, `markets.events_by_category`, `markets.quote`, `markets.book`, `markets.chain` or `markets.history` for exact instruments, quotes and charts. Use `find_capability` to discover `option_contract_details` for the selected account’s exact option symbol and deliverable.
+- Read saved layouts and pane IDs with `chart_layouts`. Use `market_settings_change` with `save_chart_layout` to save panes or rename a layout. Use the saved revision for an edit and revision zero for a new layout.
+- Read starred stocks and events with `market_watchlist`. Use `market_settings_change` with `watch_symbol` or `watch_event` to add or remove one star. A star has no notification or order effect.
+- Use `stock_screens` and `stock_screen_change` for named filters. To schedule a saved screen, use `market_settings_change` with `schedule_stock_screen`. The routine checks the watchlist at 4:15 p.m. Eastern and can report matches.
+- Use `arbitrage_history` with all-account read access to see saved outcomes, the watch and the minimum edge. Use `market_settings_change` with `save_arbitrage_edge` or `watch_arbitrage` to change notifications. Use `arbitrage_package` for eligible Automatic packages with each leg’s account in the saved grant. In Review, open the package in Markets.
+- Use `manage_price_alerts` for price alerts. To act on a ticket or chart order, use `propose_trade.order` with the exact account, instrument, order intent and price bound. Use `find_capability` for the supported venue schema and read working orders before changing or canceling one. For an eligible chart reprice, supply the current order revision and new price. Client Review keeps the client’s confirmation step. Automatic uses the saved grant, current caps, Stop and the same OrderOwner checks.
 
 ## Prepare an order
 
@@ -20,13 +29,22 @@ If the account, price, market rules or capability is missing, keep the request o
 
 The same stock symbol appears on one card with a price-source switcher. Each choice keeps that connection’s quote, account actions and prices together. Reported categories appear when available; otherwise cards use the source’s asset class. Times show both relative age and your local time. A reported closed market shows when its last price was recorded. Stock catalogs currently report whether an asset is active, not whether its exchange session is open; an old quote alone is never treated as proof of a closed session.
 
-## Prediction-market research
+## When Webull is closed
 
-Open **Markets → Browse & trade → Prediction-market research**. Choose a view, import its JSON source packet and select Evaluate imported inputs. Export the result to retain it; source packets are evaluated in memory. Public collection actions are explicit and bounded. These tools create no account, fills or orders and do not automatically hand a result to a ticket.
+While Webull's trading gateway is closed, the stock ticket offers **Review order for the open**. Review the exact order and selected session, then confirm once. Tandem sends it automatically at that open after checking your cash and limits again. A failed check leaves the order waiting on Accounts. A missed session never rolls forward to a later one. You can cancel before the desk starts checking with Webull; a scheduled order is not a guaranteed fill.
 
-- Venue spreads compares reviewed Kalshi and Polymarket US equivalents with depth and market-specific fees. Similar question titles are insufficient. Check that the selected pair has a retained review before using it.
-- Options fair value estimates terminal binary threshold/range probabilities from sourced spot, volatility and explicit assumptions. A compatible listed broker vertical is an approximation, not an executable conversion or a calibrated forecast.
-- Weather edge and weather replay use retained ensemble forecasts and exact contract rules. Check the selected policy's enabled state and retained station review. A captured forecast cannot substitute for a forecast available before a historical decision.
-- Wallet explanation analyzes public international Polymarket trades separately from US accounts. Missing fees, settlements or history withhold profitability claims. Paired buys and statistical comparisons are descriptive evidence, not proof of skill.
+Older tickets that were only saved have no permission to send automatically. When one says **Ready to send** on Accounts, open it and **Review** and **Confirm**.
 
-Missing rules, fees, source clocks, reviewed stations or historical inputs stay unavailable. Research estimates and hypothetical paper results do not establish fills or returns. For tracked-wallet copy verdicts and consensus, use [Presets](presets-and-traders.md); that is a separate workflow from wallet explanation. For protective tickets, trade review and phone approval, see [Trading with your AI](trading-with-ai.md).
+## Alpaca prices, history and option records
+
+Open **Price and history** on a stock page. In an Alpaca account, select an option holding for its reported prices and history. The option ticket also has **Selected contracts · prices and history**. IEX covers one stock exchange. Indicative option quotes are derived prices; its trades are delayed 15 minutes. OPRA and consolidated stock prices require existing Alpaca data access. Selecting a source does not buy access. Historical option bars and trades are available from February 2024; Alpaca does not document a historical option-quotes endpoint.
+
+On an Alpaca account, **Balance history** shows the broker's account curve and posted exercise, assignment, expiration and cash-settlement records. A practice broker curve is separate from Tandem's practice budget. Missing fees, execution clocks and unlinked records remain unknown. Posting dates and settlement dates are not execution times.
+
+**Alpaca Exercise and Do Not Exercise** stays off in Settings → New features for Practice and Real accounts. Alpaca applies an instruction to the whole position it holds at processing time. Tandem cannot limit the instruction to the number of contracts you reviewed. You can still read posted exercise and settlement records on the account.
+
+The AI's `alpaca_data` tool reads prices, chains, history, account streams and reference data using the selected account. Its bounded market streams also include symbol-bound news observations. The stream leaves continuity unverified. Use sourced account records for fills and spendable balances.
+
+## Research and following
+
+Tandem includes imported-input prediction calculators in Research. For tracked-wallet copy verdicts and consensus, use **Strategies → Follow a portfolio** and [Presets](presets-and-traders.md). Research estimates and practice results do not establish real fills or returns. For supported protective tickets, trade review and phone approval, see [Trading with your AI](trading-with-ai.md).

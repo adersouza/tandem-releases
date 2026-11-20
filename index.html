@@ -3,102 +3,217 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>Tandem for Mac</title>
-<meta name="description" content="A hands-off copy-trading desk for stocks, options, prediction markets and crypto that runs on your Mac.">
-<link rel="icon" href="icon.png">
-<style>
-:root {
-  --bg: #fafaf9; --surface: #ffffff; --text: #1c1c1a; --muted: #62625d; --line: #e4e4df;
-  --accent: #1f4fd8; --accent-text: #ffffff;
-}
-@media (prefers-color-scheme: dark) {
-  :root { --bg: #131312; --surface: #1c1c1a; --text: #efefeb; --muted: #a2a29b; --line: #2e2e2b; --accent: #7f9cf5; --accent-text: #0e1220; }
-}
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-main { max-width: 760px; margin: 0 auto; padding: 48px 16px 64px; }
-header { text-align: center; }
-.icon { width: 96px; height: 96px; border-radius: 22px; }
-h1 { font-size: 40px; line-height: 1.1; margin: 16px 0 8px; font-weight: 600; letter-spacing: -0.02em; }
-.lead { color: var(--muted); font-size: 18px; margin: 0 auto; max-width: 34em; }
-.shot { display: block; width: 100%; height: auto; margin: 32px 0 8px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
-.cta { text-align: center; margin: 24px 0 8px; }
-.button { display: inline-block; background: var(--accent); color: var(--accent-text); padding: 14px 28px; border-radius: 10px; font-weight: 600; font-size: 17px; text-decoration: none; }
-.button:hover { filter: brightness(1.08); }
-.button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-dl.facts { display: grid; grid-template-columns: max-content 1fr; gap: 6px 20px; margin: 24px auto 0; padding: 16px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; font-size: 15px; }
-dl.facts dt { color: var(--muted); }
-dl.facts dd { margin: 0; min-width: 0; }
-code { font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; }
-section { margin-top: 48px; }
-h2 { font-size: 22px; margin: 0 0 12px; font-weight: 600; letter-spacing: -0.01em; }
-ul, ol { padding-left: 1.2em; margin: 0; }
-li { margin: 8px 0; }
-a { color: var(--accent); }
-.notes { white-space: pre-line; }
-footer { margin-top: 48px; color: var(--muted); font-size: 14px; text-align: center; }
-@media (max-width: 480px) {
-  main { padding-top: 32px; }
-  h1 { font-size: 32px; }
-  dl.facts { grid-template-columns: 1fr; gap: 0; }
-  dl.facts dd { margin-bottom: 10px; }
-}
-</style>
+<meta name="description" content="Follow traders and run your own strategies across five venues from one copy-trading desk on your Mac.">
+<link rel="canonical" href="https://adersouza.github.io/tandem-releases/">
+<link rel="icon" href="icon.png" type="image/png">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="stylesheet" href="site.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tandem for Mac">
+<meta property="og:description" content="Follow traders and run your own strategies across five venues from one desk on your Mac.">
+<meta property="og:url" content="https://adersouza.github.io/tandem-releases/">
+<meta property="og:image" content="https://adersouza.github.io/tandem-releases/tandem-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Trade in Tandem. A calm copy-trading desk for your Mac.">
+<meta name="twitter:card" content="summary_large_image">
 </head>
-<body>
+<body id="top">
+<header class="wrap site-header">
+  <a class="brand" href="#top"><img src="brand.webp" width="34" height="34" alt="">Tandem</a>
+  <nav aria-label="Main navigation">
+    <a href="#how">How it works</a>
+    <a href="#new">Releases</a>
+    <a href="https://github.com/adersouza/tandem-releases">GitHub ↗</a>
+  </nav>
+</header>
+
 <main>
-  <header>
-    <img class="icon" src="icon.png" width="96" height="96" alt="">
-    <h1>Tandem</h1>
-    <p class="lead">A hands-off copy-trading desk for stocks, options, prediction markets and crypto that runs on your Mac.</p>
-  </header>
+  <section class="hero" id="download" aria-labelledby="hero-title">
+    <div class="wrap hero-copy">
+      <h1 id="hero-title">Trade in Tandem.</h1>
+      <p class="lead">A copy-trading desk for five venues, right on your Mac.</p>
+      <a class="button" href="https://github.com/adersouza/tandem-releases/releases/download/v1.0.17/Tandem-1.0.17.dmg"><span aria-hidden="true">↓</span> Download for Mac</a>
+      <dl class="release-facts" aria-label="Download details">
+        <div><dt>Version</dt><dd>1.0.17</dd></div>
+        <div><dt>Size</dt><dd>230.5 MB</dd></div>
+        <div><dt>Requires</dt><dd>Apple silicon · macOS 12.0+</dd></div>
+      </dl>
+      <details class="checksum">
+        <summary>SHA-256 checksum</summary>
+        <code>020e2905e4524cdf8f811de6fb898f016ab0c3237e4e619e9e8678de2f06cf1a</code>
+      </details>
+    </div>
+  </section>
 
-  <img class="shot" src="overview.png" alt="The Tandem Overview on day 3 of the practice week: value, positions, routines, return and this week">
+  <figure class="wrap preview" id="preview">
+    <div class="mac-window">
+      <div class="titlebar" aria-hidden="true">
+        <span class="window-controls"><i></i><i></i><i></i></span>
+        <span>Tandem</span>
+        <span class="window-sample">Sample data</span>
+      </div>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="desk-dark-small.webp 800w, desk-dark.webp 1800w" sizes="(max-width: 720px) 90vw, 1200px">
+        <img src="desk-light.webp" srcset="desk-light-small.webp 800w, desk-light.webp 1800w" sizes="(max-width: 720px) 90vw, 1200px" fetchpriority="high"
+             width="1440" height="900" alt="Tandem Overview with a value chart, accounts, following activity, and trade controls.">
+      </picture>
+    </div>
+    <figcaption>
+      <span>Tandem Overview with sample data</span>
+      <span class="preview-links">Full size <a href="desk-dark.webp">Dark</a><a href="desk-light.webp">Light</a></span>
+    </figcaption>
+  </figure>
 
-  <div class="cta"><a class="button" href="https://github.com/adersouza/tandem-releases/releases/download/v1.0.14/Tandem-1.0.14.dmg">Download for Mac</a></div>
+  <section class="wrap section feature-section" id="features">
+    <h2>One desk for the trades you follow.</h2>
+    <dl class="feature-list">
+      <div><dt>Follow and copy</dt><dd>Follow a trader, public wallet or portfolio. Tandem checks new decisions against your allocation and limits.</dd></div>
+      <div><dt>Work across five venues</dt><dd>See supported stocks, options, prediction markets and crypto in the same desk.</dd></div>
+      <div><dt>Run routines with your AI</dt><dd>Connect your AI to research the desk, draft trades and run eligible routines within the access you grant.</dd></div>
+      <div><dt>Stop anytime</dt><dd>Pause new trades and routines from the desk. Review open orders and positions before you resume.</dd></div>
+    </dl>
+  </section>
 
-  <dl class="facts">
-    <dt>Version</dt><dd>1.0.14</dd>
-    <dt>Size</dt><dd>156.1 MB</dd>
-    <dt>Security</dt><dd>Signed and notarized by Apple</dd>
-    <dt>Works on</dt><dd>Apple silicon Macs, macOS 12 or later</dd>
-    <dt>SHA-256</dt><dd><code>4922360f33607137f6640fdf907838deea70880390a43099034f30eb69f3805d</code></dd>
-  </dl>
-
-  <section id="before">
-    <h2>Before your install day</h2>
-    <p>Some accounts take a day or two to approve. Do these first, so install day is only clicks.</p>
-    <ol>
-      <li>Apply for Webull's Trading API. Approval takes about 1 to 2 business days. <a href="https://developer.webull.com/apis/docs/faq">How it works</a></li>
-      <li>Open the Webull crypto account.</li>
-      <li>Create your Kalshi and Polymarket US accounts.</li>
-      <li>Install the free ntfy app on your iPhone. The desk uses it to send alerts.</li>
+  <section class="wrap section" id="how">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><span aria-hidden="true">01</span><h3>Connect an account</h3><p>Choose a venue you already use and follow its connection steps.</p></li>
+      <li><span aria-hidden="true">02</span><h3>Choose what to follow</h3><p>Pick a trader or portfolio, or set up a routine. Set how much it can use.</p></li>
+      <li><span aria-hidden="true">03</span><h3>Turn it on</h3><p>Choose the accounts and limits. When you’re ready, turn on real money for each account you want Tandem and your AI to trade within those limits.</p></li>
     </ol>
-    <p>A step-by-step version is in <a href="guide/BEFORE-INSTALL-DAY.html">Before install day</a>.</p>
+    <a class="text-link" href="guide/quick-start.html">Read the quick start</a>
   </section>
 
-  <section id="privacy">
-    <h2>What stays on your Mac</h2>
-    <p>Your data and your keys stay on your Mac. Tandem talks only to your trading accounts, to the AI app if you connect one, and to ntfy for alerts.</p>
+  <section class="wrap section" id="safety">
+    <div class="safety-panel">
+      <h2>Stay in control.</h2>
+      <dl>
+        <div><dt>Review → Confirm</dt><dd>Check the account, size and limits before confirming a new order or granting automatic execution.</dd></div>
+        <div><dt>You set the limits</dt><dd>Set per-order and daily caps, choose which accounts your AI can trade, and decide when its grant ends. Real money stays off until you turn it on for each account.</dd></div>
+        <div><dt>Stop</dt><dd>One click blocks new orders and asks venues to cancel open ones. Stop never sells positions.</dd></div>
+        <div><dt>Keys stay in your Keychain</dt><dd>Tandem stores your venue credentials in macOS Keychain. You choose what account access your connected AI receives.</dd></div>
+      </dl>
+      <a class="text-link" href="guide/safety.html">Read the safety guide</a>
+    </div>
   </section>
 
-  <section id="help">
-    <h2>Help</h2>
-    <ul>
-      <li>Contact: Ader, Monchera · <a href="mailto:contact@monchera.com">contact@monchera.com</a></li>
-      <li><a href="guide/quick-start.html">Quick start</a></li>
-      <li><a href="guide/safety.html">Terms and safety</a></li>
-      <li><a href="guide/fund-your-accounts.html">Fund your accounts</a></li>
-      <li><a href="guide/remove-tandem.html">Remove Tandem</a></li>
-    </ul>
+  <section class="wrap section" id="connections">
+    <h2>Venues and AI hosts</h2>
+    <div class="connections">
+      <div>
+        <h3>Venues</h3>
+        <ul>
+          <li>Alpaca</li><li>Tradier</li><li>Webull</li><li>Kalshi</li><li>Polymarket US</li>
+        </ul>
+        <a class="text-link" href="guide/connect-accounts.html">Connect a venue</a>
+      </div>
+      <div>
+        <h3>AI hosts</h3>
+        <ul>
+          <li>Claude Desktop</li><li>Claude Code</li><li>ChatGPT desktop</li><li>Codex</li>
+        </ul>
+        <a class="text-link" href="guide/mcp-setup.html">Connect an AI app</a>
+      </div>
+    </div>
   </section>
 
-  <section id="new">
-    <h2>What's new</h2>
-    <p class="notes">First-launch setup in four steps: connect Webull, Kalshi and Polymarket, add Tandem to your AI, pick a starting setup, done. Prediction market prices now show a clear chance (or No clear price) and the real best offer. Fixes from the Webull, Kalshi and Polymarket reviews, including fees, order types and clearer refusal messages. Better answers from Ask AI and from Tandem in your AI app.</p>
+  <section class="wrap section feature-section" id="faq">
+    <h2>Frequently asked questions</h2>
+    <div class="questions">
+      <details><summary>How do I install Tandem?</summary><p>Open the signed, Apple-notarized DMG. Drag Tandem to Applications and open it from there. Check <a href="guide/BEFORE-INSTALL-DAY.html">Before install day</a> for venue steps that can take longer.</p></details>
+      <details><summary>When can Tandem trade with real money?</summary><p>Real money is off by default. After connecting a venue, choose the account and turn on real money when you’re ready.</p></details>
+      <details><summary>Do I need an AI app?</summary><p>You can use Tandem on its own. Connect an AI app if you want to ask about your desk or have it help with routines and trade proposals.</p></details>
+      <details id="privacy"><summary>What stays on my Mac?</summary><p>Tandem keeps desk records on your Mac and venue keys in macOS Keychain. Optional AI, alerts, updates and backups use the services you configure. An AI provider can receive the desk information included in your request.</p></details>
+      <details><summary>How do updates reach me?</summary><p>Tandem uses Sparkle to check for signed updates. You can also check from Tandem’s Mac menu.</p></details>
+    </div>
   </section>
 
-  <footer>Tandem 1.0.14</footer>
+  <section class="wrap section feature-section" id="new">
+    <h2>Release notes</h2>
+    <div class="releases">
+      <article><h3>Tandem 1.0.17</h3><time datetime="2026-11-20">Nov 20, 2026</time><p class="release-note">What&#x27;s new
+
+- Schedule hands-off copying for eligible stock portfolios. Tandem checks new disclosures during market hours and places eligible orders within your saved limits.
+- Schedule recurring dollar buys with a budget and an end date. Attach a price-limited order to a watch and choose Review or Automatic where supported.
+- Ask a connected AI app to handle more tasks you can do in Tandem, including reading accounts, checking copy decisions and proposing order changes.
+- Choose a local model through Ollama to ask about your desk and prepare proposals for Review.
+- Research is included for everyone. Findings shows public-data studies on SPY and Central Park temperatures. Buy-and-hold beat the tested SPY rules in the historical simulation. The temperature study lacked enough matched Kalshi prices for an exchange comparison.
+
+Fixes
+
+- Tandem no longer loses its connection to the desk when a hung desk recovers. The menu reconnects once it verifies the desk is running again.
+- Working orders have clearer fill, fee and time details. An unclear venue response stays pending while Tandem checks the outcome.
+
+Safety
+
+- Set optional per-order and daily AI and routine caps. Tandem holds automatic orders above a saved cap for your decision.
+- Real money starts off on each account. Manual orders and changes still use Review → Confirm. Automatic orders use your saved permissions, fresh prices and trading limits, and respect Stop.</p></article>
+      <details><summary>Tandem 1.0.14 · <time datetime="2026-11-16">Nov 16, 2026</time></summary><p class="release-note">First-launch setup in four steps: connect Webull, Kalshi and Polymarket, add Tandem to your AI, pick a starting setup, done. Prediction market prices now show a clear chance (or No clear price) and the real best offer. Fixes from the Webull, Kalshi and Polymarket reviews, including fees, order types and clearer refusal messages. Better answers from Ask AI and from Tandem in your AI app.</p></details>
+      <details><summary>Tandem 1.0.13 · <time datetime="2026-11-14">Nov 14, 2026</time></summary><p class="release-note">- Connect your Claude plan without Terminal: Install Claude Code and Sign in with Claude are in Set up your desk.
+- Company filings wait in your inbox and no longer ring your phone, unless you turn them on.
+- Emergency stop, routines, phone approval and AI settings show names, not internal ids.
+- The assistant reads replies that contain line breaks.
+- The assistant never places real-money orders on its own. It proposes them, and you confirm.
+- A Telegram approval message now shows the order it approves.
+- Your phone can reach the desk only after pairing, even from inside your Tailscale network.
+- The assistant has room for ordinary questions, shows your question beside its reply, and says plainly why when it can&#x27;t answer.
+- A calmer, plainer desk: practice and real money in the same words everywhere, one-line empty states, neutral colours except for money, and a value chart that shows gain since you started.
+- On a phone: bigger buttons, no zoom when you type, and the stop notice and Ask AI fit the screen.
+- Stop new trades works from a paired phone.</p></details>
+      <details class="release-history"><summary>Earlier releases</summary><details><summary>Tandem 1.0.12 · <time datetime="2026-11-13">Nov 13, 2026</time></summary><p class="release-note">- Every page has a new, calmer layout.
+- Every order, AI proposal and access renewal is confirmed in one Review sheet, showing your account before and after.
+- Ask AI is a bar at the bottom of each page. It suggests; you confirm.
+- Your phone rings less: no alerts for recoveries or brief order checks, and at most 4 routine alerts an hour.
+- Tandem is smaller: the download is about 40 MB lighter.
+- Orders to review, the breaker and approvals always come through, whatever the hourly limit.
+- After an emergency stop, Turn new trades back on resumes only what the stop stopped.
+- Emergency stop results read in words, such as &quot;SPY: closed&quot;.
+- A cancelled order&#x27;s receipt says so, and a refused cancel says nothing was sent.
+- When Webull is busy, Tandem says nothing was sent and to try again in a minute.
+- A routine that fails once tries again quietly; your phone rings if it fails twice in a row.
+- Markets shows the Prediction and Crypto research tabs only on desks that run research.
+- The assistant and setup screens name accounts and strategies plainly, not by internal ids.</p></details><details><summary>Tandem 1.0.11 · <time datetime="2026-11-13">Nov 13, 2026</time></summary><p class="release-note">World Monitor on every desk, and fixes: Overview counts one account set, preset caps stay within account limits, presets and plans fit your accounts, the practice week ends correctly, setup choices saved on the desk, terms show once, no internal ids, research cards only when they ran, clearer Kalshi busy message, unsaved demo keys deleted at start, background data updates in the installed app.</p></details><details><summary>Tandem 1.0.10 · <time datetime="2026-11-12">Nov 12, 2026</time></summary><p class="release-note">Accounts shows AI mode, recent orders and money in and out. Overview returns show income. Kalshi and Polymarket US recent orders and fill fees. A price alert column on the watchlist.</p></details><details><summary>Tandem 1.0.9 · <time datetime="2026-11-12">Nov 12, 2026</time></summary><p class="release-note">New layout for Overview, Markets, Accounts, Strategies and Settings with a light theme. Real-money orders from an AI app are confirmed in the desk; automatic mode takes two steps. A Stop button on the phone. Pages appear at once. The install guide matches the notarized app.</p></details><details><summary>Tandem 1.0.8 · <time datetime="2026-11-12">Nov 12, 2026</time></summary><p class="release-note">One app for everyone, safer setup limits, live venue order fixes and fresh-install fixes.</p></details><details><summary>Tandem 1.0.7 · <time datetime="2026-11-12">Nov 12, 2026</time></summary><p class="release-note">Since you last looked, sample-data tour, trading word definitions, monthly deposit reminder, weekly summary alert, and fixes.</p></details><details><summary>Tandem 1.0.6 · <time datetime="2026-11-12">Nov 12, 2026</time></summary><p class="release-note">Setup ends with a starting plan. Limit presets on the Limits step. A Fund your accounts guide. Viewing: Practice | Real. One-line Desk health.</p></details><details><summary>Tandem 1.0.5 · <time datetime="2026-11-12">Nov 12, 2026</time></summary><p class="release-note">- Every page lists only the accounts you connected.
+- When an order is held or refused, the desk says why in a plain sentence.
+- If the Mac was asleep at 4:15 pm, the daily account record is taken when it wakes, marked as late.
+- If the desk stops while Tandem is open, the menu bar says Desk stopped and offers Restart desk.
+- If Tandem cannot copy your data before an update, it does not start and says what to do. Nothing is changed.
+- A Webull account connected for practice shows Done (paper) in setup while live waits for Webull&#x27;s approval.
+- Routines show plain names, and the monthly venue checks say they are checked daily and run once a month.
+- The guides match the app, and a new Remove Tandem guide is in Help.
+- Phone alerts use the help contact as their sender contact.
+- The app is smaller: research parts you never use are no longer included.</p></details><details><summary>Tandem 1.0.4 · <time datetime="2026-11-12">Nov 12, 2026</time></summary><p class="release-note">- Settings is one page with one menu on the left.
+- Adding an account starts with four venue cards; you choose practice or real in the same steps.
+- A short terms screen shows once. After that, one slim line reminds you until you accept.
+- Presets open as a catalog of cards.
+- The AI assistant page is the chat, with the account chosen next to the message box.
+- Webull crypto is found on your saved Webull connection.
+- Your return no longer goes blank after the Mac was off for a few days. It counts across the gap and says how many days were not recorded.
+- A monthly statement starts at the last close before the 1st of its month.
+- The tax export lists crypto as crypto, keeps its decimals, and does not run the wash-sale estimate on it.
+- Settings, About lists one notice for the dashboard&#x27;s open-source libraries and says where the Python licences are.</p></details><details><summary>Tandem 1.0.3 · <time datetime="2026-11-11">Nov 11, 2026</time></summary><p class="release-note">Practice | Real switch at the top. Real money can be turned on any time with Review, then Confirm. Daily database backup on this Mac. Start at login for new installs. Fixes: Polymarket US account drawer, slow start, red zero, Check for Updates in the menu bar icon.</p></details><details><summary>Tandem 1.0.2 · <time datetime="2026-11-11">Nov 11, 2026</time></summary><p class="release-note">Faster pages; a fresh install sets itself up; Kalshi practice orders work; prices for Kalshi and crypto; 8-K filing alerts; wash-sale estimates and a tax-loss list; licences in About.</p></details><details><summary>Tandem 1.0.1 · <time datetime="2026-11-11">Nov 11, 2026</time></summary><p class="release-note">Closing the window keeps Tandem running in the menu bar, with no Dock icon.
+You choose whether this Mac stays awake while the desk runs (Settings, This Mac). With it off, the Mac sleeps as usual and the desk checks your accounts again when it wakes.
+Quit Tandem from the menu bar and it stays off until you open it again.</p></details><details><summary>Tandem 1.0.0 · <time datetime="2026-11-11">Nov 11, 2026</time></summary><p class="release-note">First release of Tandem. Drag it to Applications to install. Phone alerts set up with a QR code, an optional AI app, Remove Tandem in Settings, What&#x27;s new after each update, and automatic updates from now on.</p></details></details>
+      <p class="release-links"><a class="text-link" href="https://github.com/adersouza/tandem-releases/releases/tag/v1.0.17">Tandem 1.0.17 on GitHub ↗</a><a class="text-link" href="https://github.com/adersouza/tandem-releases/releases">All releases</a><a class="text-link" href="appcast.xml">Sparkle feed</a></p>
+    </div>
+  </section>
+
+  <section class="wrap section support" id="help">
+    <h2>Need a hand?</h2>
+    <p>Email <a href="mailto:contact@monchera.com">contact@monchera.com</a> at Monchera.</p>
+    <nav aria-label="Support guides">
+      <a href="guide/quick-start.html">Quick start</a>
+      <a href="guide/fund-your-accounts.html">Fund your accounts</a>
+      <a href="guide/remove-tandem.html">Remove Tandem</a>
+    </nav>
+  </section>
 </main>
+
+<footer class="wrap site-footer">
+  <a class="brand" href="#top"><img src="brand.webp" width="30" height="30" alt="">Tandem</a>
+  <a href="https://github.com/adersouza/tandem-releases">GitHub ↗</a>
+</footer>
 </body>
 </html>

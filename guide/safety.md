@@ -1,10 +1,10 @@
 # Safety: what your AI can and cannot do
 
-Your AI can read available sources, explain them and propose actions. A proposal records a prepared action. Review mode requires your confirmation; automatic modes can also return an execution receipt. Neither proves a fill or a profit. Unknown balances, positions, orders, valuation and settlement stay unknown until supported by source evidence.
+Your AI can read and explain sources, prepare manual orders and trade automatically within a saved grant. A proposal records a prepared action. Review mode requires your confirmation; automatic modes can also return an execution receipt. Neither proves a fill or a profit. Unknown balances, positions, orders, valuation and settlement stay unknown until supported by source evidence.
 
 ## Your controls
 
-Only the client can arm an account's live policy or enable its stricter autonomy limits in the app. Real-money mode starts OFF. The in-app assistant and MCP both use client-selected Research, Review, Trade or Manage authority. Research reads only; Review requires confirmation; Trade can execute qualifying orders inside the saved grant; Manage also permits supported strategy configuration and schedules. Automatic modes still require the matching enabled account grant. Initial or expanded authority and tracked-trade copy/exit proposals require client confirmation.
+Only you can turn on Real for an account in Tandem. Real starts off. In Automatic, Tandem’s AI and routines can place eligible real orders within your saved grant without per-order Confirm. The OrderOwner applies price caps, a fresh quote, duplicate guards, limits, Stop, revocation and expiry. Research reads. Review prepares manual orders and changes for your confirmation. An AI cannot approve or widen its own grant.
 
 The calibration preset's virtual simulation uses a separate client-reviewed strategy grant with bounded simulated cash, exposure, source scope and expiry. It has no broker route or real-money authority. Its app/MCP modes cannot exceed that grant. Policy edits preserve aggregate exposure and losses across experiments. Research can collect free source evidence and save research records, but cannot create financial orders or simulated fills. Selected-strategy execution controls cannot use another strategy or raw orders to escape their mandate.
 

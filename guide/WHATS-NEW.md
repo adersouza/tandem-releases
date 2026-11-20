@@ -2,13 +2,44 @@
 
 The newest version is first. Tandem shows this once after each update.
 
+The changes below describe the version named in each heading. See [Safety](safety.md) and [Trading with your AI](trading-with-ai.md) for current behavior.
+
+## 1.0.17 - November 2026
+
+What's new
+
+- Schedule hands-off copying for eligible stock portfolios. Tandem checks new disclosures during market hours and places eligible orders within your saved limits.
+- Schedule recurring dollar buys with a budget and an end date. Attach a price-limited order to a watch and choose Review or Automatic where supported.
+- Ask a connected AI app to handle more tasks you can do in Tandem, including reading accounts, checking copy decisions and proposing order changes.
+- Choose a local model through Ollama to ask about your desk and prepare proposals for Review.
+- Research is included for everyone. Findings shows public-data studies on SPY and Central Park temperatures. Buy-and-hold beat the tested SPY rules in the historical simulation. The temperature study lacked enough matched Kalshi prices for an exchange comparison.
+
+Fixes
+
+- Tandem no longer loses its connection to the desk when a hung desk recovers. The menu reconnects once it verifies the desk is running again.
+- Working orders have clearer fill, fee and time details. An unclear venue response stays pending while Tandem checks the outcome.
+
+Safety
+
+- Set optional per-order and daily AI and routine caps. Tandem holds automatic orders above a saved cap for your decision.
+- Real money starts off on each account. Manual orders and changes still use Review → Confirm. Automatic orders use your saved permissions, fresh prices and trading limits, and respect Stop.
+
+## 1.0.16 - November 2026
+
+- Each account shows working orders, with Cancel and Change beside the order.
+- Order details show clearer fill totals, fees and times, including on a phone. An unconfirmed order stays unconfirmed.
+- Close all keeps Webull protection in place by waiting when protected orders are present. Its review identifies orders that aren't linked to Tandem.
+- Held copies keep their history, and account checks explain missing data more clearly.
+- Settings includes Restore backup, and setup, alerts and account screens fit small screens more comfortably.
+- Kalshi Perps shows risk, positions, paid funding and working orders for the subaccount you choose. Reduce and Close still go through Review and Confirm on the Mac.
+
 ## 1.0.13 - November 2026
 
 - Connect your Claude plan without Terminal: Install Claude Code and Sign in with Claude are in Set up your desk.
 - Company filings wait in your inbox and no longer ring your phone, unless you turn them on.
 - Emergency stop, routines, phone approval and AI settings show names, not internal ids.
 - The assistant reads replies that contain line breaks.
-- The assistant never places real-money orders on its own. It proposes them, and you confirm.
+- In this version, the assistant used proposal and confirmation for real orders.
 - A Telegram approval message now shows the order it approves.
 - Your phone can reach the desk only after pairing, even from inside your Tailscale network.
 - The assistant has room for ordinary questions, shows your question beside its reply, and says plainly why when it can't answer.
@@ -19,7 +50,7 @@ The newest version is first. Tandem shows this once after each update.
 ## 1.0.12 - November 2026
 
 - Every page has a new, calmer layout.
-- Every order, AI proposal and access renewal is confirmed in one Review sheet, showing your account before and after.
+- This version introduced a Review sheet for orders, AI proposals and access renewals, with before and after account figures.
 - Ask AI is a bar at the bottom of each page. It suggests; you confirm.
 - Your phone rings less: no alerts for recoveries or brief order checks, and at most 4 routine alerts an hour.
 - Tandem is smaller: the download is about 40 MB lighter.
@@ -34,12 +65,11 @@ The newest version is first. Tandem shows this once after each update.
 
 ## 1.0.11 - November 2026
 
-- World Monitor is in the sidebar on every desk: recent earthquakes and the news sources it follows, from public data, refreshed when you open it.
+- World Monitor added public news and event sources.
 - Your AI can read World Monitor too: ask it about recent earthquakes or what the news sources are reporting.
 - Overview's value, chart, Put in and Made now count the same accounts, and name any left out.
 - Copying a preset keeps its limits within your account's own limits.
 - Presets and starting plans list only what your connected accounts can trade.
-- The practice week reads Done only after its seven days, and ends when you turn on real money.
 - Not using and Decide later on setup are saved on the desk, so every browser sees them.
 - The terms show once, and Not now is remembered.
 - Setup, Accounts & keys and Strategies show plain names, not internal ids.
@@ -83,7 +113,7 @@ The newest version is first. Tandem shows this once after each update.
 - Trading words have short definitions. Point at a dotted word to read it.
 - An optional monthly reminder to add money to your accounts, in Settings, Alerts. Tandem never moves money.
 - Setup has a step for Tandem on your iPhone's Home Screen, and the phone shows a clear screen when offline.
-- A welcome screen, a market-closed line on Overview and a card when your practice week is done.
+- Overview gained a market-closed line.
 - Get help in Settings, Help has diagnostics you can copy for support.
 - The Kalshi demo check finds a usable practice market more reliably.
 
@@ -125,7 +155,7 @@ The newest version is first. Tandem shows this once after each update.
 ## 1.0.3 - November 2026
 
 - A Practice | Real switch at the top shows practice accounts or real-money accounts, never mixed. Practice shows an amber strip on every page. Switching only changes what you see.
-- You can turn real money on at any time with Review, then Confirm on Accounts, even during the practice week. Doing so ends the practice week. Review shows a short readiness list for your information.
+- You can turn real money on at any time with Review, then Confirm on Accounts, when your account is eligible. Review shows a short readiness list for your information.
 - If a card or page cannot draw, only that part shows an error; the rest of the desk keeps working.
 - Opening a Polymarket US account on Accounts no longer shows "Something went wrong".
 - If the desk is slow to start, the window waits and opens it as soon as it is ready.

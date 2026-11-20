@@ -1,6 +1,6 @@
 # Before install day
 
-Some accounts take a day or two to approve. Do these first. Then install day is only clicks, and you can be running in about an hour.
+Some accounts take a day or two to approve. Do these first. You can then follow setup at your own pace.
 
 ## 1. Apply for Webull's Trading API
 
@@ -10,16 +10,14 @@ Webull approves API access by hand. It takes about 1 to 2 business days. Apply a
 
 If you want crypto, open it in the Webull app now. It is a separate account from your stock account.
 
-## 3. Create your Kalshi and Polymarket US accounts
+## 3. Create your other accounts
 
-Make an account on each and finish any identity checks they ask for. You do not need to fund them yet. The desk starts with a seven day practice week. Real money stays off until you turn it on, which you can do any time, including during that week.
-
-## 4. Install ntfy on your iPhone
-
-Install the free ntfy app from the App Store. The desk uses it to send alerts to your phone. You do not need to set anything up in it yet.
+Make an account on the venue you’ll use and finish its identity checks. You can start with **Practice** where the venue supports it. Real money starts off. Only you can enable it on the exact account in Tandem.
 
 ## On install day
 
 Download Tandem from the page you were sent. Open the file, drag Tandem into Applications and open it. Then follow the [quick start](quick-start.md).
 
-Before Emerson leaves, three things are checked with you: Tandem starts at login, the outside heartbeat is turned on, and one heartbeat ping has arrived.
+Before leaving Tandem to run, check that it starts at login. If you use the optional outside heartbeat, check that its status is healthy and that its test alert reaches your phone; a sent ping alone does not prove phone delivery. Check **Settings → Desk health → Backup folder** for a completed copy outside this Mac.
+
+You can do these checks yourself. If setup gets stuck, open **Settings → Help → Save diagnostics**, choose **Save and show**, and read [Troubleshooting](troubleshooting.md). Saving creates a local file and uploads nothing. The same guide is available to a connected AI through `desk_guide` topic `troubleshooting` (the `desk_overview` tool's `guide` action). For Tandem support, email contact@monchera.com.
