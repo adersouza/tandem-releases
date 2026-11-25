@@ -3,6 +3,16 @@
   <channel>
     <title>Tandem</title>
     <item>
+      <title>Tandem 1.0.69</title>
+      <link>https://github.com/adersouza/tandem-releases/releases/tag/v1.0.69</link>
+      <pubDate>Wed, 25 Nov 2026 17:19:36 +0000</pubDate>
+      <sparkle:version>9227</sparkle:version>
+      <sparkle:shortVersionString>1.0.69</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Tandem 1.0.69: your AI can search Kalshi by words and list every watch at once; Markets shows 15-minute markets with their current window and your recently viewed markets; Activity shows trades placed in Kalshi&#x27;s or your broker&#x27;s own app; after Confirm the ticket says in one line where an order stands; Research drops workbenches that never had data.</p>]]></description>
+      <enclosure url="https://github.com/adersouza/tandem-releases/releases/download/v1.0.69/Tandem-1.0.69.dmg" length="288835774" type="application/octet-stream" sparkle:edSignature="wOBWMUWb6CWlBjLZ48cfGxgCIBZa/aj1zSJzrqoAjad8riTNtbbi02rFWCM47u8Cgqjv806R+DyguEPkj0yQDg=="/>
+    </item>
+    <item>
       <title>Tandem 1.0.61</title>
       <link>https://github.com/adersouza/tandem-releases/releases/tag/v1.0.61</link>
       <pubDate>Wed, 25 Nov 2026 12:46:20 +0000</pubDate>

@@ -2,11 +2,11 @@
 
 # Tandem for Mac
 
-[![Latest release: v1.0.61](https://img.shields.io/badge/release-v1.0.61-51449C)](https://github.com/adersouza/tandem-releases/releases/tag/v1.0.61)
+[![Latest release: v1.0.69](https://img.shields.io/badge/release-v1.0.69-51449C)](https://github.com/adersouza/tandem-releases/releases/tag/v1.0.69)
 ![macOS 12.0+ on Apple silicon](https://img.shields.io/badge/macOS-12.0%2B-30303A)
 ![Apple notarized](https://img.shields.io/badge/Apple-notarized-30303A)
 
-**[Download for Mac](https://github.com/adersouza/tandem-releases/releases/download/v1.0.61/Tandem-1.0.61.dmg)** · 289.2 MB · [SHA-256](https://github.com/adersouza/tandem-releases/releases/download/v1.0.61/Tandem-1.0.61.dmg.sha256) · [Release notes](https://github.com/adersouza/tandem-releases/releases/tag/v1.0.61)
+**[Download for Mac](https://github.com/adersouza/tandem-releases/releases/download/v1.0.69/Tandem-1.0.69.dmg)** · 288.8 MB · [SHA-256](https://github.com/adersouza/tandem-releases/releases/download/v1.0.69/Tandem-1.0.69.dmg.sha256) · [Release notes](https://github.com/adersouza/tandem-releases/releases/tag/v1.0.69)
 
 Follow traders and run your own strategies across five venues from one desk on your Mac.
 
@@ -23,7 +23,7 @@ Follow traders and run your own strategies across five venues from one desk on y
 
 ## Install
 
-1. [Download Tandem](https://github.com/adersouza/tandem-releases/releases/download/v1.0.61/Tandem-1.0.61.dmg) and open the DMG.
+1. [Download Tandem](https://github.com/adersouza/tandem-releases/releases/download/v1.0.69/Tandem-1.0.69.dmg) and open the DMG.
 2. Drag **Tandem** to **Applications**.
 3. Open Tandem from Applications and follow the [quick start](https://adersouza.github.io/tandem-releases/guide/quick-start.html).
 

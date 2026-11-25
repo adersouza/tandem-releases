@@ -4,6 +4,20 @@ The newest version is first. Tandem shows this once after each update.
 
 The changes below describe the version named in each heading. See [Safety](safety.md) and [Trading with your AI](trading-with-ai.md) for current behavior. Tandem is real only: a connected account trades once you accept the terms in Tandem, always inside its saved limits.
 
+## 1.0.69 - November 2026
+
+What's new
+
+- Markets has two new lists: 15-minute markets show each one's current window, and Recently viewed brings back the markets you opened.
+- Your AI can search Kalshi by words, such as "fed rate" or "bitcoin", and when it can't read something it says why in plain words.
+- Your AI can list all your watches at once, and watches can wait for a date, such as an earnings day.
+- News search adds the latest headlines for the stocks you name. With Webull's news summary turned on, it works without Alpaca.
+- Activity shows trades you placed in Kalshi's or your broker's own app, with their cost and Filled.
+- A Coinbase convert that never ran keeps its amount set aside until your balance shows it, then releases it.
+- The Mac menu's Stop works while Tandem is still loading.
+- After you confirm an order or a change, the ticket says in one line where it stands: working, how much filled and why.
+- Research is simpler: workbenches that never had data or couldn't run on your Mac are gone, and your AI no longer offers actions that couldn't run.
+
 ## 1.0.60 - November 2026
 
 What's new
