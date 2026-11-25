@@ -3,6 +3,16 @@
   <channel>
     <title>Tandem</title>
     <item>
+      <title>Tandem 1.0.61</title>
+      <link>https://github.com/adersouza/tandem-releases/releases/tag/v1.0.61</link>
+      <pubDate>Wed, 25 Nov 2026 12:46:20 +0000</pubDate>
+      <sparkle:version>9163</sparkle:version>
+      <sparkle:shortVersionString>1.0.61</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[<p>Tandem 1.0.61: Real only. Coinbase shows and trades like your other accounts with Coinbase&#x27;s own quote and fee. Your AI can set price watches with automatic orders, trailing stops, recurring buys and sells, timed cancels and Kalshi take-profit/stop pairs, all within your saved budget. Held and refused orders say why in plain words.</p>]]></description>
+      <enclosure url="https://github.com/adersouza/tandem-releases/releases/download/v1.0.61/Tandem-1.0.61.dmg" length="289157572" type="application/octet-stream" sparkle:edSignature="2ap08xhkxsKK/eHIx0rFuYTVhJTkH9mGiyJtP6iijonAvdoGrIHCgAwfevcSK8osuV83AvlJIqPcIxA0GoMXDA=="/>
+    </item>
+    <item>
       <title>Tandem 1.0.18</title>
       <link>https://github.com/adersouza/tandem-releases/releases/tag/v1.0.18</link>
       <pubDate>Fri, 20 Nov 2026 21:50:18 +0000</pubDate>

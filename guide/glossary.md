@@ -11,8 +11,7 @@ Plain meanings of the words Tandem uses, including the terms in the app’s Info
 - **Day change** is the change from the previous close to the latest price Tandem read.
 - **Today** is the change from the last saved close to the latest account value, adjusted for money moved.
 - **Cash** is the cash balance read for the accounts in view.
-- **Practice budget** is the amount of pretend money you set. Its value includes cash and holdings bought with it.
-- **Buying power** is the amount your broker says is available to trade. In Practice, Tandem also checks the cash left in your budget.
+- **Buying power** is the amount your broker says is available to trade.
 - **Quote age** measures the time since the price source recorded the quote.
 - **Delayed quotes** come from a feed that publishes prices after a delay. Tandem shows the delay reported by that feed.
 - **Not read** means Tandem could not read the value from its source. That value stays out of totals.
@@ -23,14 +22,13 @@ Plain meanings of the words Tandem uses, including the terms in the app’s Info
 - **Per trade** is the most a trade may spend, based on the saved percentage and account value.
 - **Per position** is the largest share of account value a holding can take up, based on the saved percentage.
 - **Loss from start** measures loss from the saved starting account value.
-- **Per-order cap**: An optional amount on an AI or routine grant. Tandem shows how far an order goes over a saved cap and waits for your decision. Account and venue limits still apply.
+- **Per-order cap**: An optional amount on an AI or routine allowance. Tandem shows how far an order goes over a saved cap and waits for your decision. Account and venue limits still apply.
 - **Daily loss limit**: The most an account may lose in a day. Past it, the desk opens no new trades.
 - **Crypto cap**: The largest share of your total desk value that crypto may take. Sales are never held by it.
 - **Open risk**: The most money your open trades could lose together. New trades wait while this is full.
 - **Core**: Long-term holdings, limited by their share of the account rather than by open risk.
 - **Sleeve**: A slice of the account set aside for one group of orders, capped as a share of its value.
-- **Practice**: Trades with pretend money on a test account. Nothing you win or lose is real.
-- **Real money**: Trades with your own funds. It stays off until you turn it on for an account.
+- **Real money**: Every connected account trades your own funds, inside the limits you set.
 - **Held order**: An order the desk didn't send because a safety rule said no. Each names its reason.
 - **Account check**: The desk compares its own records with your broker's and flags any difference for you.
 - **Stop new trades**: Stops every account from opening new trades and attempts to cancel resting buy orders. Check the cancellation outcomes; positions stay open and other waiting orders may still fill.
@@ -46,7 +44,7 @@ Plain meanings of the words Tandem uses, including the terms in the app’s Info
 - **Limit order**: An order that trades only at your price or better. It may not fill.
 - **Fill**: A trade that actually happened: the exchange or broker matched your order.
 - **Unknown order**: The desk couldn't confirm whether the venue received or accepted the order. It never sends it again on its own. Press **Check account** to find out.
-- **Proposal**: An order your AI suggests. In Review, you confirm a manual order. In Automatic, eligible orders on an approved account use your saved grant.
+- **Proposal**: An order your AI suggests. In Review, you confirm a manual order. In Automatic, eligible orders on an approved account use your saved allowance.
 
 ## Strategy results
 
@@ -69,9 +67,9 @@ Plain meanings of the words Tandem uses, including the terms in the app’s Info
 ## The desk and your AI
 
 - **Automatic** allows Tandem to send eligible trades within your saved limits.
-- **Grant** is a saved permission for an AI app to act, including its account, limits and expiry.
+- **Allowance** is a saved permission for an AI app to act, including its account, limits and end time.
 - **Venue**: A place you trade: Kalshi, Webull, Polymarket and the others. Each has its own account and key.
 - **Key**: The access code a venue gives you so the desk can read or trade for you. Disable transfer and withdrawal access wherever the venue offers those choices. Tandem cannot universally verify a key's permissions. Never paste one into a chat.
-- **Research, Review, Trade, Manage**: How much your AI app may do. Research only reads. Review proposes orders you confirm. Automatic (Trade) acts on its own within the saved limits of approved Practice and enabled Real accounts. Manage also covers eligible strategy controls within the saved scope.
-- **Phone pairing**: Lets your iPhone open the desk for 30 days. A paired phone can act on held copies, confirm manual Practice and Real orders, and confirm eligible Practice proposals from AI. In an eligible review, hold to go over a cap once or turn it off. Use the Mac to confirm Real AI proposals, turn on real money, or change keys.
+- **Research, Review, Trade, Manage**: How much your AI app may do. Research only reads. Review proposes orders you confirm. Automatic (Trade) acts on its own within the budget saved for each account. Manage also covers eligible strategy controls within the saved scope.
+- **Phone pairing**: Lets your iPhone open the desk for 30 days. A paired phone can act on held copies, confirm manual orders. In an eligible review, hold to go over a cap once or turn it off. Use the Mac to confirm AI proposals, loosen a limit, or change keys.
 - **Heartbeat**: An optional outside check that tells your phone when the Mac or the desk is down.

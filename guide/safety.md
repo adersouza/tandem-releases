@@ -4,7 +4,7 @@ Your AI can read and explain sources, prepare manual orders and trade automatica
 
 ## Your controls
 
-Only you can turn on Real for an account in Tandem. Real starts off. In Automatic, Tandem’s AI and routines can place eligible real orders within your saved grant without per-order Confirm. The OrderOwner applies price caps, a fresh quote, duplicate guards, limits, Stop, revocation and expiry. Research reads. Review prepares manual orders and changes for your confirmation. An AI cannot approve or widen its own grant.
+Connected accounts trade once you accept the terms in setup. Stop new trades is the off switch, for every account or one account at a time. In Automatic, Tandem’s AI and routines can place eligible real orders within your saved grant without per-order Confirm. The OrderOwner applies price caps, a fresh quote, duplicate guards, limits, Stop, revocation and expiry. Research reads. Review prepares manual orders and changes for your confirmation. An AI cannot approve or widen its own grant.
 
 The calibration preset's virtual simulation uses a separate client-reviewed strategy grant with bounded simulated cash, exposure, source scope and expiry. It has no broker route or real-money authority. Its app/MCP modes cannot exceed that grant. Policy edits preserve aggregate exposure and losses across experiments. Research can collect free source evidence and save research records, but cannot create financial orders or simulated fills. Selected-strategy execution controls cannot use another strategy or raw orders to escape their mandate.
 

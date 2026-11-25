@@ -17,14 +17,17 @@ Two rules hold for every problem:
 **What to check.**
 
 - The menu bar icon: "⚠ Desk stopped" means Tandem needs attention; it does not establish an order's outcome.
-- The saved stop state in **Settings → Trading safety → Stop new trades**: it shows when trades stopped and why. The Mac sidebar and phone **Stop new trades** controls work in one click and also attempt to cancel resting buys; read their cancellation outcomes. Positions remain open.
+- The saved stop state in **Settings › Limits › Stop new trades**: it shows when trades stopped and why. The sidebar and phone **Stop new trades** controls work in one click and also attempt to cancel resting buys; read their cancellation outcomes. Positions remain open.
 
 **What to do.**
 
 - Desk program stopped: click the Tandem icon in the menu bar and choose **Restart desk**. If that doesn't help, choose **Quit Tandem**, then open Tandem again.
 - New trades stopped: read the reason on the card. After checking the cause, use the Mac's trading controls to choose which accounts should trade again and read the saved result. Your AI can't do this for you.
+- New trades blocked by the desk itself: Resume can't turn these off, and pressing Stop again keeps the desk's reason.
+  - "Tandem found damage in its order records": open **Settings › Backup › Restore backup** and restore the newest good backup. After the restore, Resume works again.
+  - "Tandem's order worker (or monitor) stopped after restarting too often": there is no fix you can do in the app. Selling and cancelling still work. Save diagnostics and email contact@monchera.com.
 
-**Save diagnostics when** the desk stops again after a restart, or you don't understand the reason on the card. Use **Settings → Help and about → Diagnostics → Save diagnostics**.
+**Save diagnostics when** the desk stops again after a restart, or you don't understand the reason on the card. Use **Settings › Help and about › Diagnostics › Save diagnostics**.
 
 ## A venue is disconnected
 
@@ -32,14 +35,14 @@ Two rules hold for every problem:
 
 **What to check.**
 
-- **Settings → Accounts & keys**: the venue's row says whether it is connected.
+- **Settings › Accounts and keys**: the venue's row says whether it is connected.
 - The venue's own app or website: can you sign in, and is the key still listed?
 
 **What to do.**
 
 1. Wait a few minutes. A short outage fixes itself.
 2. On **Accounts**, press **Check account** for that account.
-3. If it still fails, make a new key at the venue, delete the old one there, and paste the new one in **Settings → Accounts & keys**. Then choose **Save and test connection**. Changing a key turns real money off for that venue's accounts. Turn it back on yourself on **Accounts**.
+3. If it still fails, make a new key at the venue, delete the old one there, and paste the new one in **Settings › Accounts and keys**. Then choose **Save and test connection**. Changing a key turns real money off for that venue's accounts. Turn it back on yourself on **Accounts**.
 
 **Save diagnostics when** a fresh key still doesn't connect, or the venue says the account is locked or restricted.
 
@@ -62,7 +65,7 @@ Two rules hold for every problem:
 **What to check.**
 
 - The Mac: is it awake, logged in, and is Tandem open?
-- On the Mac, check the event switch and quiet hours in **Settings → Alerts and phone**. Choose **Manage pairing** to check your phone.
+- On the Mac, check the event switch and quiet hours in **Settings › Alerts and phone**. Choose **Manage pairing** to check your phone.
 - On your iPhone, open Tandem from the Home Screen and check **Notifications on this device**. Alerts in the bell are available when push is off.
 
 **What to do.**
@@ -77,7 +80,7 @@ Two rules hold for every problem:
 
 **How to set it up.**
 
-- On the Mac, open **Settings → Alerts and phone → Manage pairing** and choose **More alert channels → Add a channel**, or search **⌘K → Add email, Telegram or Slack alerts**.
+- On the Mac, open **Settings › Alerts and phone › Manage pairing** and choose **More alert channels › Add a channel**, or search **⌘K › Add email, Telegram or Slack alerts**.
 - Build the service's Apprise address from the Apprise wiki, for example `mailtos://you:app-password@gmail.com` or `tgram://bot-token/chat-id`, and paste it. The address is a secret: it stays in your Keychain and never appears in logs or diagnostics.
 - Saving sends one test message. Use **Change or test** to send another.
 
@@ -85,7 +88,7 @@ Two rules hold for every problem:
 
 ## Healthchecks says Tandem is down
 
-Open **Settings → Desk health → Background checks → Heartbeat history** on the Mac. The last 50 checks show whether Tandem answered, whether the scheduler checked in, whether a retry helped and whether Healthchecks accepted the ping. One failed cycle waits for the next check. Two in a row send a failure ping. If the Mac or internet is unavailable, Healthchecks can alert when the pings stop.
+Open **Settings › Desk health › Background checks › Heartbeat history** on the Mac. The last 50 checks show whether Tandem answered, whether the scheduler checked in, whether a retry helped and whether Healthchecks accepted the ping. One failed cycle waits for the next check. Two in a row send a failure ping. If the Mac or internet is unavailable, Healthchecks can alert when the pings stop.
 
 Use **Copy** next to **Healthchecks setup** and set the check to a **5-minute period** and **15-minute grace** in Healthchecks. Choose **Send test ping** and look for **Log** in the check's **Events** list. The test verifies delivery without clearing a down alert.
 
@@ -134,7 +137,7 @@ Use **Copy** next to **Healthchecks setup** and set the check to a **5-minute pe
 **What to check.**
 
 - The message Tandem showed. "Could not copy your data before starting an update" means the backup step failed. Check available disk space and the stated error before trying again.
-- **Settings → Desk health → Running** shows the version that's running.
+- **Settings › Desk health › Running** shows the version that's running.
 
 **What to do.**
 
@@ -148,22 +151,22 @@ Use **Copy** next to **Healthchecks setup** and set the check to a **5-minute pe
 
 **What it means.** A paired phone stays paired for 30 days. After that, opening the desk on the phone shows the pairing page instead of the desk. Your Mac and your trades aren't affected.
 
-**What to check.** On the Mac, **Settings → Alerts and phone → Phone** lists the paired phones and the saved phone address.
+**What to check.** On the Mac, **Settings › Alerts and phone › Phone** lists the paired phones and the saved phone address.
 
 **What to do.**
 
-1. On the Mac, open **Settings → Alerts and phone → Phone** and choose **Show code**. If the phone address is off, choose **Set up phone access** first.
+1. On the Mac, open **Settings › Alerts and phone › Phone** and choose **Show code**. If the phone address is off, choose **Set up phone access** first.
 2. On the phone, open the pairing page and type the code. The code works once and expires in a few minutes, so do it right away.
 
 **Save diagnostics when** the pairing page doesn't open on the phone, or a fresh code is refused.
 
 ## Your AI app asks to connect again
 
-Ask it to read `desk_status` for the actual connection mode and read scope. For a missing venue tool, use `find_capability` and check the matching account, the saved connection and any New features switch. For a market read that finds several sources, use `markets` action `sources` and select the returned connection for the intended environment. To list Kalshi subaccounts, pair to the primary Predictions or Perps account and grant **Read all connected accounts**. A missing or unread source stays unknown.
+Ask it to read `desk_status` for the actual connection mode and read scope. For a missing venue tool, use `find_capability` and check the matching account, the saved connection and any New features switch you turned off. For a market read that finds several sources, use `markets` action `sources` and select the returned connection for the intended environment. To list Kalshi subaccounts, pair to the primary Predictions or Perps account and grant **Read all connected accounts**. A missing or unread source stays unknown.
 
 If an action was held, show the returned `confirm_step`. If its outcome is unknown, open the matching order, account or routine record in Tandem. Use `explain` with that reference when available. A second call can duplicate an action whose first reply was lost.
 
-Open **Settings → AI → Connect your AI app** and check that the code matches the one in your AI app before you approve. A connection you chose to remember lasts until it expires or you revoke it. Connecting never gives the AI more trading permission than you chose.
+Open **Settings › AI › Connect your AI app** and check that the code matches the one in your AI app before you approve. A connection you chose to remember lasts until it expires or you revoke it. Connecting never gives the AI more trading permission than you chose.
 
 ## A routine didn't run
 
@@ -171,9 +174,9 @@ Keep the Mac awake and Tandem open, and allow about a minute after the scheduled
 
 ## Save diagnostics and get help
 
-On the Mac, open **Settings → Support → Diagnostics** and choose **Save diagnostics**. Tandem saves a local ZIP in **Documents → Tandem Support**. Leave **Include balances and account numbers** off unless you choose to include them. Keys and passwords are excluded.
+On the Mac, open **Settings › Help and support › Diagnostics** and choose **Save diagnostics**. Tandem saves a local ZIP in **Documents › Tandem Support**. Leave **Include balances and account numbers** off unless you choose to include them. Keys and passwords are excluded.
 
-In **Settings → Support → Health report**, choose **Review email draft** to open a message in Mail. Review the desk version, connection states and error counts before sending. **Include account details** is optional and starts off. You decide whether to send the draft and attach the saved ZIP.
+In **Settings › Support › Health report**, choose **Review email draft** to open a message in Mail. Review the desk version, connection states and error counts before sending. **Include account details** is optional and starts off. You decide whether to send the draft and attach the saved ZIP.
 
 For Tandem support, email contact@monchera.com. Say what you were doing, what you saw and the time. Save diagnostics locally and decide whether to share the redacted file. Hide account numbers in screenshots. Never send keys, passwords, pairing codes, setup-transfer files or configuration files.
 
@@ -183,11 +186,11 @@ If Tandem cannot open, use the venue's own app or website to inspect orders and 
 
 If a key may be exposed, revoke it on the venue's own website immediately. Stop new trades in Tandem if you can, but do not wait for Tandem before revoking an exposed key. Check for unexpected orders and activity at the venue.
 
-Create a replacement key for the same Practice or Real environment. Give it only the access you intend, and disable transfer and withdrawal access wherever offered. Tandem cannot universally verify those scopes. Enter the replacement only in **Settings → Accounts & keys**, then use **Save and test connection** and **Check account**. A key change can turn real money off; check each affected account's saved state and limits before turning it back on yourself. Never resend an unknown order as part of reconnecting.
+Create a replacement key for the same account. Give it only the access you intend, and disable transfer and withdrawal access wherever offered. Tandem cannot universally verify those scopes. Enter the replacement only in **Settings › Accounts and keys**, then use **Save and test connection** and **Check account**. A key change can stop an account from trading; check each affected account's saved state and limits before you trade again. Never resend an unknown order as part of reconnecting.
 
 ## Backups could not be checked
 
-Use **Retry** if the desk couldn't read your backups. Check your chosen backup folder, iCloud downloads and Time Machine. Choose **Start fresh** only after checking for recoverable copies. **Settings → Backup → Restore backup → Find backups** lets you look again. See [New Mac](new-mac.md) before restoring. Backups exclude keys. New trades stay stopped after a restore, and every account needs checking against newer venue activity.
+Use **Retry** if the desk couldn't read your backups. Check your chosen backup folder, iCloud downloads and Time Machine. Choose **Start fresh** only after checking for recoverable copies. **Settings › Backup › Restore backup › Find backups** lets you look again. See [New Mac](new-mac.md) before restoring. Backups exclude keys. New trades stay stopped after a restore, and every account needs checking against newer venue activity.
 ## How do I read options activity or contract terms?
 
 Use `option_activity` on the selected Alpaca or Webull account with the exact UTC window. Use `option_ticket_chain` for the ticket’s selected symbol and expiration, and `option_contract_details` with the full contract symbol to look up its multiplier or deliverables.
@@ -196,25 +199,17 @@ Use `option_activity` on the selected Alpaca or Webull account with the exact UT
 
 Read **Needs you** and pass the saved proposal ID to `routine_inbox_proposal` from a desk-wide read connection. Review and confirm in Tandem. A missing outcome stays unknown.
 
-## How do I recover a legacy Practice ticket?
-
-Find the original ticket in **Research → Paper attached stops**. Check the entry or close order using the ticket’s broker check. Use **Cancel open practice orders** on the same ticket if needed. Those actions recover orders under the original Practice registration. The AI can read the saved journal with `dashboard_view`. Current connected-account orders use the account’s ordinary Review and OrderOwner.
-
-## How do I prepare a thesis or journal a Practice ticket?
-
-Use `review_saved_research_run` for a paper attached-stop draft, a client-declared thesis, a plan for a saved thesis, an observation on that plan or an evaluation. Pass the exact workbench inputs and confirm in Tandem. A draft or evaluation sends no orders.
-
 ## Which AI, delivery and recovery controls stay on the Mac?
 
-Choose AI providers, local routing and spending limits in **Settings → AI**. Use **Test assistant** there to exercise the selected provider. Save a lower spending limit in one step and confirm a higher limit yourself. Use **Use this model** or **Prefer connected AI** to select an installed model.
+Choose AI providers, local routing and spending limits in **Settings › AI**. Use **Test assistant** there to exercise the selected provider. Save a lower spending limit in one step and confirm a higher limit yourself. Use **Use this model** or **Prefer connected AI** to select an installed model.
 
-Use `new_feature_status` for the saved switches and `change_new_feature` to turn off a feature or enable a display preference. Enable trading, paid and delivery features yourself in New features.
+Use `new_feature_status` for the saved switches and `change_new_feature` to turn off a feature or enable a display preference. Every feature is on unless you turned it off; turn one back on yourself in New features.
 
 Use `daily_brief_status` for the saved schedule and the latest delivery test. Save Discord and Telegram credentials directly in Tandem. Send a delivery test or send a saved brief to Discord from its named Mac control. Run a heartbeat test in Background checks against the saved monitor. These buttons can contact a private destination.
 
-Use Connections on the Mac to capture or download private broker tool formats after signing in. The AI can list qualified public reads using `broker_market_tools`. Read or edit your personal assistant memory in Settings → AI or the Tandem memory controls. This preserves which statements you approved as your own.
+Use Connections on the Mac to capture or download private broker tool formats after signing in. The AI can list qualified public reads using `broker_market_tools`. Read or edit your personal assistant memory in Settings › AI or the Tandem memory controls. This preserves which statements you approved as your own.
 
-Run a sealed strategy’s simulated handoff from its own Research workbench. It binds the exact stock run and selected observation before the paper Owner records an intent. The AI can read the study and explain the hold.
+Run a sealed strategy’s simulated handoff from its own Research workbench. It binds the exact stock run and selected observation before Tandem records an intent. It places no real order. The AI can read the study and explain the hold.
 
 ## How do I work with exact retained research?
 
@@ -238,6 +233,6 @@ Use `watched_wallets` to read the saved public address and latest balance. Ask f
 
 ## How do I read local model and strategy status?
 
-Use `local_assistant_status` for the saved Local model selection and installed models. In Settings → AI, check the download progress. Use `practice_run_summary` for the exact saved strategy ID on the selected Practice account.
+Use `local_assistant_status` for the saved Local model selection and installed models. In Settings › AI, check the download progress.
 
 Use `retained_research_check` with `desk_saved_answer` for a saved-record question. An order request goes through the selected account’s ordinary Review.

@@ -6,13 +6,13 @@ Search from ⌘K for **Earnings and economic calendar**. Coming up includes issu
 
 Open **Markets** in the desk navigation. Its tabs are **Overview**, **Stocks**, **Prediction**, **Options** and **Macro**. Search a company, symbol, event or topic with **Search markets**. Stocks has popular symbols; Prediction has topic filters and event cards. Your connected account determines which orders the desk can prepare.
 
-Visible cards refresh quotes in small batches every 30 seconds. Alpaca stock snapshots use IEX; option quotes are indicative. Tradier sandbox quotes are delayed 15 minutes. Source timestamps are separate from fetch times, and old or missing source clocks remain visible. Prediction cards show question titles, sourced YES/NO prices in cents, close dates and volume when available. A missing outcome price is never filled with a calculated complement.
+Visible cards refresh quotes in small batches every 30 seconds. Alpaca stock snapshots use IEX; option quotes are indicative. Source timestamps are separate from fetch times, and old or missing source clocks remain visible. Prediction cards show question titles, sourced YES/NO prices in cents, close dates and volume when available. A missing outcome price is never filled with a calculated complement.
 
 Prediction coverage can still be loading. Read the coverage notice rather than treating an empty list as a complete search. Open an event for its markets, order book and supported bet ticket. Read each market’s trade-availability message before preparing an order; a displayed event is not proof that your account can trade it.
 
-In **Markets → Arbitrage → Discovery**, open a threshold estimate to see its priced legs, size and quote age. Taking a threshold pair requires a verified common settlement source and observation cutoff.
+In **Markets › Arbitrage › Discovery**, open a threshold estimate to see its priced legs, size and quote age. Taking a threshold pair requires a verified common settlement source and observation cutoff.
 
-To be told when a package is worth a look, open **Markets → Arbitrage → Alert me** and set **Profit after fees at least** and **Edge at least**. Matching packages go to the Tandem bell, and nothing is placed. Ask your AI for `arbitrage_history` to read the saved minimums; it changes them only through a reviewed `market_settings_change`. Press **⌘K** and search “arbitrage alert”.
+To be told when a package is worth a look, open **Markets › Arbitrage › Alert me** and set **Profit after fees at least** and **Edge at least**. Matching packages go to the Tandem bell, and nothing is placed. Ask your AI for `arbitrage_history` to read the saved minimums; it changes them only through a reviewed `market_settings_change`. Press **⌘K** and search “arbitrage alert”.
 
 Read the source, observation time, environment and coverage before acting. A displayed price can be delayed or stale. An empty result is not a zero balance or an empty real market. HOLD explains why a request is unavailable.
 
@@ -54,12 +54,20 @@ Older tickets that were only saved have no permission to send automatically. Whe
 
 Open **Price and history** on a stock page. In an Alpaca account, select an option holding for its reported prices and history. The option ticket also has **Selected contracts · prices and history**. IEX covers one stock exchange. Indicative option quotes are derived prices; its trades are delayed 15 minutes. OPRA and consolidated stock prices require existing Alpaca data access. Selecting a source does not buy access. Historical option bars and trades are available from February 2024; Alpaca does not document a historical option-quotes endpoint.
 
-On an Alpaca account, **Balance history** shows the broker's account curve and posted exercise, assignment, expiration and cash-settlement records. A practice broker curve is separate from Tandem's practice budget. Missing fees, execution clocks and unlinked records remain unknown. Posting dates and settlement dates are not execution times.
+On an Alpaca account, **Balance history** shows the broker's account curve and posted exercise, assignment, expiration and cash-settlement records. Missing fees, execution clocks and unlinked records remain unknown. Posting dates and settlement dates are not execution times.
 
-**Alpaca Exercise and Do Not Exercise** stays off in Settings → New features for Practice and Real accounts. Alpaca applies an instruction to the whole position it holds at processing time. Tandem cannot limit the instruction to the number of contracts you reviewed. You can still read posted exercise and settlement records on the account.
+**Alpaca Exercise and Do Not Exercise** is unavailable in Settings › New features, and Tandem cannot turn it on. Alpaca applies an instruction to the whole position it holds at processing time. Tandem cannot limit the instruction to the number of contracts you reviewed. You can still read posted exercise and settlement records on the account.
 
 The AI's `alpaca_data` tool reads prices, chains, history, account streams and reference data using the selected account. Its bounded market streams also include symbol-bound news observations. The stream leaves continuity unverified. Use sourced account records for fills and spendable balances.
 
 ## Research and following
 
-Tandem includes imported-input prediction calculators in Research. For tracked-wallet copy verdicts and consensus, use **Strategies → Follow a portfolio** and [Presets](presets-and-traders.md). Research estimates and practice results do not establish real fills or returns. For supported protective tickets, trade review and phone approval, see [Trading with your AI](trading-with-ai.md).
+Tandem includes imported-input prediction calculators in Research. For tracked-wallet copy verdicts and consensus, use **Following › Follow a portfolio** and [Presets](presets-and-traders.md). Research estimates and simulations do not establish real fills or returns. For supported protective tickets, trade review and phone approval, see [Trading with your AI](trading-with-ai.md).
+
+## What can my AI read on Markets, and what does it never do?
+
+Ask your AI about a chart and it reads your own records for that symbol: your fills with their time, price and quantity, the open and queued orders, scheduled recurring buys, the stop and target on an order, and the alerts on the chart. A price the venue did not report is left out, never shown as zero. It can also read the latest value of the indicators in your saved chart layout, replay the bars up to a day you choose, and hand you a Pine v5 script for TradingView to paste in. Nothing is sent anywhere.
+
+It can tell you whether stock, crypto, bet and news data is live, delayed (with how long) or rate limited (with when to try again). A missing stock key leaves crypto, bets and news working. It can read the Markets overview (index ETF and crypto tiles with the time of each price, top US stock movers, and the economic calendar with the Kalshi market when one is saved), run a plain-words screen such as "price is above 100" over the symbols you follow, and list price gaps between Kalshi and Polymarket US, only where the resolution rules match on both venues, with the fees Tandem could price and the costs it could not.
+
+Before you send your watchlist to a broker, the preview lists what would be added and removed and what stays only in Tandem (bets and crypto). If the last send was not confirmed by the venue, Tandem will not send again until you have checked the list there. Searching with ⌘K covers places, actions, settings and help. Money actions open their Review sheet; nothing is placed from the search. Your AI cannot save a chart, send a watchlist or place an order.

@@ -2,51 +2,63 @@
 
 The newest version is first. Tandem shows this once after each update.
 
-The changes below describe the version named in each heading. See [Safety](safety.md) and [Trading with your AI](trading-with-ai.md) for current behavior.
+The changes below describe the version named in each heading. See [Safety](safety.md) and [Trading with your AI](trading-with-ai.md) for current behavior. Tandem is real only: a connected account trades once you accept the terms in Tandem, always inside its saved limits.
+
+## 1.0.60 - November 2026
+
+What's new
+
+- Tandem is Real only: every account you connect is your real account, and Practice is gone from every page.
+- Coinbase shows like your other accounts: its value counts in your total, each coin shows by name with its value, and a coin Coinbase can't price is named instead of hiding the whole account.
+- Coinbase buys and sells go through Review and Confirm with Coinbase's own quote and fee.
+- Markets names the day each index change covers, and old workbench pages are gone.
+- A held or refused order says why in plain words on every ticket, and an order whose outcome isn't confirmed yet says to check rather than "nothing sent".
+- No crypto cap unless you set one. Raising or removing a saved cap asks for one Confirm.
 
 ## 1.0.18 - November 2026
 
 What's new
 
-- Copy someone in one step: choose Copy someone on Following, Overview or ⌘K and paste a name, wallet address, profile link or ID. Tandem shows who it is, what they trade and which accounts can copy it, then you choose Watch, Practice mirror or Copy.
+- Copy someone in one step: choose Copy someone on Following, Overview or ⌘K and paste a name, wallet address, profile link or ID. Tandem shows who it is, what they trade and which accounts can copy it, then you choose Watch or Copy.
 - Trade spot crypto on Coinbase, 24/7: any USD pair Coinbase lists. Open a Coinbase account and choose Trade. Review shows Coinbase's own fee estimate and checks a fresh quote before you Confirm.
 - Choose market with a price limit, limit, stop-limit or a sell bracket. A resting buy can carry a take-profit and a stop-loss. Change or cancel a working order from the account.
-- Practice on Coinbase without a key. Tandem simulates the account with Coinbase's live prices and sends nothing to Coinbase. Real stays off until you turn it on in Accounts.
-- Schedule recurring Coinbase buys that run every day, weekends included. Convert between USD and USDC at Coinbase's quote through Review and Confirm.
+- Schedule recurring Coinbase buys that run every day, weekends included. Convert between USD and USDC, PYUSD or EURC (and PYUSD and USDC) at Coinbase's quote through Review and Confirm.
 - Connect Coinbase from Add a connection, Setup or ⌘K. The sheet walks you through a View and Trade key, then checks the portfolio, fee tier and read time.
 - Ask your AI to propose a Coinbase order. It opens Review for you to Confirm; it runs on its own only inside a saved Automatic grant for that account.
-- Open the year-end tax report from Activity → Export or an account’s Records. Practice and Real records have separate reports.
+- Open the year-end tax report from Activity › Export or an account’s Records.
 - See issuer earnings and official economic dates in Coming up. For stock follows, choose whether copies run normally, shrink or wait around earnings.
-- Send the same short alerts to email, Telegram, Pushover, Slack, Discord or Teams under Settings → Alerts and phone → More alert channels. Off until you add one; the address stays in your Keychain.
-- Get alerts on your paired iPhone or in Tandem’s bell. Choose fills, held copies, trading limits, stops, unconfirmed orders and price alerts under Settings → Alerts and phone.
-- Read the same ranked stories in Overview, World Monitor and Ask AI. The stories link to publishers and show why they matter to your desk.
-- Use ⌘K to find workflows by name or intent, or open an account directly from the Mac sidebar. Kalshi and Kalshi Perps have separate connection rows.
-- Set up Tandem’s assistant or connect an external AI app from Setup or Settings → AI. View a connected app’s current tools and permissions in Tool access.
-- Schedule recurring buys from Strategies → Routines. Turning on Automatic for a Real plan requires Confirm. Choose New York weekdays for routines that follow the market calendar.
+- Send the same short alerts to email, Telegram, Pushover, Slack, Discord or Teams under Settings › Alerts and phone › More alert channels. Off until you add one; the address stays in your Keychain.
+- Get alerts on your paired iPhone or in Tandem’s bell. Choose fills, held copies, trading limits, stops, unconfirmed orders and price alerts under Settings › Alerts and phone.
+- Read the same ranked stories in Overview, World and Ask AI. The stories link to publishers and show why they matter to your desk.
+- Use ⌘K to find workflows by name or intent, or open an account directly from the sidebar. Kalshi and Kalshi Perps have separate connection rows.
+- Set up Tandem’s assistant or connect an external AI app from Setup or Settings › AI. View a connected app’s current tools and permissions in Tool access.
+- Schedule recurring buys from Automate › Routines. Turning on Automatic for a Real plan requires Confirm. Choose New York weekdays for routines that follow the market calendar.
 - Open Copy Decisions in Following or from a saved Activity item. A held copy shows its reason and the action available to you.
 - Set a loss limit for a single strategy. When it is reached, new entries pause and Needs you says why.
 - Drag a working order line on the chart to open a price change in Review. Position drawings show reward to risk.
 - Attach an order to a saved watch, set an exact expiry on resting Kalshi and Polymarket US orders, and protect a holding with linked profit and stop exits where the venue supports it.
 - Protect a holding from its row, read Position risk, or open Hedge my portfolio in Strategies. Estimates show cost, maximum loss and what is unavailable. Tandem prepares each order for Review.
 - Roll an option you hold to a later date or another strike from its row or Search. Review shows the closing and opening orders together.
-- Add a portfolio source in Following from a published target file or a watched folder. Tandem prepares guarded Practice rebalances from it.
-- Open exact venue records, pending payouts and account safety details from Accounts. Check saved Practice promotion thresholds under Strategies.
-- Verify Codex or a local Ollama model as your Ask AI choice in Settings → AI.
+- Verify Codex or a local Ollama model as your Ask AI choice in Settings › AI.
 - Research shows study results, collection checkpoints and filing sources in Findings.
-- First run takes you through an account read and a Practice order preview. The sample desk includes a tour. Restore keeps saved records and starts with new trades stopped.
+- Move money on a Real Coinbase account: sweep futures cash to spot, turn intraday margin on or off, send crypto to a saved or entered address with checks for each network, and deposit or withdraw to a bank you linked at Coinbase. Each one waits for your Confirm, and Stop new trades blocks it.
+- Create, rename or delete a Coinbase portfolio, and watch a Coinbase live channel for a few seconds, from the account page or ⌘K.
+- See whether each venue's live updates are Live, Reconnecting or Off in Accounts, and keep an Alpaca, Tradier or Webull watchlist in step with Tandem's.
+- Sell an uncovered Webull option within a limit you set (Real waits for Webull to prove short positions), buy a Webull event contract for an exact dollar amount, and choose what Kalshi does when an order would trade with your own.
+- Search your saved news from ⌘K, see risk by holding on Accounts, and press ⌃⌥⌘S in any app to open the Stop sheet.
+- Every feature is on unless you turn it off under Settings › New features.
 
 Fixes
 
-- The shell, Accounts, Trading safety and the Mac menu share one clear Stop status. Account rows show the last successful read when available.
+- The shell, Accounts, Limits and the Mac menu share one clear Stop status. Account rows show the last successful read when available.
 - Cards that cannot load say what failed, and the rest of the page keeps working.
 - Pages with many sections show an All sections picker in a small window or on a phone.
 - Activity groups consecutive healthy checks and keeps unresolved orders in view.
 - Informational trading notices and choices use neutral cues. Holds and Real money keep their distinct treatment.
-- The Practice budget line now reads "Started with" the amount you began with.
 
 Safety
 
-- Every order still goes through Review → Confirm or your saved Automatic permissions, fresh prices, limits and Stop.
+- Every order still goes through Review › Confirm or your saved Automatic permissions, fresh prices, limits and Stop.
 - Real money stays off on each account until you turn it on.
 
 ## 1.0.17 - November 2026
@@ -67,7 +79,7 @@ Fixes
 Safety
 
 - Set optional per-order and daily AI and routine caps. Tandem holds automatic orders above a saved cap for your decision.
-- Real money starts off on each account. Manual orders and changes still use Review → Confirm. Automatic orders use your saved permissions, fresh prices and trading limits, and respect Stop.
+- Real money starts off on each account. Manual orders and changes still use Review › Confirm. Automatic orders use your saved permissions, fresh prices and trading limits, and respect Stop.
 
 ## 1.0.16 - November 2026
 
@@ -88,7 +100,6 @@ Safety
 - A Telegram approval message now shows the order it approves.
 - Your phone can reach the desk only after pairing, even from inside your Tailscale network.
 - The assistant has room for ordinary questions, shows your question beside its reply, and says plainly why when it can't answer.
-- A calmer, plainer desk: practice and real money in the same words everywhere, one-line empty states, neutral colours except for money, and a value chart that shows gain since you started.
 - On a phone: bigger buttons, no zoom when you type, and the stop notice and Ask AI fit the screen.
 - Stop new trades works from a paired phone.
 
@@ -110,14 +121,14 @@ Safety
 
 ## 1.0.11 - November 2026
 
-- World Monitor added public news and event sources.
-- Your AI can read World Monitor too: ask it about recent earthquakes or what the news sources are reporting.
+- World added public news and event sources.
+- Your AI can read World too: ask it about recent earthquakes or what the news sources are reporting.
 - Overview's value, chart, Put in and Made now count the same accounts, and name any left out.
 - Copying a preset keeps its limits within your account's own limits.
 - Presets and starting plans list only what your connected accounts can trade.
 - Not using and Decide later on setup are saved on the desk, so every browser sees them.
 - The terms show once, and Not now is remembered.
-- Setup, Accounts & keys and Strategies show plain names, not internal ids.
+- Setup, Accounts and keys and Strategies show plain names, not internal ids.
 - Strategies shows research cards only for research that ran on this desk, and keeps a card whose read failed.
 - A Kalshi busy answer during Test connection says to try again in a minute.
 - Demo keys made but never saved are deleted when the desk starts.
@@ -133,7 +144,6 @@ Safety
 ## 1.0.9 - November 2026
 
 - Overview, Markets, Accounts, Strategies and Settings have a new layout, and there is a light theme.
-- Real-money orders from an AI app are confirmed in the desk; practice orders can still be confirmed in the AI app.
 - Turning on the assistant's automatic mode now takes two steps that expire after 5 minutes.
 - On the phone, a Stop button sits in the top bar.
 - Pages appear at once while they load, and one card's error no longer breaks the whole page.
@@ -146,7 +156,6 @@ Safety
 - Setup shows every limit change before you confirm, and it can only lower the crypto cap.
 - Pages open on a fresh install before any data has been saved.
 - Phone alerts say so plainly when the Mac's Keychain can't store the alert key.
-- The venue practice checks have clearer names: Kalshi and Webull practice check, every 30 days.
 - Real-money order checks for Kalshi and Polymarket US match each venue's current documentation.
 
 ## 1.0.7 - November 2026
@@ -160,16 +169,14 @@ Safety
 - Setup has a step for Tandem on your iPhone's Home Screen, and the phone shows a clear screen when offline.
 - Overview gained a market-closed line.
 - Get help in Settings, Help has diagnostics you can copy for support.
-- The Kalshi demo check finds a usable practice market more reliably.
 
 ## 1.0.6 - November 2026
 
 - Setup ends with Choose a starting plan: three templates, each with what it does, its evidence label and its limits. Nothing starts until you confirm, and Decide later is fine.
 - The Limits step has Cautious, Balanced and Wide presets that fill the per-order cap, the daily loss limit and the crypto cap. You can change every number.
 - A new Fund your accounts guide explains how to add money at each venue. Tandem never moves money.
-- The top bar says Viewing: Practice | Real. With no real-money account, the Real view says Real money is off and links to the Review step.
 - The amber strip across the top is gone. The view shows once, in the top bar.
-- Desk health is one line, such as Desk running · checked 2 min ago, with any problem in plain words.
+- Desk health is one line, such as Desk running · checked 8:30 PM, with any problem in plain words.
 
 ## 1.0.5 - November 2026
 
@@ -178,7 +185,6 @@ Safety
 - If the Mac was asleep at 4:15 pm, the daily account record is taken when it wakes, marked as late.
 - If the desk stops while Tandem is open, the menu bar says Desk stopped and offers Restart desk.
 - If Tandem cannot copy your data before an update, it does not start and says what to do. Nothing is changed.
-- A Webull account connected for practice shows Done (paper) in setup while live waits for Webull's approval.
 - Routines show plain names, and the monthly venue checks say they are checked daily and run once a month.
 - The guides match the app, and a new Remove Tandem guide is in Help.
 - Phone alerts use the help contact as their sender contact.
@@ -187,7 +193,6 @@ Safety
 ## 1.0.4 - November 2026
 
 - Settings is one page with one menu on the left.
-- Adding an account starts with four venue cards; you choose practice or real in the same steps.
 - A short terms screen shows once. After that, one slim line reminds you until you accept.
 - Presets open as a catalog of cards.
 - The AI assistant page is the chat, with the account chosen next to the message box.
@@ -199,7 +204,6 @@ Safety
 
 ## 1.0.3 - November 2026
 
-- A Practice | Real switch at the top shows practice accounts or real-money accounts, never mixed. Practice shows an amber strip on every page. Switching only changes what you see.
 - You can turn real money on at any time with Review, then Confirm on Accounts, when your account is eligible. Review shows a short readiness list for your information.
 - If a card or page cannot draw, only that part shows an error; the rest of the desk keeps working.
 - Opening a Polymarket US account on Accounts no longer shows "Something went wrong".
@@ -214,8 +218,6 @@ Safety
 ## 1.0.2 - November 2026
 
 - Pages open faster, and a thin bar shows while a page loads.
-- A new install sets up its daily account value record and monthly practice checks on its own.
-- Kalshi practice orders now go through, and the monthly Kalshi check works.
 - Your own Alpaca and Tradier accounts show on every page.
 - Suggestions stay above the chat box after your first question.
 - The status bar shows Live when the desk is connected.

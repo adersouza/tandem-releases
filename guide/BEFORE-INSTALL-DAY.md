@@ -12,12 +12,12 @@ If you want crypto, open it in the Webull app now. It is a separate account from
 
 ## 3. Create your other accounts
 
-Make an account on the venue you’ll use and finish its identity checks. You can start with **Practice** where the venue supports it. Real money starts off. Only you can enable it on the exact account in Tandem.
+Make an account on the venue you’ll use and finish its identity checks. Nothing trades until you accept Tandem's terms once in setup, and **Stop new trades** turns trading off at any time.
 
 ## On install day
 
 Download Tandem from the page you were sent. Open the file, drag Tandem into Applications and open it. Then follow the [quick start](quick-start.md).
 
-Before leaving Tandem to run, check that it starts at login. If you use the optional outside heartbeat, check that its status is healthy and that its test alert reaches your phone; a sent ping alone does not prove phone delivery. Check **Settings → Desk health → Backup folder** for a completed copy outside this Mac.
+Before leaving Tandem to run, check that it starts at login. If you use the optional outside heartbeat, check that its status is healthy and that its test alert reaches your phone; a sent ping alone does not prove phone delivery. Check **Settings › Desk health › Backup folder** for a completed copy outside this Mac.
 
-You can do these checks yourself. If setup gets stuck, open **Settings → Help → Save diagnostics**, choose **Save and show**, and read [Troubleshooting](troubleshooting.md). Saving creates a local file and uploads nothing. The same guide is available to a connected AI through `desk_guide` topic `troubleshooting` (the `desk_overview` tool's `guide` action). For Tandem support, email contact@monchera.com.
+You can do these checks yourself. If setup gets stuck, open **Settings › Help › Save diagnostics**, choose **Save and show**, and read [Troubleshooting](troubleshooting.md). Saving creates a local file and uploads nothing. The same guide is available to a connected AI through `desk_guide` topic `troubleshooting` (the `desk_overview` tool's `guide` action). For Tandem support, email contact@monchera.com.
